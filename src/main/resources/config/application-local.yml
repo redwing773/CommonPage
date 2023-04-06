@@ -1,0 +1,43 @@
+spring:
+  config:
+    activate:
+      on-profile: local
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  devtools:
+    livereload:
+      enabled: true
+
+server:
+  port: 8080
+  servlet:
+    encoding:
+      charset: UTF-8
+      force: true
+
+logging:
+  config: classpath:log/logback-spring.xml
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+
+external:
+  etoos:
+    auth-url: https://dev-member.etoos.com
+    auth-client-id: FDC9681217BF12363D7C11C1FF9EB66B
+    auth-secret-key: 12F95D404F50B4310BBC10F8AC423920A5713113B51A7D33CBE77614C051D5D8
+  sendbird:
+    app-id: V/UDUwZWtMVK4FJntdN7ov6yCx85+pkyVCisC3wvhQOZg0lL9vG8MLupMEQYfmd7
+    app-key: 426c814dc4d1bf3f2cc76a898aad533b76e3901491c79a6c317aef334e87eb75
+
+feign:
+  linker:
+    url: http://dev.ilinker.co.kr:10004
+

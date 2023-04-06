@@ -1,0 +1,43 @@
+spring:
+  config:
+    activate:
+      on-profile: live
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  boot:
+    admin:
+      client:
+        url: http://live-bootadmin.linker.ac
+
+server:
+  port: 8080
+  servlet:
+    encoding:
+      charset: UTF-8
+      force: true
+
+logging:
+  config: classpath:log/logback-spring.xml
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+
+external:
+  etoos:
+    auth-url: https://member.etoos.com
+    auth-client-id: 03328164578a11672ae98e0d82e7847e
+    auth-secret-key: faeb58a80ea8839105a39486079df9dfa15d054a1b2bbc8379711c1e0b227f9e
+  sendbird:
+    app-id: 1bwluZVwTNXNF4avgXQJvPxxlWwbs3aRzKdiqYrUjyTP2M5DtWCJmHFi+xXTWjRX
+    app-key: 37ED539C0CEF13959ABD980BEBF30F4922F606E3
+
+feign:
+  linker:
+    url: https://linker.etoos.com

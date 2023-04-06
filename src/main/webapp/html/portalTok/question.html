@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+    <title>질문톡-검색결과</title>
+    <meta name="author" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0, width=device-width" />
+    <!--네이버 사이트 소유확인  -->
+    <meta name="naver-site-verification" content="8d48e34ebff1e1fa2c5b3038ae6af460aeeaa3da" />
+    <!-- 구글 사이트 소유확인  -->
+    <meta name="google-site-verification" content="hi6I7UDoxYht05mqfW5BIFzVdij4R9-D6nH4b8brSog" />
+    <!-- 키워드 및 디스크립션 설정 -->
+    <meta name="keywords" content = "링커, linker, 생활기록부, 생기부, 자소서, 대학입시컨설팅, 학생부종합전형, 수시컨설팅, 입시컨설팅, 과외구하기" />
+    <meta name="description" content="수험생과 대학생을 연결하는 멘토링 플랫폼 ‘링커’" />
+    <!-- og태그 설정  -->
+    <meta property="og:title" content="링커"/>
+    <meta property="og:image" content="https://d9f2e26giax13.cloudfront.net/etc/3876ca5b150c4be29f400b5a7e252f77.png"/>
+    <meta property="og:url" content="https://ilinker.co.kr"/>
+    <meta property="og:description" content="수험생과 대학생을 연결하는 멘토링 플랫폼 ‘링커’"/>
+    <meta property="og:type" content="website"/>
+
+    <meta name="facebook-domain-verification" content="5y6omymnhfrh1ncl4itz25hpl90689" />
+
+    <link rel="stylesheet" type="text/css" href="/src/main/resources/static/pc/common/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="/src/main/resources/static/pc/common/css/responsive.css" />
+    <link rel="stylesheet" type="text/css" href="/src/main/resources/static/pc/common/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="/src/main/resources/static/apps/common/css/awl_couponPost.css" /><!--쿠폰함 및 우편함 css-->
+    <link rel="stylesheet" type="text/css" href="/src/main/resources/static/apps/common/css/awl_saleInfo.css" /><!--판매설정 css-->
+    <link rel="stylesheet" type="text/css" href="/src/main/resources/static/pc/common/css/bootstrap-datepicker3.css" />
+    <link rel="shortcut icon" href="/src/main/resources/static/pc/images/favicon/favicon_etoos_plus_20221227.png">
+
+    <!-- 추가된 부분 -->
+    <link rel="stylesheet" type="text/css" href="/src/main/resources/static/apps/common/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="/src/main/resources/static/apps/common/css/custom.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="/src/main/resources/static/apps/common/css/awl_openTalk.css" /> -->
+    <style>
+      .rank_list ol{width: 100%; padding: 0; float:none; overflow-y: auto; overflow-x: auto; white-space: inherit; height: auto; padding-top: 0;}
+      #recommendList{overflow-y: auto; overflow-x: auto; white-space: inherit;}
+      .rank_list ol li{margin-right: 5px; margin-left: 0; font-size: 13px; font-weight: 400; color: #676767; overflow: hidden; box-shadow:none; margin-top: 0 !important; background: #E8EBF5; border-radius: 100px; padding: 0 11px; width: fit-content; display: inline-block; letter-spacing: -0.04em; vertical-align: top; line-height: 26px;}
+      .awl_main_list li{border: 1px solid #cdcdcd; box-shadow: none;}
+      .awl_main_list li + li{margin-top: 16px;}
+      .awl_content{padding: 14px 18px; padding-top: 15px;}
+      .awl_categoryNm{justify-content: flex-end;}
+    </style>
+
+</head>
+<body style="background:rgb(247, 249, 255);overflow:hidden;">
+<div class="mojiboard">
+    <div id="headerArea" class="board_menu_box" style="padding: 0;width: 100%; position:relative; top: 0px; left: 0;background-color: #fff; border-bottom: 1px solid #F1F1F1;z-index: 999">
+        <div class="awl_header2" style="width: 100%; height: 50px; max-width: 400px; margin: 0 auto;">
+            <div class="awl_header_l">
+                <img src="/src/main/resources/static/pc/images/portaltalk_title2.png" alt="입SEE" style="width: 99px;">
+            </div>
+            <div class="awl_header_c" style="cursor: pointer;width: fit-content; position: absolute;top: 0;right: 0;">
+<!--                <div class="goKakaoQuestion">-->
+<!--                    <div class="goKakaoQuestion_img">-->
+<!--                        <img src="/src/main/webapp/pc/images/gnb_kakao_talk_img2.svg" alt="질문톡 고객센터" style="width: 16px;">-->
+<!--                    </div>-->
+<!--                    <div class="goKakaoQuestion_txt_area">-->
+<!--                        <span class="goKakaoQuestion_txt1">질문톡 고객센터</span>-->
+<!--                        <span class="goKakaoQuestion_txt2">평일 10시 - 17시</span>-->
+<!--                    </div>-->
+<!--                </div>-->
+            </div>
+            <div class="awl_header_r"></div>
+        </div>
+        <div class="awl_header_b" style="max-width: 384px;margin: 0 auto;padding-left: 16px;font-family:'Apple SD Gothic Neo', dotum, Arial, sans-serif;">
+            <!-- 선택한 곳에 on 추가 -->
+            <a href="javascript:void(0);" class="moji_tab on" data-tab="1">질문톡</a>
+            <a href="javascript:void(0);" class="moji_tab" data-tab="3">멘토칼럼</a>
+            <a href="javascript:void(0);" class="moji_tab" data-tab="4">
+                <img src="/src/main/webapp/pc/images/briefing_icon.png" style="width: 14px; vertical-align: text-top;margin-top: 1px;"> 설명회</a>
+            <a href="javascript:void(0);" id="btn_mytalk" class="moji_tab" data-tab="0">내글</a>
+        </div>
+    </div>
+
+    <!-- 콘텐츠 -->
+    <!-- 삭제 <div class="header_white_fixed"></div> -->
+    <div class="portal_search">
+        <div class="awl_opentalk_header">
+            <div class="both_area_new">
+                <div class="fl_r">
+                    <a href="javascript:void(0);" class="btn_prev"><span class="blind">닫기</span></a>
+                </div>
+                <h2 class="awl_talkTit">검색 결과</h2>
+            </div>
+            <div class="search_area">
+                <div class="in_box">
+                    <a href="javascript:void(0);" class="btn_prev"><span class="blind">닫기</span></a>
+                    <input type="text" id="searchKeyword" placeholder="검색어를 입력해 주세요." value="">
+                    <button type="button" class="btn_del"><span class="blind">삭제</span></button>
+                    <button type="button" class="btn_do_search"><span>검색하기</span></button>
+                </div>
+                <div class="datalist" style="padding: 0px 93px 0px 17px; top: 59px; display: none;">
+                </div>
+            </div>
+        </div>
+        <div class="awl_wrap">
+            <div class="awl_content" style="background-color: #F7F9FF;">
+
+                <ul class="awl_main_list">
+                    <li class="awl_content_reply_list"> <input type="hidden" class="talkNo" value="21602"> <input type="hidden"
+                                                                                                                  class="rankNo" value="1">
+                        <p class="awl_categoryNm">#학습법</p>
+                        <div class="awl_user"> <span class="awl_img"><img src="/src/main/resources/static/apps/images/ico_37.png"
+                                                                          onclick="invokeProfileFn('ff11f042fb8acb879e72ab2db54e264d','N');"></span>
+                            <div class="awl_name" data-no="ff11f042fb8acb879e72ab2db54e264d"> <strong class="awl_nickname">냉동고843</strong>
+                                <span class="blockContentsSpan">
+                                        <div class="blockContents" style="display: none;">
+                                            <div class="drop_bar" id="contentsff11f042fb8acb879e72ab2db54e264d"><img class="moreBlock"
+                                                                                                                     src="/apps/images/ic_more.png"></div>
+                                            <div style="display: none;" class="drop_content"> <a href="javascript:void(0);"
+                                                                                                 onclick="moveReport('ff11f042fb8acb879e72ab2db54e264d', 21602, 1);">신고하기</a> <a
+                                                style="display: none;" class="block"
+                                                onclick="block(this, 'contents', 'ff11f042fb8acb879e72ab2db54e264d', 21602)">차단하기</a> <a
+                                                style="display: none;" class="unBlock"
+                                                onclick="unBlock(this, 'contents', 'ff11f042fb8acb879e72ab2db54e264d', 21602)">차단해제</a>
+                                            </div>
+                                        </div>
+                                    </span> <span class="awl_date" data-no="2022-12-02T23:58:08Z">11월 02일</span> </div> <span class="awl_badge"
+                                                                                                                              data-no="N">멘티</span> <span class="txt_11 btn_question"
+                                                                                                                                                          onclick="getConnectChat('ff11f042fb8acb879e72ab2db54e264d', 'N');" style="display: none;">문의하기</span>
+                        </div>
+                        <p class="con blockContentsTextff11f042fb8acb879e72ab2db54e264d clickable"
+                           onclick="moreContentQuestionFn(this, 21602, 'question');"><span class="highlight">서울</span></p>
+                        <p class="con blockContentsImgff11f042fb8acb879e72ab2db54e264d clickable" style="display: none;"
+                           onclick="moreContentQuestionFn(this, 21602, 'question');"><img class="blockListImg"
+                                                                                          src="/apps/images/im_block_talk_list.png"></p>
+                        <div class="awl_box_state"> <span class="awl_dat clickable"
+                                                          onclick="moreContentQuestionFn(this, 21602, 'question');">1개의 댓글 보기</span>
+                            <div class="awl_abs_right"> <a href="javascript:void(0);" class="btn_select txt_13">채택 포인트 : 500P</a> </div>
+                        </div>
+                    </li>
+                    <li class="awl_content_reply_list"> <input type="hidden" class="talkNo" value="20242"> <input type="hidden"
+                                                                                                                  class="rankNo" value="2">
+                        <p class="awl_categoryNm">#학습법</p>
+                        <div class="awl_user"> <span class="awl_img"><img src="/src/main/resources/static/apps/images/ico_37.png"
+                                                                          onclick="invokeProfileFn('aad54acf9ff97dd6c22ee2ce8a2923dc','N');"></span>
+                            <div class="awl_name" data-no="aad54acf9ff97dd6c22ee2ce8a2923dc"> <strong class="awl_nickname">꾸루루</strong>
+                                <span class="blockContentsSpan">
+                                        <div class="blockContents" style="display: none;">
+                                            <div class="drop_bar" id="contentsaad54acf9ff97dd6c22ee2ce8a2923dc"><img class="moreBlock"
+                                                                                                                     src="/apps/images/ic_more.png"></div>
+                                            <div style="display: none;" class="drop_content"> <a href="javascript:void(0);"
+                                                                                                 onclick="moveReport('aad54acf9ff97dd6c22ee2ce8a2923dc', 20242, 1);">신고하기</a> <a
+                                                style="display: none;" class="block"
+                                                onclick="block(this, 'contents', 'aad54acf9ff97dd6c22ee2ce8a2923dc', 20242)">차단하기</a> <a
+                                                style="display: none;" class="unBlock"
+                                                onclick="unBlock(this, 'contents', 'aad54acf9ff97dd6c22ee2ce8a2923dc', 20242)">차단해제</a>
+                                            </div>
+                                        </div>
+                                    </span> <span class="awl_date" data-no="2022-01-21T09:28:41Z">21년 12월 21일</span> </div> <span
+                                class="awl_badge" data-no="N">멘티</span> <span class="txt_11 btn_question"
+                                                                              onclick="getConnectChat('aad54acf9ff97dd6c22ee2ce8a2923dc', 'N');" style="display: none;">문의하기</span>
+                        </div>
+                        <p class="con blockContentsTextaad54acf9ff97dd6c22ee2ce8a2923dc clickable"
+                           onclick="moreContentQuestionFn(this, 20242, 'question');">1학기 내신 2. 중반대로 마무리 될 것 같고 2학년부터는 이과 계열을 선택했는데
+                            저희학교가 이과가 훨씬 적긴 하지만 1점대까지는 올리고 싶어요 수학 과학 영어는 학원을 다니고 있긴 하지만 제가 <span class="highlight">건강</span>상 백신을 맞기
+                            어려울수도 있어서 2월달부터는 학원을 못 다닐수도 있을것 같아서 걱정이라 방학때 어떤식으로 하면 좋을지 알려주세요...!!</p>
+                        <p class="con blockContentsImgaad54acf9ff97dd6c22ee2ce8a2923dc clickable" style="display: none;"
+                           onclick="moreContentQuestionFn(this, 20242, 'question');"><img class="blockListImg"
+                                                                                          src="/apps/images/im_block_talk_list.png"></p>
+                        <div class="awl_box_state"> <span class="awl_dat clickable"
+                                                          onclick="moreContentQuestionFn(this, 20242, 'question');">8개의 댓글 보기</span>
+                            <div class="awl_abs_right"> <a href="javascript:void(0);" class="btn_endSelect txt_13">질문자 채택(500P)</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="awl_content_reply_list"> <input type="hidden" class="talkNo" value="17861"> <input type="hidden"
+                                                                                                                  class="rankNo" value="3">
+                        <p class="awl_categoryNm">#학교생활</p>
+                        <div class="awl_user"> <span class="awl_img"><img src="/src/main/resources/static/apps/images/ico_37.png"
+                                                                          onclick="invokeProfileFn('1dd7a1e98e826ddf401a6f45e8266b41','N');"></span>
+                            <div class="awl_name" data-no="1dd7a1e98e826ddf401a6f45e8266b41"> <strong class="awl_nickname">달고마</strong>
+                                <span class="blockContentsSpan">
+                                        <div class="blockContents" style="display: none;">
+                                            <div class="drop_bar" id="contents1dd7a1e98e826ddf401a6f45e8266b41"><img class="moreBlock"
+                                                                                                                     src="/apps/images/ic_more.png"></div>
+                                            <div style="display: none;" class="drop_content"> <a href="javascript:void(0);"
+                                                                                                 onclick="moveReport('1dd7a1e98e826ddf401a6f45e8266b41', 17861, 1);">신고하기</a> <a
+                                                style="display: none;" class="block"
+                                                onclick="block(this, 'contents', '1dd7a1e98e826ddf401a6f45e8266b41', 17861)">차단하기</a> <a
+                                                style="display: none;" class="unBlock"
+                                                onclick="unBlock(this, 'contents', '1dd7a1e98e826ddf401a6f45e8266b41', 17861)">차단해제</a>
+                                            </div>
+                                        </div>
+                                    </span> <span class="awl_date" data-no="2021-12-17T12:48:53Z">21년 11월 17일</span> </div> <span
+                                class="awl_badge" data-no="N">멘티</span> <span class="txt_11 btn_question"
+                                                                              onclick="getConnectChat('1dd7a1e98e826ddf401a6f45e8266b41', 'N');" style="display: none;">문의하기</span>
+                        </div>
+                        <p class="con blockContentsText1dd7a1e98e826ddf401a6f45e8266b41 clickable"
+                           onclick="moreContentQuestionFn(this, 17861, 'question');">학종을 준비하고 있는데 1학년 영어 세특이 실수로 다른 학생걸로 적혀서 미디어 관련에서
+                            <span class="highlight">건강</span>관리 내용으로 들어갔는데 아무래도 정정은 어려울것 같고 다른방법이 있을까요? 선생님께선 면접때 언급하면 된다고 하셨는데 아무래도 면접을
+                            모든 학교에서 보는건 아니다 보니 고민되네요!</p>
+                        <p class="con blockContentsImg1dd7a1e98e826ddf401a6f45e8266b41 clickable" style="display: none;"
+                           onclick="moreContentQuestionFn(this, 17861, 'question');"><img class="blockListImg"
+                                                                                          src="/apps/images/im_block_talk_list.png"></p>
+                        <div class="awl_box_state"> <span class="awl_dat clickable"
+                                                          onclick="moreContentQuestionFn(this, 17861, 'question');">7개의 댓글 보기</span>
+                            <div class="awl_abs_right"> <a href="javascript:void(0);" class="btn_endSelect txt_13">질문자 채택(500P)</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="awl_content_reply_list"> <input type="hidden" class="talkNo" value="17235"> <input type="hidden"
+                                                                                                                  class="rankNo" value="4">
+                        <p class="awl_categoryNm">#기타</p>
+                        <div class="awl_user"> <span class="awl_img"><img src="/src/main/resources/static/apps/images/ico_37.png"
+                                                                          onclick="invokeProfileFn('1e76cf8c247da74b7b82ed7d66f738a3','N');"></span>
+                            <div class="awl_name" data-no="1e76cf8c247da74b7b82ed7d66f738a3"> <strong class="awl_nickname">연두미피</strong>
+                                <span class="blockContentsSpan">
+                                        <div class="blockContents" style="display: none;">
+                                            <div class="drop_bar" id="contents1e76cf8c247da74b7b82ed7d66f738a3"><img class="moreBlock"
+                                                                                                                     src="/apps/images/ic_more.png"></div>
+                                            <div style="display: none;" class="drop_content"> <a href="javascript:void(0);"
+                                                                                                 onclick="moveReport('1e76cf8c247da74b7b82ed7d66f738a3', 17235, 1);">신고하기</a> <a
+                                                style="display: none;" class="block"
+                                                onclick="block(this, 'contents', '1e76cf8c247da74b7b82ed7d66f738a3', 17235)">차단하기</a> <a
+                                                style="display: none;" class="unBlock"
+                                                onclick="unBlock(this, 'contents', '1e76cf8c247da74b7b82ed7d66f738a3', 17235)">차단해제</a>
+                                            </div>
+                                        </div>
+                                    </span> <span class="awl_date" data-no="2021-12-05T02:33:07Z">21년 11월 05일</span> </div> <span
+                                class="awl_badge" data-no="N">멘티</span> <span class="txt_11 btn_question"
+                                                                              onclick="getConnectChat('1e76cf8c247da74b7b82ed7d66f738a3', 'N');" style="display: none;">문의하기</span>
+                        </div>
+                        <p class="con blockContentsText1e76cf8c247da74b7b82ed7d66f738a3 clickable"
+                           onclick="moreContentQuestionFn(this, 17235, 'question');">원하는 주제로 글을 쓰면 사회세특에 써주신다고 하는데 청원서 같은거 작성하는거 어떨까요??
+                            <span class="highlight">건강</span>과 복지를 주제로 사회취약계층의 치과진료지윈과 관련하여 글을 쓰고싶은데 어떤 주제로 글을 쓰는게 좋을까요? 그리고 청원서 형태로
+                            작성하는게 괜찮다고 생각하시나요?</p>
+                        <p class="con blockContentsImg1e76cf8c247da74b7b82ed7d66f738a3 clickable" style="display: none;"
+                           onclick="moreContentQuestionFn(this, 17235, 'question');"><img class="blockListImg"
+                                                                                          src="/apps/images/im_block_talk_list.png"></p>
+                        <div class="awl_box_state"> <span class="awl_dat clickable"
+                                                          onclick="moreContentQuestionFn(this, 17235, 'question');">8개의 댓글 보기</span>
+                            <div class="awl_abs_right"> <a href="javascript:void(0);" class="btn_endSelect txt_13">자동 마감(500P)</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="awl_content_reply_list"> <input type="hidden" class="talkNo" value="16543"> <input type="hidden"
+                                                                                                                  class="rankNo" value="5">
+                        <p class="awl_categoryNm">#학교생활</p>
+                        <div class="awl_user"> <span class="awl_img"><img src="/src/main/resources/static/apps/images/ico_37.png"
+                                                                          onclick="invokeProfileFn('0bf28bf56b3428b236d8cf9692c95904','N');"></span>
+                            <div class="awl_name" data-no="0bf28bf56b3428b236d8cf9692c95904"> <strong
+                                class="awl_nickname">하하하하하핳</strong> <span class="blockContentsSpan">
+                                        <div class="blockContents" style="display: none;">
+                                            <div class="drop_bar" id="contents0bf28bf56b3428b236d8cf9692c95904"><img class="moreBlock"
+                                                                                                                     src="/apps/images/ic_more.png"></div>
+                                            <div style="display: none;" class="drop_content"> <a href="javascript:void(0);"
+                                                                                                 onclick="moveReport('0bf28bf56b3428b236d8cf9692c95904', 16543, 1);">신고하기</a> <a
+                                                style="display: none;" class="block"
+                                                onclick="block(this, 'contents', '0bf28bf56b3428b236d8cf9692c95904', 16543)">차단하기</a> <a
+                                                style="display: none;" class="unBlock"
+                                                onclick="unBlock(this, 'contents', '0bf28bf56b3428b236d8cf9692c95904', 16543)">차단해제</a>
+                                            </div>
+                                        </div>
+                                    </span> <span class="awl_date" data-no="2021-11-25T14:55:50Z">21년 10월 25일</span> </div> <span
+                                class="awl_badge" data-no="N">멘티</span> <span class="txt_11 btn_question"
+                                                                              onclick="getConnectChat('0bf28bf56b3428b236d8cf9692c95904', 'N');" style="display: none;">문의하기</span>
+                        </div>
+                        <p class="con blockContentsText0bf28bf56b3428b236d8cf9692c95904 clickable"
+                           onclick="moreContentQuestionFn(this, 16543, 'question');">문과에요.. 생활과 과학이랑 교대랑 어떻게 엮으면 좋을까요?? 만약에 진로랑 엮지 않는다면
+                            할만한 좋은 주제가 있을까요? <span class="highlight">건강</span>과 식품,화장품 ,의복 ,건축 ,교통 ,문화와 과학 같은 내용들이 있어요 </p>
+                        <p class="con blockContentsImg0bf28bf56b3428b236d8cf9692c95904 clickable" style="display: none;"
+                           onclick="moreContentQuestionFn(this, 16543, 'question');"><img class="blockListImg"
+                                                                                          src="/apps/images/im_block_talk_list.png"></p>
+                        <div class="awl_box_state"> <span class="awl_dat clickable"
+                                                          onclick="moreContentQuestionFn(this, 16543, 'question');">8개의 댓글 보기</span>
+                            <div class="awl_abs_right"> <a href="javascript:void(0);" class="btn_endSelect txt_13">자동 마감(500P)</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="awl_content_reply_list"> <input type="hidden" class="talkNo" value="16130"> <input type="hidden"
+                                                                                                                  class="rankNo" value="6">
+                        <p class="awl_categoryNm">#학교생활</p>
+                        <div class="awl_user"> <span class="awl_img"><img src="/src/main/resources/static/apps/images/ico_37.png"
+                                                                          onclick="invokeProfileFn('d39f7d7e03c9d90ffb8e65245a1afdc9','N');"></span>
+                            <div class="awl_name" data-no="d39f7d7e03c9d90ffb8e65245a1afdc9"> <strong
+                                class="awl_nickname">hyii95</strong> <span class="blockContentsSpan">
+                                        <div class="blockContents" style="display: none;">
+                                            <div class="drop_bar" id="contentsd39f7d7e03c9d90ffb8e65245a1afdc9"><img class="moreBlock"
+                                                                                                                     src="/apps/images/ic_more.png"></div>
+                                            <div style="display: none;" class="drop_content"> <a href="javascript:void(0);"
+                                                                                                 onclick="moveReport('d39f7d7e03c9d90ffb8e65245a1afdc9', 16130, 1);">신고하기</a> <a
+                                                style="display: none;" class="block"
+                                                onclick="block(this, 'contents', 'd39f7d7e03c9d90ffb8e65245a1afdc9', 16130)">차단하기</a> <a
+                                                style="display: none;" class="unBlock"
+                                                onclick="unBlock(this, 'contents', 'd39f7d7e03c9d90ffb8e65245a1afdc9', 16130)">차단해제</a>
+                                            </div>
+                                        </div>
+                                    </span> <span class="awl_date" data-no="2021-11-19T16:30:24Z">21년 10월 19일</span> </div> <span
+                                class="awl_badge" data-no="N">멘티</span> <span class="txt_11 btn_question"
+                                                                              onclick="getConnectChat('d39f7d7e03c9d90ffb8e65245a1afdc9', 'N');" style="display: none;">문의하기</span>
+                        </div>
+                        <p class="con blockContentsTextd39f7d7e03c9d90ffb8e65245a1afdc9 clickable"
+                           onclick="moreContentQuestionFn(this, 16130, 'question');">1학년때 작성 한 내용을 2학년때 어떻게 구체화, 심화시키는 건가요? 제가 국가나 종교별
+                            <span class="highlight">건강</span> 문화의 차이에 대해 조사한다면 2,3학년땐 어떤 방식으로 심화시켜야 할까요? 과학 실험을 하거나 탐구 보고서를 작성하면 2,3학년땐
+                            거기서 더 심화된 개념을 하는건가요? 만약 1학년때 화학진동반응을 실험하면 2학년땐 그게 어떻게 활용되는지를 다루는건가요?</p>
+                        <p class="con blockContentsImgd39f7d7e03c9d90ffb8e65245a1afdc9 clickable" style="display: none;"
+                           onclick="moreContentQuestionFn(this, 16130, 'question');"><img class="blockListImg"
+                                                                                          src="/apps/images/im_block_talk_list.png"></p>
+                        <div class="awl_box_state"> <span class="awl_dat clickable"
+                                                          onclick="moreContentQuestionFn(this, 16130, 'question');">8개의 댓글 보기</span>
+                            <div class="awl_abs_right"> <a href="javascript:void(0);" class="btn_endSelect txt_13">질문자 채택(500P)</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="awl_content_reply_list"> <input type="hidden" class="talkNo" value="12866"> <input type="hidden"
+                                                                                                                  class="rankNo" value="7">
+                        <p class="awl_categoryNm">#학교생활</p>
+                        <div class="awl_user"> <span class="awl_img"><img src="/src/main/resources/static/apps/images/ico_37.png"
+                                                                          onclick="invokeProfileFn('ea74f8476e80fb4ab1e39420478450b7','N');"></span>
+                            <div class="awl_name" data-no="ea74f8476e80fb4ab1e39420478450b7"> <strong class="awl_nickname">장지영</strong>
+                                <span class="blockContentsSpan">
+                                        <div class="blockContents" style="display: none;">
+                                            <div class="drop_bar" id="contentsea74f8476e80fb4ab1e39420478450b7"><img class="moreBlock"
+                                                                                                                     src="/apps/images/ic_more.png"></div>
+                                            <div style="display: none;" class="drop_content"> <a href="javascript:void(0);"
+                                                                                                 onclick="moveReport('ea74f8476e80fb4ab1e39420478450b7', 12866, 1);">신고하기</a> <a
+                                                style="display: none;" class="block"
+                                                onclick="block(this, 'contents', 'ea74f8476e80fb4ab1e39420478450b7', 12866)">차단하기</a> <a
+                                                style="display: none;" class="unBlock"
+                                                onclick="unBlock(this, 'contents', 'ea74f8476e80fb4ab1e39420478450b7', 12866)">차단해제</a>
+                                            </div>
+                                        </div>
+                                    </span> <span class="awl_date" data-no="2021-09-30T08:47:29Z">21년 08월 30일</span> </div> <span
+                                class="awl_badge" data-no="N">멘티</span> <span class="txt_11 btn_question"
+                                                                              onclick="getConnectChat('ea74f8476e80fb4ab1e39420478450b7', 'N');" style="display: none;">문의하기</span>
+                        </div>
+                        <p class="con blockContentsTextea74f8476e80fb4ab1e39420478450b7 clickable"
+                           onclick="moreContentQuestionFn(this, 12866, 'question');">생활과 과학 vs 융합과학 중 추천해주세요!! 약학과 목표 생명공학 희망 생활과 과학:
+                            1단원 질병, 치료, 예방 융합과학: 3단원 생명의 진화, 5단원 인류의 <span class="highlight">건강</span>과 기술 저는 문과 과목이라해도 집적적으로 연관되어서 세특을
+                            잘 채우기 위해 생과를 하고싶은데 학교샘들은 이과 과목인 융합과학을 들으라고 하셨어요 1학기에 어느 단원을 배울지는 미정이에요</p>
+                        <p class="con blockContentsImgea74f8476e80fb4ab1e39420478450b7 clickable" style="display: none;"
+                           onclick="moreContentQuestionFn(this, 12866, 'question');"><img class="blockListImg"
+                                                                                          src="/apps/images/im_block_talk_list.png"></p>
+                        <div class="awl_box_state"> <span class="awl_dat clickable"
+                                                          onclick="moreContentQuestionFn(this, 12866, 'question');">6개의 댓글 보기</span>
+                            <div class="awl_abs_right"> <a href="javascript:void(0);" class="btn_endSelect txt_13">질문자 채택(500P)</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="awl_content_reply_list"> <input type="hidden" class="talkNo" value="11730"> <input type="hidden"
+                                                                                                                  class="rankNo" value="8">
+                        <p class="awl_categoryNm">#학교생활</p>
+                        <div class="awl_user"> <span class="awl_img"><img src="/src/main/resources/static/apps/images/ico_37.png"
+                                                                          onclick="invokeProfileFn('21ef2bce73c2603f091af22d0421c6d4','N');"></span>
+                            <div class="awl_name" data-no="21ef2bce73c2603f091af22d0421c6d4"> <strong class="awl_nickname">옴옴옴</strong>
+                                <span class="blockContentsSpan">
+                                        <div class="blockContents" style="display: none;">
+                                            <div class="drop_bar" id="contents21ef2bce73c2603f091af22d0421c6d4"><img class="moreBlock"
+                                                                                                                     src="/apps/images/ic_more.png"></div>
+                                            <div style="display: none;" class="drop_content"> <a href="javascript:void(0);"
+                                                                                                 onclick="moveReport('21ef2bce73c2603f091af22d0421c6d4', 11730, 1);">신고하기</a> <a
+                                                style="display: none;" class="block"
+                                                onclick="block(this, 'contents', '21ef2bce73c2603f091af22d0421c6d4', 11730)">차단하기</a> <a
+                                                style="display: none;" class="unBlock"
+                                                onclick="unBlock(this, 'contents', '21ef2bce73c2603f091af22d0421c6d4', 11730)">차단해제</a>
+                                            </div>
+                                        </div>
+                                    </span> <span class="awl_date" data-no="2021-09-18T07:55:28Z">21년 08월 18일</span> </div> <span
+                                class="awl_badge" data-no="N">멘티</span> <span class="txt_11 btn_question"
+                                                                              onclick="getConnectChat('21ef2bce73c2603f091af22d0421c6d4', 'N');" style="display: none;">문의하기</span>
+                        </div>
+                        <p class="con blockContentsText21ef2bce73c2603f091af22d0421c6d4 clickable"
+                           onclick="moreContentQuestionFn(this, 11730, 'question');">간호학과를 희망해서 동아리가 rcy인데요 이번에 인권 문제로 피피티 만들어서 발표하는
+                            활동을 하는데 <span class="highlight">건강</span>권 침해 괜찮을까요?? 아니면 어떤 좋은 주제가 있을까요? (간호사 태움,남자 간호사 차별, 간호사 호칭 문제는 다른
+                            활동에서 했어요ㅠ)</p>
+                        <p class="con blockContentsImg21ef2bce73c2603f091af22d0421c6d4 clickable" style="display: none;"
+                           onclick="moreContentQuestionFn(this, 11730, 'question');"><img class="blockListImg"
+                                                                                          src="/apps/images/im_block_talk_list.png"></p>
+                        <div class="awl_box_state"> <span class="awl_dat clickable"
+                                                          onclick="moreContentQuestionFn(this, 11730, 'question');">6개의 댓글 보기</span>
+                            <div class="awl_abs_right"> <a href="javascript:void(0);" class="btn_endSelect txt_13">질문자 채택(500P)</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="awl_content_reply_list"> <input type="hidden" class="talkNo" value="11643"> <input type="hidden"
+                                                                                                                  class="rankNo" value="9">
+                        <p class="awl_categoryNm">#학교생활</p>
+                        <div class="awl_user"> <span class="awl_img"><img src="/src/main/resources/static/apps/images/ico_37.png"
+                                                                          onclick="invokeProfileFn('370bcf9505ce6a19b69b744882c5affe','N');"></span>
+                            <div class="awl_name" data-no="370bcf9505ce6a19b69b744882c5affe"> <strong class="awl_nickname">김걩이</strong>
+                                <span class="blockContentsSpan">
+                                        <div class="blockContents" style="display: none;">
+                                            <div class="drop_bar" id="contents370bcf9505ce6a19b69b744882c5affe"><img class="moreBlock"
+                                                                                                                     src="/apps/images/ic_more.png"></div>
+                                            <div style="display: none;" class="drop_content"> <a href="javascript:void(0);"
+                                                                                                 onclick="moveReport('370bcf9505ce6a19b69b744882c5affe', 11643, 1);">신고하기</a> <a
+                                                style="display: none;" class="block"
+                                                onclick="block(this, 'contents', '370bcf9505ce6a19b69b744882c5affe', 11643)">차단하기</a> <a
+                                                style="display: none;" class="unBlock"
+                                                onclick="unBlock(this, 'contents', '370bcf9505ce6a19b69b744882c5affe', 11643)">차단해제</a>
+                                            </div>
+                                        </div>
+                                    </span> <span class="awl_date" data-no="2021-09-17T09:04:07Z">21년 08월 17일</span> </div> <span
+                                class="awl_badge" data-no="N">멘티</span> <span class="txt_11 btn_question"
+                                                                              onclick="getConnectChat('370bcf9505ce6a19b69b744882c5affe', 'N');" style="display: none;">문의하기</span>
+                        </div>
+                        <p class="con blockContentsText370bcf9505ce6a19b69b744882c5affe clickable"
+                           onclick="moreContentQuestionFn(this, 11643, 'question');">학교에서 따로 소인수 공동교육과정인 심리학을 이수할 수 있는데 심리학이 생명과학이나 약학과
+                            관련있을까요? 인지,범죄,성격,상담,뇌과학 등 여러 분야 심리학을 다루는 것 같아요. 의학 연관 활동은 ptsd 이해, 뇌과학, <span class="highlight">건강</span>심리학
+                            등 10번 중 3,4번 있는 것 같습니다. 의학계열이면 심리학을 듣는게 좋다고 하는데 어떤가요? 생기부 기재 가능한다고해요</p>
+                        <p class="con blockContentsImg370bcf9505ce6a19b69b744882c5affe clickable" style="display: none;"
+                           onclick="moreContentQuestionFn(this, 11643, 'question');"><img class="blockListImg"
+                                                                                          src="/apps/images/im_block_talk_list.png"></p>
+                        <div class="awl_box_state"> <span class="awl_dat clickable"
+                                                          onclick="moreContentQuestionFn(this, 11643, 'question');">11개의 댓글 보기</span>
+                            <div class="awl_abs_right"> <a href="javascript:void(0);" class="btn_endSelect txt_13">자동 마감(500P)</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="awl_content_reply_list"> <input type="hidden" class="talkNo" value="5560"> <input type="hidden"
+                                                                                                                 class="rankNo" value="10">
+                        <p class="awl_categoryNm">#기타</p>
+                        <div class="awl_user"> <span class="awl_img"><img src="/src/main/resources/static/apps/images/ico_37.png"
+                                                                          onclick="invokeProfileFn('8a622a1fe1ba71db6cfaea43e77f17eb','N');"></span>
+                            <div class="awl_name" data-no="8a622a1fe1ba71db6cfaea43e77f17eb"> <strong
+                                class="awl_nickname">sj1113</strong> <span class="blockContentsSpan">
+                                        <div class="blockContents" style="display: none;">
+                                            <div class="drop_bar" id="contents8a622a1fe1ba71db6cfaea43e77f17eb"><img class="moreBlock"
+                                                                                                                     src="/apps/images/ic_more.png"></div>
+                                            <div style="display: none;" class="drop_content"> <a href="javascript:void(0);"
+                                                                                                 onclick="moveReport('8a622a1fe1ba71db6cfaea43e77f17eb', 5560, 1);">신고하기</a> <a
+                                                style="display: none;" class="block"
+                                                onclick="block(this, 'contents', '8a622a1fe1ba71db6cfaea43e77f17eb', 5560)">차단하기</a> <a
+                                                style="display: none;" class="unBlock"
+                                                onclick="unBlock(this, 'contents', '8a622a1fe1ba71db6cfaea43e77f17eb', 5560)">차단해제</a>
+                                            </div>
+                                        </div>
+                                    </span> <span class="awl_date" data-no="2021-06-18T14:45:52Z">21년 05월 18일</span> </div> <span
+                                class="awl_badge" data-no="N">멘티</span> <span class="txt_11 btn_question"
+                                                                              onclick="getConnectChat('8a622a1fe1ba71db6cfaea43e77f17eb', 'N');" style="display: none;">문의하기</span>
+                        </div>
+                        <p class="con blockContentsText8a622a1fe1ba71db6cfaea43e77f17eb clickable"
+                           onclick="moreContentQuestionFn(this, 5560, 'question');">사회문화를 듣고있는데 단원 중 자신의 진로와 관련있는 부분 아무거나 골라서 발표하는 활동이
+                            있는데 제가 생각하고있는 건 <span class="highlight">건강</span>, 의료 불평등인데 세특용 독서활동에서 기아에 대해 읽었는데 그 부분에서 의료 불평등을 살짝 언급했는데
+                            괜찮을까요? 또 의료 분야 관련지어서 괜찮은 주제있을까요...?</p>
+                        <p class="con blockContentsImg8a622a1fe1ba71db6cfaea43e77f17eb clickable" style="display: none;"
+                           onclick="moreContentQuestionFn(this, 5560, 'question');"><img class="blockListImg"
+                                                                                         src="/apps/images/im_block_talk_list.png"></p>
+                        <div class="awl_box_state"> <span class="awl_dat clickable"
+                                                          onclick="moreContentQuestionFn(this, 5560, 'question');">8개의 댓글 보기</span>
+                            <div class="awl_abs_right"> <a href="javascript:void(0);" class="btn_endSelect txt_13">자동 마감(500P)</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div id="recommendList" style="position: relative;"></div>
+            </div>
+            <div class="moveQuestion_btn">
+                <div>
+                    <a href="javascript:void(0);" id="moveQuestion3">멘토에게 질문하기<span class="ico_badge"><img src="/src/main/resources/static/apps/images/ico_question_badge.png" alt="5분 답변"></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<div class="popup_all">
+    <div class="popup_alert_moji">
+    </div>
+</div>
+
+<script>
+    /* ui 스크립트 */
+    (function(){
+        const portal_search = document.querySelector('.portal_search');
+        const search_box = document.querySelector('.portal_search .search_area');
+        const awl_wrap = document.querySelector('.portal_search .awl_wrap');
+        const both_area_new = document.querySelector('.portal_search .both_area_new');
+        let awl_opentalk_header_H = document.querySelector('.portal_search .awl_opentalk_header .in_box').clientHeight;
+        let awl_wrap_top = both_area_new.getBoundingClientRect().top + both_area_new.clientHeight + search_box.querySelector('.in_box').clientHeight + 9 + 15 - 100;
+        let portalSearchTop;
+        portal_search.addEventListener('scroll',() => {
+            portalSearchTop = portal_search.scrollTop;
+            if(portalSearchTop > awl_wrap_top){
+                search_box.classList.add('fixed');
+                awl_wrap.style.marginTop = awl_opentalk_header_H+'px';
+            } else{
+                search_box.classList.remove('fixed');
+                awl_wrap.style.marginTop = 0;
+            };
+        });
+    })();
+</script>
+
+
+</body>
+</html>

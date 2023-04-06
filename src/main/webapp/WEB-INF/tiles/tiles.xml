@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+    "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+    "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+    <definition name="empty" template="/WEB-INF/tiles/layout/empty.jsp">
+        <put-attribute name="content" value=""/>
+    </definition>
+
+    <definition name="main" template="/WEB-INF/tiles/layout/main.jsp">
+        <put-attribute name="content" value="" />
+    </definition>
+
+    <definition name="piece-portal-main" template="/WEB-INF/tiles/layout/piece_portal_main.jsp">
+        <put-attribute name="content" value="" />
+    </definition>
+
+    <definition name="error" extends="empty">
+        <put-attribute name="content" value="/WEB-INF/views/error.jsp" />
+    </definition>
+
+    <definition name="pc/*/*" extends="empty">
+        <put-attribute name="content" value="/WEB-INF/view/pc/{1}/{2}.jsp" />
+    </definition>
+
+    <definition name="pc/*/*/*" extends="empty">
+        <put-attribute name="content" value="/WEB-INF/view/pc/{1}/{2}/{3}.jsp" />
+    </definition>
+
+    <definition name="piece-portal/*" extends="piece-portal-main">
+        <put-attribute name="content" value="/WEB-INF/views/piece-portal/{1}.jsp" />
+    </definition>
+
+    <definition name="piece-portal/*/*" extends="piece-portal-main">
+        <put-attribute name="content" value="/WEB-INF/views/piece-portal/{1}/{2}.jsp" />
+    </definition>
+
+    <definition name="piece-portal/*/*/*" extends="piece-portal-main">
+        <put-attribute name="content" value="/WEB-INF/views/piece-portal/{1}/{2}/{3}.jsp" />
+    </definition>
+
+    <definition name="*" extends="main">
+        <put-attribute name="content" value="/WEB-INF/views/{1}.jsp" />
+    </definition>
+
+    <definition name="*/*" extends="main">
+        <put-attribute name="content" value="/WEB-INF/views/{1}/{2}.jsp" />
+    </definition>
+
+    <definition name="*/*/*" extends="main">
+        <put-attribute name="content" value="/WEB-INF/views/{1}/{2}/{3}.jsp" />
+    </definition>
+</tiles-definitions>

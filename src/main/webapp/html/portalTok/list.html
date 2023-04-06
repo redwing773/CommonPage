@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+	<title>질문톡</title>
+	<meta name="author" content="" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport"
+		content="user-scalable=no, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0, width=device-width" />
+	<!--네이버 사이트 소유확인  -->
+	<meta name="naver-site-verification" content="8d48e34ebff1e1fa2c5b3038ae6af460aeeaa3da" />
+	<!-- 구글 사이트 소유확인  -->
+	<meta name="google-site-verification" content="hi6I7UDoxYht05mqfW5BIFzVdij4R9-D6nH4b8brSog" />
+	<!-- 키워드 및 디스크립션 설정 -->
+	<meta name="keywords" content="링커, linker, 생활기록부, 생기부, 자소서, 대학입시컨설팅, 학생부종합전형, 수시컨설팅, 입시컨설팅, 과외구하기" />
+	<meta name="description" content="수험생과 대학생을 연결하는 멘토링 플랫폼 ‘링커’" />
+	<!-- og태그 설정  -->
+	<meta property="og:title" content="링커" />
+	<meta property="og:image" content="https://d9f2e26giax13.cloudfront.net/etc/3876ca5b150c4be29f400b5a7e252f77.png" />
+	<meta property="og:url" content="https://ilinker.co.kr" />
+	<meta property="og:description" content="수험생과 대학생을 연결하는 멘토링 플랫폼 ‘링커’" />
+	<meta property="og:type" content="website" />
+
+	<meta name="facebook-domain-verification" content="5y6omymnhfrh1ncl4itz25hpl90689" />
+
+	<link rel="stylesheet" type="text/css" href="/src/main/resources/static/pc/common/css/common.css?ver=20221111" />
+	<link rel="stylesheet" type="text/css" href="/src/main/resources/static/pc/common/css/responsive.css?ver=202211282" />
+	<link rel="stylesheet" type="text/css" href="/src/main/resources/static/pc/common/css/custom.css?ver=20221102" />
+	<link rel="stylesheet" type="text/css" href="/src/main/resources/static/apps/common/css/awl_couponPost.css?ver=20220407" />
+	<!--쿠폰함 및 우편함 css-->
+	<link rel="stylesheet" type="text/css" href="/src/main/resources/static/apps/common/css/awl_saleInfo.css?ver=202010104" />
+	<!--판매설정 css-->
+	<link rel="stylesheet" type="text/css" href="/src/main/resources/static/pc/common/css/bootstrap-datepicker3.css?ver=20200101" />
+	<link rel="shortcut icon" href="/src/main/resources/static/pc/images/favicon/favicon_etoos_plus_20221227.png">
+</head>
+<body>
+	<div class="mojiboard">
+		
+		<div class="board_menu_box" style="padding: 0;width: 100%; position:relative; top: 0px; left: 0;background-color: #fff; border-bottom: 1px solid #F1F1F1;z-index: 999">
+			<div class="awl_header2" style="width: 100%; height: 50px; max-width: 400px; margin: 0 auto;">
+				<div class="awl_header_l">
+					<img src="/src/main/resources/static/pc/images/portaltalk_title2.png" alt="입SEE" style="width: 99px;">
+				</div>
+				<div class="awl_header_c" style="cursor: pointer;width: fit-content; position: absolute;top: 0;right: 0;">
+<!--					<div class="goKakaoQuestion" style="display: flex;">-->
+<!--                        <div class="goKakaoQuestion_img">-->
+<!--						    <img src="/src/main/resources/static/pc/images/gnb_kakao_talk_img2.svg" alt="질문톡 고객센터" style="width: 16px;">-->
+<!--                        </div>-->
+<!--                        <div class="goKakaoQuestion_txt_area">-->
+<!--                            <span class="goKakaoQuestion_txt1">질문톡 고객센터</span>-->
+<!--                            <span class="goKakaoQuestion_txt2">평일 10시 - 17시</span>-->
+<!--                        </div>-->
+<!--					</div>-->
+					<div class="veiwEventWinner" style="width: 175px; height: 42px; margin-top: 4px;margin-right: 16px; display: none;">
+						<img src="/src/main/resources/static/pc/images/event_winner_btn2.svg" alt="질문톡 이벤트 당첨자" style="transform: translateX(-4px);">
+					</div>
+				</div>
+				<div class="awl_header_r">
+				</div>
+			</div>
+
+			<div class="awl_header_b" style="max-width: 384px;margin: 0 auto;padding-left: 16px;">
+				<a href="javascript:void(0);" id="btn_talk" class="moji_tab on" data-tab="1">질문톡</a>
+				<a href="javascript:void(0);" id="btn_column" class="moji_tab" data-tab="3">멘토칼럼</a>
+				<a href="javascript:void(0);" id="btn_briefing" class="moji_tab" data-tab="4" style="">
+					<img src="/src/main/resources/static/pc/images/briefing_icon.png" style="width: 14px; vertical-align: text-top;margin-top: 1px;"> 설명회
+				</a>
+				<a href="javascript:void(0);" id="btn_mytalk" class="moji_tab" data-tab="0">내글</a>
+			</div>
+		</div>
+
+		<div style="display: flex; justify-content: center; background-color: #F7F9FF; height: calc(100vh - 100px);">
+			<div id="divList" style="position: absolute; top: 100px; height: calc(100vh - 100px); overflow: auto;max-width:400px; width: 400px; margin: 0px auto;">
+				<div class="search_area">
+					<div class="title">질문 검색</div>
+					<div class="in_box">
+						<input type="text" id="searchKeyword" placeholder="검색어를 입력해 주세요.">
+						<button type="button" class="btn_del"><span class="blind">삭제</span></button>
+						<button type="button" class="btn_do_search"><span>검색하기</span></button>
+					</div>
+					<div class="datalist" style="transform: translateZ(10px); display: none;"></div>
+					<div class="awl_content">
+						<div id="recommendList"><div class="rank_list_box">         <div class="rank_list">             <ol>                 <img class="portal_search_icon next" src="/src/main/resources/static/pc/images/portal_search_icon_01_1.png" onclick="moveToRight();">                 <span id="recommend"><li><a href="#self" onclick="recommendWordClick('서울')">#서울</a></li><li><a href="#self" onclick="recommendWordClick('수학')">#수학</a></li><li><a href="#self" onclick="recommendWordClick('사용여부 확인')">#사용여부 확인</a></li><li><a href="#self" onclick="recommendWordClick('자동완성')">#자동완성</a></li><li><a href="#self" onclick="recommendWordClick('대학')">#대학</a></li><li><a href="#self" onclick="recommendWordClick('입시')">#입시</a></li><li><a href="#self" onclick="recommendWordClick('영어')">#영어</a></li><li><a href="#self" onclick="recommendWordClick('??????')">#??????</a></li></span>                 <img class="portal_search_icon prev" src="/src/main/resources/static/pc/images/portal_search_icon_02_1.png" onclick="moveToLeft();">             </ol>         </div>     </div></div>
+					</div>
+				</div>
+		
+				<div class="awl_wrap moji_list" style="background: none; margin-top: 16px;">
+				<!-- 삭제 <img src="/src/main/resources/static/pc/images/image_portal_04.png" class="banner_img" id="moveQuestion2" style="width: 100%; cursor: pointer;"> -->
+				
+					
+				<div class="board_expertMentor_box2 mb10 mt10" style="display: none; padding: 0 18px 0 18px;">
+					<img src="/src/main/resources/static/apps/images/expertMentor_banner_20211230_pc.png" class="expertMentor_banner_img" style="width: 100%; cursor: pointer;">
+				</div>
+					
+				<div class="portal_opentalk_list_filter">
+		
+		
+		
+		
+		
+					<div class="board_mentee_conditionBox">
+						<select class="questioner txt_13" name="questioner">
+							<option value="">질문자 전체</option>
+							<option value="h3">고3</option>
+							<option value="h2">고2</option>
+							<option value="h1">고1</option>
+							<option value="m3">중3</option>
+							<option value="etc">그 외 학년</option>
+						</select>
+						<select class="categoryNo txt_13" name="categoryNo">
+							<option value="0">주제 전체</option>
+							<option value="13">학습법</option>
+							<option value="14">학교생활</option>
+							<option value="15">입시</option>
+							<option value="16">기타</option>
+						</select>
+					</div>
+				</div>
+				<div class="awl_content">
+					
+					<ul class="awl_main_mojilist moji_talk_list" style="padding:0 16px 20px 16px;">
+						<li class="awl_content_reply_list"> <input type="hidden" class="talkNo" value="21867">
+							<p class="awl_categoryNm">#학교생활</p>
+							<div class="awl_user"> <span class="awl_img"><img src="/src/main/resources/static/apps/images/ico_37.png"
+										onclick="invokeProfileFn('f3fb8acc0caddafb5484736ad7bff71a','N');"></span>
+								<div class="awl_name" data-no="f3fb8acc0caddafb5484736ad7bff71a"> <strong
+										class="awl_nickname">큐리에서왔어여</strong> <span class="blockContentsSpan">
+										<div class="blockContents"></div>
+									</span> <span class="awl_date" data-no="2023-01-05" 04:16:30.0="">32분 전</span> </div> <span
+									class="awl_badge" data-no="N">멘티</span> <span class="txt_11 awl_mentorMenteeInfo"> 일반고등학교, 고2(이과)</span>
+							</div>
+							<p class="con blockContentsTextf3fb8acc0caddafb5484736ad7bff71a" onclick="replyExtendFn(this);">54534</p>
+							<p class="con blockContentsImgf3fb8acc0caddafb5484736ad7bff71a" style="display: none;"
+								onclick="replyExtendFn(this);"><img class="blockListImg"
+									src="/src/main/resources/static/apps/images/im_block_talk_list.png"></p>
+							<div class="awl_box_state"> <span class="awl_dat" onclick="replyExtendFn(this);">2개의 댓글 보기</span>
+								<div class="awl_abs_right"> <a href="javascript:void(0);" class="btn_select txt_13">채택 포인트 : 500P</a> </div>
+							</div>
+							<div class="awl_comment_box mt10" id="awl_comment_box">
+								<div class="awl_comment_head mb15"> <img src="/src/main/resources/static/apps/images/ic_arrow_down.png"
+										id="closeToggle" onclick="replyExtend2Fn(this);"> </div>
+								<div class="awl_comment_tit mt10">
+									<p class="adoptPercentForList"><span style="font-weight: bold;color:#000000">질문자의 </span>질문수 <span
+											style="color: #302cc8;" id="questionSum21867"></span> </p> <strong
+										style="display: inline-block; margin-top:-12px;">댓글 2</strong> <a href="javascript:void(0);"
+										onclick="moreContentFn(21867);">댓글 모두 보기</a>
+								</div>
+								<div class="awl_swl_comment">
+									<div class="swl_comment_input mb15"> <textarea rows="2" placeholder="댓글에 이모티콘 입력 불가" id="replyInput"
+											maxlength="500" oncopy="return false;"
+											onpaste="openAlertPopupMoji('댓글 복사,붙여넣기 금지'); return false;" oncut="return false;"
+											onkeyup="replyInputFn(this, 1);" onclick="replyInputFn(this, 1);"></textarea> <a href="#"><img
+												src="/src/main/resources/static/apps/images/ico_send.png" class="sendIcon"
+												onclick="replyInsertFn(this, 1, false);"></a> <span class="countReply">0/500</span> </div>
+								</div>
+								<ul class="swl_comment_list"></ul><!-- 댓글 삽입 부분 -->
+							</div>
+						</li>
+						<li class="awl_content_reply_list"> <input type="hidden" class="talkNo" value="21866">
+							<p class="awl_categoryNm">#학습법</p>
+							<div class="awl_user"> <span class="awl_img"><img src="/src/main/resources/static/apps/images/ico_37.png"
+										onclick="invokeProfileFn('ea819fa2dc51114b8d28d1b3f80d1056','N');"></span>
+								<div class="awl_name" data-no="ea819fa2dc51114b8d28d1b3f80d1056"> <strong
+										class="awl_nickname">형성원872</strong> <span class="blockContentsSpan">
+										<div class="blockContents"></div>
+									</span> <span class="awl_date" data-no="2023-01-05" 01:35:26.0="">3시간 전</span> </div> <span
+									class="awl_badge" data-no="N">멘티</span> <span class="txt_11 awl_mentorMenteeInfo"> 일반고등학교, 고2(이과)</span>
+							</div>
+							<p class="con blockContentsTextea819fa2dc51114b8d28d1b3f80d1056" onclick="replyExtendFn(this);">sddas</p>
+							<p class="con blockContentsImgea819fa2dc51114b8d28d1b3f80d1056" style="display: none;"
+								onclick="replyExtendFn(this);"><img class="blockListImg"
+									src="/src/main/resources/static/apps/images/im_block_talk_list.png"></p>
+							<div class="awl_box_state"> <span class="awl_dat" onclick="replyExtendFn(this);">3개의 댓글 보기</span>
+								<div class="awl_abs_right"> <a href="javascript:void(0);" class="btn_select txt_13">채택 포인트 : 500P</a> </div>
+							</div>
+							<div class="awl_comment_box mt10" id="awl_comment_box">
+								<div class="awl_comment_head mb15"> <img src="/src/main/resources/static/apps/images/ic_arrow_down.png"
+										id="closeToggle" onclick="replyExtend2Fn(this);"> </div>
+								<div class="awl_comment_tit mt10">
+									<p class="adoptPercentForList"><span style="font-weight: bold;color:#000000">질문자의 </span>질문수 <span
+											style="color: #302cc8;" id="questionSum21866"></span> </p> <strong
+										style="display: inline-block; margin-top:-12px;">댓글 3</strong> <a href="javascript:void(0);"
+										onclick="moreContentFn(21866);">댓글 모두 보기</a>
+								</div>
+								<div class="awl_swl_comment">
+									<div class="swl_comment_input mb15"> <textarea rows="2" placeholder="댓글에 이모티콘 입력 불가" id="replyInput"
+											maxlength="500" oncopy="return false;"
+											onpaste="openAlertPopupMoji('댓글 복사,붙여넣기 금지'); return false;" oncut="return false;"
+											onkeyup="replyInputFn(this, 1);" onclick="replyInputFn(this, 1);"></textarea> <a href="#"><img
+												src="/src/main/resources/static/apps/images/ico_send.png" class="sendIcon"
+												onclick="replyInsertFn(this, 1, false);"></a> <span class="countReply">0/500</span> </div>
+								</div>
+								<ul class="swl_comment_list"></ul><!-- 댓글 삽입 부분 -->
+							</div>
+						</li>
+						<li class="awl_content_reply_list"> <input type="hidden" class="talkNo" value="21865">
+							<p class="awl_categoryNm">#입시</p>
+							<div class="awl_user"> <span class="awl_img"><img src="/src/main/resources/static/apps/images/ico_37.png"
+										onclick="invokeProfileFn('657bb932c7d8e64ff878efdbe6e18c93','N');"></span>
+								<div class="awl_name" data-no="657bb932c7d8e64ff878efdbe6e18c93"> <strong
+										class="awl_nickname">김정은614</strong> <span class="blockContentsSpan">
+										<div class="blockContents"></div>
+									</span> <span class="awl_date" data-no="2023-01-05" 01:18:41.0="">3시간 전</span> </div> <span
+									class="awl_badge" data-no="N">멘티</span> <span class="txt_11 awl_mentorMenteeInfo"> 수험생, 비공개</span>
+							</div>
+							<p class="con blockContentsText657bb932c7d8e64ff878efdbe6e18c93" onclick="replyExtendFn(this);">
+								TESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTEST
+							</p>
+							<p class="con blockContentsImg657bb932c7d8e64ff878efdbe6e18c93" style="display: none;"
+								onclick="replyExtendFn(this);"><img class="blockListImg"
+									src="/src/main/resources/static/apps/images/im_block_talk_list.png"></p>
+							<div class="awl_box_state"> <span class="awl_dat" onclick="replyExtendFn(this);">5개의 댓글 보기</span>
+								<div class="awl_abs_right"> <a href="javascript:void(0);" class="btn_endSelect txt_13">질문자 채택(500P)</a>
+								</div>
+							</div>
+							<div class="awl_comment_box mt10" id="awl_comment_box">
+								<div class="awl_comment_head mb15"> <img src="/src/main/resources/static/apps/images/ic_arrow_down.png"
+										id="closeToggle" onclick="replyExtend2Fn(this);"> </div>
+								<div class="awl_comment_tit mt10">
+									<p class="adoptPercentForList"><span style="font-weight: bold;color:#000000">질문자의 </span>질문수 <span
+											style="color: #302cc8;" id="questionSum21865"></span> </p> <strong
+										style="display: inline-block; margin-top:-12px;">댓글 5</strong> <a href="javascript:void(0);"
+										onclick="moreContentFn(21865);">댓글 모두 보기</a>
+								</div>
+								<div class="awl_swl_comment">
+									<div class="swl_comment_input mb15"> <textarea rows="2" placeholder="댓글에 이모티콘 입력 불가" id="replyInput"
+											maxlength="500" oncopy="return false;"
+											onpaste="openAlertPopupMoji('댓글 복사,붙여넣기 금지'); return false;" oncut="return false;"
+											onkeyup="replyInputFn(this, 1);" onclick="replyInputFn(this, 1);"></textarea> <a href="#"><img
+												src="/src/main/resources/static/apps/images/ico_send.png" class="sendIcon"
+												onclick="replyInsertFn(this, 1, true);"></a> <span class="countReply">0/500</span> </div>
+								</div>
+								<ul class="swl_comment_list"></ul><!-- 댓글 삽입 부분 -->
+							</div>
+						</li>
+						<li class="awl_content_reply_list"> <input type="hidden" class="talkNo" value="21864">
+							<p class="awl_categoryNm">#학습법</p>
+							<div class="awl_user"> <span class="awl_img"><img src="/src/main/resources/static/apps/images/ico_37.png"
+										onclick="invokeProfileFn('6c21c6714057804f151ba93654a142d7','N');"></span>
+								<div class="awl_name" data-no="6c21c6714057804f151ba93654a142d7"> <strong class="awl_nickname">샌드</strong>
+									<span class="blockContentsSpan">
+										<div class="blockContents"></div>
+									</span> <span class="awl_date" data-no="2023-01-05" 00:12:59.0="">4시간 전</span> </div> <span
+									class="awl_badge" data-no="N">멘티</span> <span class="txt_11 awl_mentorMenteeInfo"> 자율고등학교,
+									고2(특성화)</span>
+							</div>
+							<p class="con blockContentsText6c21c6714057804f151ba93654a142d7" onclick="replyExtendFn(this);">AAAAA</p>
+							<p class="con blockContentsImg6c21c6714057804f151ba93654a142d7" style="display: none;"
+								onclick="replyExtendFn(this);"><img class="blockListImg"
+									src="/src/main/resources/static/apps/images/im_block_talk_list.png"></p>
+							<div class="awl_box_state"> <span class="awl_dat" onclick="replyExtendFn(this);">1개의 댓글 보기</span>
+								<div class="awl_abs_right"> <a href="javascript:void(0);" class="btn_select txt_13">채택 포인트 : 500P</a> </div>
+							</div>
+							<div class="awl_comment_box mt10" id="awl_comment_box">
+								<div class="awl_comment_head mb15"> <img src="/src/main/resources/static/apps/images/ic_arrow_down.png"
+										id="closeToggle" onclick="replyExtend2Fn(this);"> </div>
+								<div class="awl_comment_tit mt10">
+									<p class="adoptPercentForList"><span style="font-weight: bold;color:#000000">질문자의 </span>질문수 <span
+											style="color: #302cc8;" id="questionSum21864"></span> </p> <strong
+										style="display: inline-block; margin-top:-12px;">댓글 1</strong> <a href="javascript:void(0);"
+										onclick="moreContentFn(21864);">댓글 모두 보기</a>
+								</div>
+								<div class="awl_swl_comment">
+									<div class="swl_comment_input mb15"> <textarea rows="2" placeholder="댓글에 이모티콘 입력 불가" id="replyInput"
+											maxlength="500" oncopy="return false;"
+											onpaste="openAlertPopupMoji('댓글 복사,붙여넣기 금지'); return false;" oncut="return false;"
+											onkeyup="replyInputFn(this, 1);" onclick="replyInputFn(this, 1);"></textarea> <a href="#"><img
+												src="/src/main/resources/static/apps/images/ico_send.png" class="sendIcon"
+												onclick="replyInsertFn(this, 1, false);"></a> <span class="countReply">0/500</span> </div>
+								</div>
+								<ul class="swl_comment_list"></ul><!-- 댓글 삽입 부분 -->
+							</div>
+						</li>
+						<li class="awl_content_reply_list"> <input type="hidden" class="talkNo" value="21863">
+							<p class="awl_categoryNm">#학습법</p>
+							<div class="awl_user"> <span class="awl_img"><img src="/src/main/resources/static/apps/images/ico_37.png"
+										onclick="invokeProfileFn('fc268ad7b06537cec799a970e454d4ab','N');"></span>
+								<div class="awl_name" data-no="fc268ad7b06537cec799a970e454d4ab"> <strong
+										class="awl_nickname">형성원962</strong> <span class="blockContentsSpan">
+										<div class="blockContents"></div>
+									</span> <span class="awl_date" data-no="2023-01-05" 00:06:00.0="">4시간 전</span> </div> <span
+									class="awl_badge" data-no="N">멘티</span> <span class="txt_11 awl_mentorMenteeInfo"> 일반고등학교, 고2(문과)</span>
+							</div>
+							<p class="con blockContentsTextfc268ad7b06537cec799a970e454d4ab" onclick="replyExtendFn(this);">1205 알림톡</p>
+							<p class="con blockContentsImgfc268ad7b06537cec799a970e454d4ab" style="display: none;"
+								onclick="replyExtendFn(this);"><img class="blockListImg"
+									src="/src/main/resources/static/apps/images/im_block_talk_list.png"></p>
+							<div class="awl_box_state"> <span class="awl_dat" onclick="replyExtendFn(this);">4개의 댓글 보기</span>
+								<div class="awl_abs_right"> <a href="javascript:void(0);" class="btn_select txt_13">채택 포인트 : 500P</a> </div>
+							</div>
+							<div class="awl_comment_box mt10" id="awl_comment_box">
+								<div class="awl_comment_head mb15"> <img src="/src/main/resources/static/apps/images/ic_arrow_down.png"
+										id="closeToggle" onclick="replyExtend2Fn(this);"> </div>
+								<div class="awl_comment_tit mt10">
+									<p class="adoptPercentForList"><span style="font-weight: bold;color:#000000">질문자의 </span>질문수 <span
+											style="color: #302cc8;" id="questionSum21863"></span> </p> <strong
+										style="display: inline-block; margin-top:-12px;">댓글 4</strong> <a href="javascript:void(0);"
+										onclick="moreContentFn(21863);">댓글 모두 보기</a>
+								</div>
+								<div class="awl_swl_comment">
+									<div class="swl_comment_input mb15"> <textarea rows="2" placeholder="댓글에 이모티콘 입력 불가" id="replyInput"
+											maxlength="500" oncopy="return false;"
+											onpaste="openAlertPopupMoji('댓글 복사,붙여넣기 금지'); return false;" oncut="return false;"
+											onkeyup="replyInputFn(this, 1);" onclick="replyInputFn(this, 1);"></textarea> <a href="#"><img
+												src="/src/main/resources/static/apps/images/ico_send.png" class="sendIcon"
+												onclick="replyInsertFn(this, 1, false);"></a> <span class="countReply">0/500</span> </div>
+								</div>
+								<ul class="swl_comment_list"></ul><!-- 댓글 삽입 부분 -->
+							</div>
+						</li>
+						<li class="awl_content_reply_list"> <input type="hidden" class="talkNo" value="21862">
+							<p class="awl_categoryNm">#학습법</p>
+							<div class="awl_user"> <span class="awl_img"><img src="/src/main/resources/static/apps/images/ico_37.png"
+										onclick="invokeProfileFn('3ac7f9d69d16029b32d0474b2e23f968','N');"></span>
+								<div class="awl_name" data-no="3ac7f9d69d16029b32d0474b2e23f968"> <strong
+										class="awl_nickname">qwer22</strong> <span class="blockContentsSpan">
+										<div class="blockContents"></div>
+									</span> <span class="awl_date" data-no="2023-01-02" 06:54:18.0="">금요일</span> </div> <span
+									class="awl_badge" data-no="N">멘티</span> <span class="txt_11 awl_mentorMenteeInfo"> 초등졸업 검정고시 </span>
+							</div>
+							<p class="con blockContentsText3ac7f9d69d16029b32d0474b2e23f968" onclick="replyExtendFn(this);">ㅇㄴㅁㄹㄴㅁㄹ</p>
+							<p class="con blockContentsImg3ac7f9d69d16029b32d0474b2e23f968" style="display: none;"
+								onclick="replyExtendFn(this);"><img class="blockListImg"
+									src="/src/main/resources/static/apps/images/im_block_talk_list.png"></p>
+							<div class="awl_box_state"> <span class="awl_dat" onclick="replyExtendFn(this);">3개의 댓글 보기</span>
+								<div class="awl_abs_right"> </div>
+							</div>
+							<div class="awl_comment_box mt10" id="awl_comment_box">
+								<div class="awl_comment_head mb15"> <img src="/src/main/resources/static/apps/images/ic_arrow_down.png"
+										id="closeToggle" onclick="replyExtend2Fn(this);"> </div>
+								<div class="awl_comment_tit mt10">
+									<p class="adoptPercentForList"><span style="font-weight: bold;color:#000000">질문자의 </span>질문수 <span
+											style="color: #302cc8;" id="questionSum21862"></span> </p> <strong
+										style="display: inline-block; margin-top:-12px;">댓글 3</strong> <a href="javascript:void(0);"
+										onclick="moreContentFn(21862);">댓글 모두 보기</a>
+								</div>
+								<div class="awl_swl_comment">
+									<div class="swl_comment_input mb15"> <textarea rows="2" placeholder="댓글에 이모티콘 입력 불가" id="replyInput"
+											maxlength="500" oncopy="return false;"
+											onpaste="openAlertPopupMoji('댓글 복사,붙여넣기 금지'); return false;" oncut="return false;"
+											onkeyup="replyInputFn(this, 1);" onclick="replyInputFn(this, 1);"></textarea> <a href="#"><img
+												src="/src/main/resources/static/apps/images/ico_send.png" class="sendIcon"
+												onclick="replyInsertFn(this, 1, true);"></a> <span class="countReply">0/500</span> </div>
+								</div>
+								<ul class="swl_comment_list"></ul><!-- 댓글 삽입 부분 -->
+							</div>
+						</li>
+						<li class="awl_content_reply_list"> <input type="hidden" class="talkNo" value="21861">
+							<p class="awl_categoryNm">#학습법</p>
+							<div class="awl_user"> <span class="awl_img"><img src="/src/main/resources/static/apps/images/ico_37.png"
+										onclick="invokeProfileFn('07f3d8a47776e3f98ad5ec2f5b045ee5','N');"></span>
+								<div class="awl_name" data-no="07f3d8a47776e3f98ad5ec2f5b045ee5"> <strong
+										class="awl_nickname">qwer1122</strong> <span class="blockContentsSpan">
+										<div class="blockContents"></div>
+									</span> <span class="awl_date" data-no="2023-01-02" 06:43:26.0="">금요일</span> </div> <span
+									class="awl_badge" data-no="N">멘티</span> <span class="txt_11 awl_mentorMenteeInfo"> 초4 </span>
+							</div>
+							<p class="con blockContentsText07f3d8a47776e3f98ad5ec2f5b045ee5" onclick="replyExtendFn(this);">sdagag</p>
+							<p class="con blockContentsImg07f3d8a47776e3f98ad5ec2f5b045ee5" style="display: none;"
+								onclick="replyExtendFn(this);"><img class="blockListImg"
+									src="/src/main/resources/static/apps/images/im_block_talk_list.png"></p>
+							<div class="awl_box_state"> <span class="awl_dat" onclick="replyExtendFn(this);">1개의 댓글 보기</span>
+								<div class="awl_abs_right"> <a href="javascript:void(0);" class="btn_select txt_13">채택 포인트 : 500P</a> </div>
+							</div>
+							<div class="awl_comment_box mt10" id="awl_comment_box">
+								<div class="awl_comment_head mb15"> <img src="/src/main/resources/static/apps/images/ic_arrow_down.png"
+										id="closeToggle" onclick="replyExtend2Fn(this);"> </div>
+								<div class="awl_comment_tit mt10">
+									<p class="adoptPercentForList"><span style="font-weight: bold;color:#000000">질문자의 </span>질문수 <span
+											style="color: #302cc8;" id="questionSum21861"></span> </p> <strong
+										style="display: inline-block; margin-top:-12px;">댓글 1</strong> <a href="javascript:void(0);"
+										onclick="moreContentFn(21861);">댓글 모두 보기</a>
+								</div>
+								<div class="awl_swl_comment">
+									<div class="swl_comment_input mb15"> <textarea rows="2" placeholder="댓글에 이모티콘 입력 불가" id="replyInput"
+											maxlength="500" oncopy="return false;"
+											onpaste="openAlertPopupMoji('댓글 복사,붙여넣기 금지'); return false;" oncut="return false;"
+											onkeyup="replyInputFn(this, 1);" onclick="replyInputFn(this, 1);"></textarea> <a href="#"><img
+												src="/src/main/resources/static/apps/images/ico_send.png" class="sendIcon"
+												onclick="replyInsertFn(this, 1, false);"></a> <span class="countReply">0/500</span> </div>
+								</div>
+								<ul class="swl_comment_list"></ul><!-- 댓글 삽입 부분 -->
+							</div>
+						</li>
+						
+					</ul>
+				</div>
+				<div class="awl_fixer_plus2 on" style="bottom: 79px; right: 54.5px;">
+					
+					<a href="javascript:void(0);" id="moveTop" class="btn_top_moji" style="display: none; background: url(&quot;/apps/images/ic_moji_top_pc.png&quot;);"><span class="blind">TOP</span></a>
+				</div>
+				<div class="moveQuestion_btn" style="position: fixed; left: 0;width: 100%; text-align: center;z-index: 10;height: 74px; bottom: 0;">
+					<div style="background-color: rgb(247, 249, 255); height: inherit; width: 100% ;min-width: 328px; margin: 0 auto;">
+						<a href="javascript:void(0);" id="moveQuestion" style="font-size: 16px;cursor: pointer;width:100%;max-width: 364px; min-width: 328px; height: 52px;background: #302cc8; border-radius: 6px; color: #fff;display: inline-block; line-height: 52px;">
+							멘토에게 질문하기<span class="ico_badge" style="position: relative;display: inline-block;top: -10px;margin-left: 8px;margin-right: -60px;height: 40px;animation: ani_bounce 1s ease-in-out infinite;"><img src="/src/main/resources/static/apps/images/ico_question_badge.png" width="70" alt="5분 답변"></span>
+						</a>
+					</div>
+				</div>
+		
+				<div class="awl_wrap moji_mylist" style="display: none; background: none;">
+					<div class="awl_content">
+							
+						<ul class="awl_main_mojimylist moji_talk_list" style="padding:0 16px 88px 16px;"></ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+
+
+	</div>
+
+	
+
+	
+
+</body>
+
+</html>

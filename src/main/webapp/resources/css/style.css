@@ -1,0 +1,129 @@
+@charset "UTF-8";
+
+/* Font */
+@font-face {font-family: "Noto Sans KR";font-style: normal;font-weight: 400;src: local("Noto Sans KR Regular"), local("NotoSansKR-Regular"), url(../fonts/NotoSans-Regular.woff2) format("woff2"), url(../fonts/NotoSans-Regular.woff) format("woff");}
+@font-face {font-family: "Noto Sans KR";font-style: normal;font-weight: 500;src: local("Noto Sans KR Medium"), local("NotoSansKR-Medium"), url(../fonts/NotoSans-Medium.woff2) format("woff2"), url(../fonts/NotoSans-Medium.woff) format("woff");}
+@font-face {font-family: "Noto Sans KR";font-style: normal;font-weight: 700;src: local("Noto Sans KR Bold"), local("NotoSansKR-Bold"), url(../fonts/NotoSans-Bold.woff2) format("woff2"), url(../fonts/NotoSans-Bold.woff) format("woff");}
+
+/* Reset */
+* {-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button,figure {margin:0;padding:0;}
+body {font-family: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", Dotum, Hevetica, Arial, sans-serif;background-color:#fff;font-size:14px;line-height:1.5;font-weight:400;color:#000;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;}
+h1,h2,h3,h4,h5,h6,input,textarea,keygen,select,button {font-family:"Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", Dotum, Hevetica, Arial, sans-serif;word-break:keep-all;}
+fieldset,img {border:0 none;}
+img {max-width:100%;height:auto;vertical-align:top;}
+dl,ul,ol,li {list-style:none;}
+input,select,textarea,button {border:0;vertical-align:middle;}
+button {border:0 none;background-color:transparent;cursor:pointer;}
+table {width:100%;border-collapse:collapse;border-spacing:0;}
+caption {visibility:hidden;font-size:0;line-height:0;}
+input::-ms-clear,input::-ms-reveal {display:none;width:0;height:0;}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {display:none;}
+input::-webkit-input-placeholder,
+input::-moz-placeholder,
+input:-ms-input-placeholder,
+input:-moz-placeholder {color:#ddd;}
+input[disabled] {background-color:#ddd;color:#333;-webkit-text-fill-color:#333;opacity:1;}
+button,input,textarea,select {-webkit-appearance:none;-webkit-border-radius:0;border-radius:0;outline:none;}
+select::-ms-expand {display:none;}
+section,header,footer,main,article,aside,nav,figcaption,figure {display:block;}
+address,caption,cite,code,dfn,em,var {font-style:normal;font-weight:normal;}
+strong {font-weight:700;}
+a, a:active, a:hover {color:inherit;text-decoration:none;}
+
+/* Common */
+.acc-item .acc-content{display:none;}
+.acc-item.active .acc-content {display:block;}
+
+.switch {position:relative;display:block;width:38px;height:16px;}
+.switch input {width:0;height:0;opacity:0;}
+.switch .slider {position:absolute;top:0;left:0;right:0;bottom:0;border-radius:8px;background-color:#D2D9EF;cursor:pointer;-webkit-transition:.4s;transition:.4s;}
+.switch .slider::before {content:'';position:absolute;top:2px;left:2px;border-radius:100%;width:12px;height:12px;background-color:#FFF;-webkit-transition:.4s;transition:.4s;}
+.switch input:checked+.slider {background-color:#2C80FF;}
+.switch input:checked + .slider:before {-webkit-transform:translateX(22px);-ms-transform:translateX(22px);transform:translateX(22px);}
+
+/* Layout */
+html,body {overflow:hidden;}
+body {margin:0 auto;max-width:400px;min-height:100%;background-color:#F7F9FF;overflow:visible !important;}
+.container {position:relative;max-width:400px;}
+.blind {display:block;width:0;height:0;margin:0;padding:0;line-height:0;font-size:0;overflow:hidden;}
+
+/* Visual Swiper */
+.visual-swiper-box {position:relative;padding:16px 16px 36px;}
+.visual-swiper {overflow:hidden;position:relative;border-radius:10px;height:160px;background-color:#EAEAFA;}
+.visual-item img {width:100%;height:160px;}
+.visual-pagination {display:flex;justify-content:center;position:absolute;left:0;bottom:18px;padding:0 16px;width: 100%;z-index:1;}
+.visual-pagination .swiper-pagination-bullet {width:6px;height:6px;background-color:#C6C7CC;opacity:1;margin: 0 4px;}
+.visual-pagination .swiper-pagination-bullet-active {background-color:#2C80FF;}
+.visual-navigation {position:absolute;top:0;width:30px;height:160px;cursor:pointer;z-index:2;}
+.visual-navigation[aria-disabled="true"] {opacity:.3;cursor:default;}
+.visual-navigation-prev {left:0;background:url(../images/portalTok/icon_navigation_prev.png) no-repeat right center;background-size:30px auto;}
+.visual-navigation-next {right:0;background:url(../images/portalTok/icon_navigation_next.png) no-repeat left center;background-size:30px auto;}
+
+/* Explain Option */
+.explain-option-box {display:flex;justify-content:space-between;padding:0 16px;}
+.switch-box .title {font-size:13px;font-weight:500;line-height:1;color:#9F9F9F;letter-spacing:-0.05em;}
+.switch-box .switch {margin-top:9px;}
+.filter-box {position:relative;border-radius:6px;width:294px;height:44px;background-color:#FFF;}
+.filter-box .filter-select {display:block;position:relative;padding:0 14px;border:1px solid #D2D9EF;border-radius:6px;font-size:14px;line-height:42px;font-weight:500;color:#242424;letter-spacing:-0.02em;}
+.filter-box .filter-select.unchecked {color:#9F9F9F;}
+.filter-box .filter-select::after {content:'';display:block;position:absolute;top:19px;right:18px;border-top:5px solid #242424;border-left:4px solid transparent;border-right:4px solid transparent;}
+.filter-box .filter-select[data-value="all"] {color:#9F9F9F;}
+.filter-box .filter-options {overflow:hidden;display:none;position:absolute;top:0;left:0;border:1px solid #D2D9EF;border-radius:6px;width:100%;background-color:#FFF;box-shadow:0 6px 12px rgba(0, 0, 0, .15);z-index:1;}
+.filter-box .filter-options .option-head {display:flex;justify-content:space-between;align-items: center;padding:10px 14px 10px 17px;}
+.filter-box .filter-options .option-head .btn-all {display:block;font-size:13px;line-height:22px;font-weight:500;color:#242424;letter-spacing:-0.02em;}
+.filter-box .filter-options .option-head .btn-all::before {content:'';display:inline-block;margin-right:6px;border:1px solid #D2D9EF;border-radius:4px;width:20px;height:20px;background:#FFF;vertical-align:top;}
+.filter-box .filter-options .option-head .btn-all.on::before {border-color:#4C74FF;background:url(../images/portalTok/icon_check_blue.png) no-repeat 50% 50%;background-size:10px auto;}
+.filter-box .filter-options .option-head .btn-close {overflow:hidden;display:block;border-radius:50%;width:18px;height:18px;background:#C2C2C2 url(../images/portalTok/icon_close_white.png) no-repeat center center;background-size:8px auto;text-align:left;text-indent:-9999px;}
+.filter-box .filter-options .filter-list {overflow:hidden;padding:5px 12px 16px;border-top:1px solid #D2D9EF;}
+.filter-box .filter-options .filter-item {float:left;padding:5px;}
+.filter-box .filter-options .filter-item a {display:block;padding:0 16px;border:1px solid #D2D9EF;border-radius:6px;font-size:13px;line-height:32px;font-weight:500;color:#242424;letter-spacing:-0.02em;text-align:center;}
+.filter-box .filter-options .filter-item.on a {border-color:#4C74FF;color:#0039FF;font-weight:700;}
+.filter-box .filter-options .btn-select {display:block;background-color:#302CC8;font-size:14px;line-height:46px;font-weight:700;color:#FFF;text-align:center;letter-spacing:-0.02em;}
+.filter-box .filter-options .btn-select.disabled {background-color:#C8C8C8;cursor:default;}
+.filter-box.on .filter-options {display:block;}
+
+/* Explain List */
+.explain-list-box {padding:0 16px;}
+.explain-list {position:relative;padding:10px 0 20px;}
+.explain-item {position:relative;overflow:hidden;margin-top:10px;border:1px solid #D2D9EF;border-radius:10px;background-color:#FFF;}
+.explain-item .info {display:flex;align-items:center;padding:16px;}
+.explain-item .info .thumb {flex-shrink:0;align-self:flex-start;width:54px;height:54px;}
+.explain-item .info .title {display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;width:100%;padding-right:20px;margin-left:11px;font-size:16px;line-height:21px;color:#242424;font-weight:500;word-break:keep-all;letter-spacing:-0.02em;text-overflow:ellipsis;white-space:normal;}
+.explain-item .acc-btn {position:absolute;top:30px;right:12px;width:24px;height:24px;background:url('../images/portalTok/icon_acc_arrow.png') no-repeat center center;background-size:24px auto;}
+.explain-item.active .acc-btn {transform:rotate(180deg);-webkit-transform:rotate(180deg);}
+.explain-item .description {padding:0 16px;}
+.explain-item .description .text {display:flex;font-size:14px;line-height:21px;font-weight:400;color:#71737C;word-break:keep-all;letter-spacing:-0.02em;}
+.explain-item .description .text em {flex-shrink:0;width:32px;color:#242424;}
+.explain-item .description p+p {margin-top:3px;}
+.explain-item .link-shortcut {display:flex;align-items:center;justify-content:center;margin-top:22px;width:100%;height:46px;background-color:#ccc;font-size:14px;line-height:19px;font-weight:700;color:#FFF;text-align:center;letter-spacing:-0.02em;}
+.explain-item .link-shortcut::before {content:'';display:block;margin-right:7px;width:13px;height:15px;background:url(../images/portalTok/icon_explain_shortcut.png) no-repeat;background-size:100% auto;}
+.explain-item.cheongsol .link-shortcut {background-color:#009F87;}
+.explain-item.hyperacademy .link-shortcut {background-color:#CB662E;}
+.explain-item.etoos247 .link-shortcut {background-color:#6EB635;}
+.explain-item.active .info {padding:20px 16px;}
+
+/* Explain None */
+.explain-none-box {padding:0 16px;}
+.explain-none-box .explain-none {padding-top:50px;}
+.explain-none-box .explain-none .emoji {display:block;margin:0 auto 13px;}
+.explain-none-box .explain-none .emoji.no-filter {width:44px;}
+.explain-none-box .explain-none .emoji.no-pt {width:47px;}
+.explain-none-box .explain-none .emoji.error-check {width:48px;}
+.explain-none-box .explain-none .emoji.error-temporary {width:45px;}
+.explain-none-box .explain-none .more-btn {display:block;margin-top:39px;padding:12px 0;background-color:#fff;border:2px solid #0039FF;border-radius:6px;font-size:15px;font-weight:700;color:#0039FF;text-align:center;}
+.explain-none-box .explain-none .title {font-size:15px;font-weight:500;color:#242424;letter-spacing:-0.02em;text-align:center;}
+.explain-none-box .explain-none .desc {font-size:15px;font-weight:400;color:#71737C;letter-spacing:-0.02em;text-align:center;}
+.explain-none-box .explain-none.error {padding-top:125px;}
+.explain-none-box.layer-popup .explain-none.error {padding:80px 0;}
+
+/* Explain List Common*/
+.explain-list-wrap {display: none;}
+
+/* Top Btn */
+.awl_fixer_plus2 {position:fixed;right:50%;bottom:79px;z-index:7;margin-right:-190px;display: none}
+.btn_top_moji {display:inline-block;width:45px;height:45px;background:url(../images/portalTok/icon_top.png) center center no-repeat;background-size:contain;box-shadow:0 3px 5px 0 rgb(0 0 0 / 16%);border-radius:30px;}
+.btn_top_moji .blind {display:block;width:0;height:0;margin:0;padding:0;line-height:0;font-size:0;overflow:hidden;}

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>링커&amp;모지</title>
+	<meta name="author" content="" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport"
+		content="user-scalable=no, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0, width=device-width" />
+	<link rel="stylesheet" type="text/css" href="../../resources/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="../../resources/css/library/swiper.min.css" />
+	<script src="../../resources/js/library/swiper.min.js"></script>
+</head>
+
+<body>
+	<!-- 공통 헤더 -->
+	<section id="tokFrame"></section>
+	
+	<section class="visual-swiper-box">
+		<div class="swiper-container visual-swiper">
+			<div class="swiper-wrapper visual-list">
+				<div class="swiper-slide visual-item">
+					<img src="https://via.placeholder.com/328x160.png?text=Size: 100% x 160px" alt="" />
+				</div>
+			</div>
+			<div class="visual-navigation visual-navigation-prev"></div>
+			<div class="visual-navigation visual-navigation-next"></div>
+		</div>
+		<div class="visual-pagination"></div>
+		<script>
+			// ### HTML Template ###
+			const visualListData = [
+				{ url: 'https://via.placeholder.com/360x160.png?text=Size: 100% x 160px', alt: '' },
+				{ url: 'https://via.placeholder.com/360x160.png?text=Size: 100% x 160px', alt: '' },
+				{ url: 'https://via.placeholder.com/360x160.png?text=Size: 100% x 160px', alt: '' },
+			];
+			const $visualList =  document.querySelector('.visual-list');
+			const visualListHTML = visualListData.reduce(function(html, item) {
+				return html +
+					'<div class="swiper-slide visual-item">' +
+						'<img src="' + item.url + '" alt="' + item.alt + '" />' +
+					'</div>';
+			}, '');
+			$visualList.innerHTML = visualListHTML;
+
+			// Action: Swiper 실행
+			setTimeout(function() {
+				let visualSlide = $visualList.querySelectorAll('.swiper-slide').length;
+				const visualSwiper = new Swiper('.visual-swiper', {
+					loop: (visualSlide > 1) ? true : false,
+					autoplay: {
+						delay: 3000,
+					},
+					speed: 1200,
+					pagination: {
+						el: '.visual-pagination',
+					},
+					navigation: {
+						prevEl: '.visual-navigation-prev',
+						nextEl: '.visual-navigation-next',
+					},
+					watchOverflow : true,
+				});
+			}, 300);
+		</script>
+	</section>
+
+	<section class="explain-area">
+		<div class="explain-option-box">
+			<div class="switch-box">
+				<div class="title">요약 보기</div>
+				<label class="switch">
+					<input type="checkbox" id="switchExplainDescription">
+					<span class="slider"></span>
+				</label>
+				<script>
+					// Action: 전체 요약 보기(활성화/비활성화)
+					function onToggleExplainDescriptionAll(isHideAllDescription) {
+						const $explainItems = document.querySelectorAll('.explain-item');
+
+						for (let i = 0; i < $explainItems.length; i++) {
+							if (isHideAllDescription) {
+								$explainItems[i].classList.remove('active');
+							} else {
+								$explainItems[i].classList.add('active');
+							}
+						}
+						window.parent.postMessage('resizeIframe', '*');
+					}
+
+					const $switchExplainDescription = document.querySelector('#switchExplainDescription');
+					$switchExplainDescription.addEventListener('change', function() {
+						onToggleExplainDescriptionAll(this.checked);
+					});
+				</script>
+			</div>
+			<div class="filter-box">
+				<a href="#" class="filter-select">전체 학원 보기</a><!-- ### 선택된 필터 아이템 없을 시, "unchecked" 클래스 추가(텍스트 색상 변경)  ### -->
+				<div class="filter-options">
+					<div class="option-head">
+						<a href="#" class="btn-all">전체 학원 보기</a>
+						<a href="#" class="btn-close">닫기</a>
+					</div>
+					<div class="option-body">
+						<ul class="filter-list">
+							<li class="filter-item"><a href="#">강남하이퍼 본원</a></li>
+							<li class="filter-item on"><a href="#">강남하이퍼 의대관</a></li><!-- ### 선택 시, 활성화 "on" 클래스 추가 ### -->
+							<li class="filter-item"><a href="#">강남하이퍼 기숙</a></li>
+							<li class="filter-item on"><a href="#">강남하이퍼 기숙의대관</a></li><!-- ### 선택 시, 활성화 "on" 클래스 추가 ### -->
+							<li class="filter-item"><a href="#">청솔학원 강북</a></li>
+							<li class="filter-item"><a href="#">청솔학원 분당</a></li>
+							<li class="filter-item"><a href="#">청솔학원 평촌</a></li>
+							<li class="filter-item"><a href="#">청솔학원 일산</a></li>
+							<li class="filter-item"><a href="#">청솔학원 부천</a></li>
+							<li class="filter-item"><a href="#">청솔학원 강남기숙</a></li>
+						</ul>
+					</div>
+					<div class="option-foot">
+						<a href="#" class="btn-select">선택 완료</a><!-- ### 변경이 없을 때, 버튼 비활성 "disabled" 클래스 추가 ### -->
+					</div>
+				</div>
+				<script>
+					function onToggleFilterOptions(isActive) {
+						const $filterbox = document.querySelector('.filter-box');
+
+						if (isActive) {
+							$filterbox.classList.add('on');
+						} else {
+							$filterbox.classList.remove('on');
+						}
+					}
+
+					function onToggleFilterItem(el) {
+						if (el.classList.contains('on')) {
+							el.classList.remove('on');
+						} else {
+							el.classList.add('on');
+						}
+					}
+
+					function onToggleFilterItems(isActive) {
+						const $filterItems = document.querySelectorAll('.filter-item a');
+
+						for (let i = 0; i < $filterItems.length; i++) {
+							if (isActive) {
+								$filterItems[i].parentNode.classList.add('on');
+							} else {
+								$filterItems[i].parentNode.classList.remove('on');
+							}
+						}
+					}
+
+					function toggleFilterSelect() {
+						const $filterSelect = document.querySelector('.filter-select');
+						const $filterItem = document.querySelectorAll('.filter-item');
+						var hasOnLength = 0;
+
+						// 선택된 필터 아이템 없을 시, 'unchecked' 클래스 추가
+						for (let i = 0; i < $filterItem.length; i++) {
+							if ($filterItem[i].classList.contains('on')){
+								hasOnLength++;
+							}
+						}
+						if (hasOnLength < 1){
+							$filterSelect.classList.add('unchecked');
+						} else {
+							$filterSelect.classList.remove('unchecked');
+						}
+					}
+					toggleFilterSelect();
+
+					// ACTION: 필터 옵션 보기
+					const $filterSelect = document.querySelector('.filter-select');
+					$filterSelect.addEventListener('click', function() {
+						onToggleFilterOptions(true);
+					});
+
+					// ACTION: 필터 옵션 숨기기
+					const $btnCloseFilterOptions = document.querySelector('.filter-options .btn-close');
+					$btnCloseFilterOptions.addEventListener('click', function() {
+						onToggleFilterOptions(false);
+					});
+
+					// ACTION: 필터 아이템 선택 또는 취소
+					const $filterItems = document.querySelectorAll('.filter-item a');
+
+					for (let i = 0; i < $filterItems.length; i++) {
+						$filterItems[i].addEventListener('click', function(e) {
+							e.preventDefault();
+							onToggleFilterItem(this.parentNode);
+
+						});
+					}
+
+					// ACTION: 필터 아이템 전체선택 또는 전체취소
+					const $btnSelectAllFilter = document.querySelector('.filter-box .btn-all');
+					$btnSelectAllFilter.addEventListener('click', function(e) {
+						e.preventDefault();
+
+						if (this.classList.contains('on')) {
+							this.classList.remove('on');
+							onToggleFilterItems(false);
+						} else {
+							this.classList.add('on');
+							onToggleFilterItems(true);
+						}
+					});
+
+					// ACTION: 필터 선택 완료
+					const $btnSelectFilter = document.querySelector('.filter-box .btn-select');
+					$btnSelectFilter.addEventListener('click', function(e) {
+						e.preventDefault();
+
+						if (!this.classList.contains('disabled')) {
+							onToggleFilterOptions(false);
+						}
+						toggleFilterSelect();
+					});
+					
+				</script>
+			</div>
+		</div>
+
+		<!-- 필터 결과 없을때 -->
+		<div class="explain-none-box">
+			<div class="explain-none">
+				<img src="../../resources/images/portalTok/icon_emoji1.png" alt="" class="emoji no-filter" /> <!--  ### 상황별 이모지 "no-filter/no-pt/error-check/error-temporary" 클래스 추가 ### -->
+				<p class="desc">검색하신 조건에 맞는 설명회가 없습니다.</p>
+				<a href="#" class="more-btn">더 다양한 설명회 보기</a>
+			</div>
+		</div>
+
+		<!-- 진행중인 설명회가 없을때 -->
+		<div class="explain-none-box">
+			<div class="explain-none">
+				<img src="../../resources/images/portalTok/icon_emoji2.png" alt="" class="emoji no-pt" /> <!--  ### 상황별 이모지 "no-filter/no-pt/error-check/error-temporary" 클래스 추가 ### -->
+				<p class="title">현재 진행중인 설명회가 없습니다.</p>
+				<p class="desc">더욱 다양한 입시 콘텐츠로 찾아 뵙겠습니다.</p>
+			</div>
+		</div>
+
+		<div class="explain-list-box">
+			<ul class="explain-list">
+				<li class="explain-item acc-item cheongsol active"><!-- ### 학원별 "cheongsol/hyperacademy/etoos247" 클래스 추가 ### -->
+					<a href="#" class="info">
+						<img src="../../resources/images/portalTok/bi_explain_cheongsol.png" alt="" class="thumb" />
+						<div class="title">일산청솔 X 이투스네오일산 <br />2024,2025 입시 설명회</div>
+					</a>
+					<button class="acc-btn"><span class="blind">요약보기 열기/닫기</span></button>
+					<a href="#">
+						<div class="acc-content">
+							<div class="description">
+								<div class="text target"><em>대상</em> <span>2024,2025년 대입을 준비하는 학생 및 학부모</span></div>
+								<div class="text date"><em>일시</em> <span>2022년 10월 10일(토) 오후 7시</span></div>
+								<div class="text location"><em>장소</em> <span>일산청솔학원 대강당</span></div>
+							</div>
+							<div class="link-shortcut">설명회 바로가기</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<script>
+				// ### HTML Template ###
+				const explainListData = [
+					{
+						bi: 'cheongsol',
+						title: '일산청솔 X 이투스네오일산 <br/>2024,2025 입시 설명회',
+						dscription: {
+							target: '2024,2025년 대입을 준비하는 학생 및 학부모',
+							date: '2022년 10월 10일(토) 오후 7시',
+							location: '일산청솔학원 대강당',
+						},
+						url: '#'
+					},
+					{
+						bi: 'cheongsol',
+						title: '2024 수능 가채점 설명회',
+						dscription: {
+							target: '2023 수능 응시생 또는 학부모',
+							date: '2022년 11월 19일(토) 오후 7시 ',
+							location: '킨텍스 3층 회의실',
+						},
+						url: '#'
+					},
+					{
+						bi: 'hyperacademy',
+						title: '강남하이퍼학원 <br/>수시 지원 전략 설명회',
+						dscription: {
+							target: '현)중3, 고1, 고2 겨울방학을 준비하는 학생',
+							date: '2022년 10월 29일(토) 오후 7시',
+							location: '강남하이퍼학원 본원',
+						},
+						url: '#'
+					},
+					{
+						bi: 'hyperacademy',
+						title: '강남하이퍼학원 <br/>2023 원터스쿨 설명회',
+						dscription: {
+							target: '현)중3, 고1, 고2 겨울방학을 준비하는 학생',
+							date: '2022년 10월 29일(토) 오후 7시',
+							location: '강남하이퍼학원 본원',
+						},
+						url: '#'
+					},
+					{
+						bi: 'etoos247',
+						title: '(3차) 예비고3 대상 <br/>2023년 원터스쿨 설명회와 <br/>2023년 대비 입시설명회',
+						dscription: {
+							target: '2023년 예비고3(현고2)',
+							date: '2022년 10월 4일(토) 오후 7시',
+							location: '이투스247 인천송도학원 대강의실',
+						},
+						url: '#'
+					},
+					{
+						bi: 'etoos247',
+						title: '2022 예비 고1 (현 중3) <br/>프리원터스쿨 설명회',
+						dscription: {
+							target: '대상   2022년 예비 고1(현 중3) & 2023, 2024년 예비 고3(현 중1, 2) ',
+							date: '2022년 10월 4일(토) 오후 7시',
+							location: '이투스247 인천송도학원 대강의실',
+						},
+						url: '#'
+					},
+				];
+				const $explainList = document.querySelector('.explain-list');
+				const explainListHTML = explainListData.reduce(function(html, item){
+					return html + 
+						'<li class="acc-item explain-item ' + item.bi + ' active">' +
+							'<a href="' + item.url + '" class="info">' +
+								'<img src="../../resources/images/portalTok/bi_explain_' + item.bi + '.png" alt="" class="thumb" />' +
+								'<div class="title">' + item.title + '</div>' +
+							'</a>' +
+							'<button class="acc-btn"><span class="blind">요약보기 열기/닫기</span></button>' +
+							'<a href="'+ item.url + '">' +
+								'<div class="acc-content">' +
+									'<div class="description">' +
+										'<div class="text target"><em>대상</em> <span>' + item.dscription.target + '</span></div>' +
+										'<div class="text date"><em>일시</em> <span>' + item.dscription.date + '</span></div>' +
+										'<div class="text location"><em>장소</em> <span>' + item.dscription.location + '</span></div>' +
+									'</div>' +
+									'<div class="link-shortcut">설명회 바로가기</div>' +
+								'</div>' +
+							'</a>'
+						'</li>';
+				}, '');
+				$explainList.innerHTML = explainListHTML;
+
+				// ACTION: 아이템 요약 보기(활성화/비활성화)
+				function onToggleExplainDescription(el) {
+					if (el.classList.contains('active')) {
+						el.classList.remove('active');
+					} else {
+						el.classList.add('active');
+					}
+					window.parent.postMessage('resizeIframe', '*');
+				}
+
+				const $btnAccordions = document.querySelectorAll('.acc-btn');
+				
+				for (let i = 0; i < $btnAccordions.length; i++ ) {
+					$btnAccordions[i].addEventListener('click', function(e) {
+						e.preventDefault();
+						onToggleExplainDescription(this.parentNode)
+					});
+				}
+			</script>
+		</div>
+
+		<!-- fixed top 버튼(공통) -->
+		<div class="awl_fixer_plus2">
+			<a href="javascript:void(0);" id="moveTop" class="btn_top_moji"><span class="blind">TOP</span></a>
+			<script>
+				var topFixed = document.querySelector('.awl_fixer_plus2');
+				var topBtn = document.querySelector('.btn_top_moji');
+
+				if(document.querySelector('#presentation_div')){
+					document.querySelector('#presentation_div').addEventListener('scroll', fixedTopBtnScr);
+				}
+				function fixedTopBtnScr(){
+					if (document.querySelector('#presentation_div').scrollTop == 0) {
+						topFixed.style.display = 'none';
+					} else {
+						topFixed.style.display = 'block';
+					}
+				}
+
+				topBtn.addEventListener('click', scrollMoveTop);
+				function scrollMoveTop(){
+					document.querySelector('#presentation_div').scroll({top:0, behavior:'smooth'});
+				}
+			</script>
+		</div>
+	</section>
+
+	<!-- 퍼블용 헤더섹션 스크립트 -->
+	<script>
+		fetch("/src/main/webapp/html/tokFrame.html")
+			.then(response => response.text())
+			.then(data => {
+				document.querySelector('#tokFrame').outerHTML = data;
+			}
+		);
+	</script>
+
+</body>
+
+</html>

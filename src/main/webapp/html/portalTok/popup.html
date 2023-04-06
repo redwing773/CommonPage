@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>링커&amp;모지</title>
+	<meta name="author" content="" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport"
+		content="user-scalable=no, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0, width=device-width" />
+    <link rel="stylesheet" type="text/css" href="../../resources/css/common_style.css" />
+	<link rel="stylesheet" type="text/css" href="../../resources/css/library/swiper.min.css" />
+	<script src="../../resources/js/library/swiper.min.js"></script>
+</head>
+
+<body>
+
+	<section class="explain-area">
+
+        <!-- 점검 -->
+        <div class="layer-popup">
+            <div class="common-error-wrap">
+                <div class="common-error-box">
+                    <img src="../../resources/images/portalTok/icon_emoji_error_check.png" alt="" class="emoji error-check" /> <!--  ### 상황별 이모지 "error-check/error-temporary" 클래스 추가 ### -->
+                    <p class="title">현재 점검 중입니다.</p>
+                    <p class="desc">안정적인 서비스를 위해 점검을 진행하고 있습니다.</p>
+                    <div class="notice-box">
+                        <p class="notice">설명회 점검  :  12.16(목) 19:00 ~ 12.17(금) 22:00<br>기타 정보 추가시 2줄로 노출</p>
+                    </div>
+                </div>
+                <button type="button" onclick="console.log('개발반영X');this.closest('.layer-popup').classList.add('hide')" class="btn-close-x">X</button>
+            </div>
+            <!-- ### 팝업 일때 button ### -->
+            <button type="button" onclick="console.log('개발반영X');this.closest('.layer-popup').classList.add('hide')" class="btn-close">닫기</button>
+        </div>
+
+        <!-- 오류 -->
+        <div class="layer-popup">
+            <div class="common-error-wrap">
+                <div class="common-error-box">
+                    <img src="../../resources/images/portalTok/icon_emoji_error_temporary.png" alt="" class="emoji error-temporary" /> <!--  ### 상황별 이모지 "error-check/error-temporary" 클래스 추가 ### -->
+                    <p class="title">일시적인 오류가 발생했습니다.</p>
+                    <p class="desc">서비스 이용에 불편을 드려 매우 죄송합니다.</p>
+                </div>
+                <button type="button" onclick="console.log('개발반영X');this.closest('.layer-popup').classList.add('hide')" class="btn-close-x">X</button>
+            </div>
+            <!-- ### 팝업 일때 button ### -->
+            <button type="button" onclick="console.log('개발반영X');this.closest('.layer-popup').classList.add('hide')" class="btn-close">닫기</button>
+        </div>
+
+	</section>
+
+</body>
+
+</html>

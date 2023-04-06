@@ -1,0 +1,118 @@
+plugins {
+	id 'org.springframework.boot' version '2.7.3'
+	id 'io.spring.dependency-management' version '1.0.13.RELEASE'
+	id 'java'
+	id 'war'
+	id 'com.github.node-gradle.node' version '3.2.1'
+}
+
+ext {
+	set('springCloudVersion', "2021.0.5")
+}
+
+group = 'com.etoos'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+node {
+	version = '17.6.0'
+	npmVersion = '8.5.1'
+	download = true
+	npmInstallCommand = "install"
+}
+
+task cleanDistAndStatic(type: Delete) {
+	doFirst {
+		delete "${project.projectDir}/src/main/resources/static/asset-manifest.json"
+		delete "${project.projectDir}/src/main/webapp/resources/dist"
+	}
+	doLast {
+//		File dir = new File("${project.projectDir}/src/main/resources/static/")
+//		dir.mkdir()
+	}
+}
+
+task npmBuild(type: NpmTask) {
+	dependsOn cleanDistAndStatic
+	dependsOn npmInstall
+	args = ['run', "start"]
+}
+
+processResources.dependsOn 'npmBuild'
+
+dependencyManagement {
+	imports {
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+	}
+}
+
+sourceSets {
+	main {
+		resources {
+			srcDirs "src/main/webapp/resources"
+		}
+	}
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter'
+
+	//web
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	//aop
+	implementation 'org.springframework.boot:spring-boot-starter-aop'
+
+	//actuator
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+
+	//fox
+	implementation 'io.springfox:springfox-boot-starter:3.0.0'
+
+	//test
+	implementation 'junit:junit:4.13.1'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	//lombok
+	implementation 'org.projectlombok:lombok:1.18.22'
+	annotationProcessor 'org.projectlombok:lombok:1.18.22'
+
+	//logback & slf4j
+	implementation 'ch.qos.logback:logback-classic:1.2.9'
+	implementation 'ch.qos.logback:logback-core:1.2.9'
+	implementation 'org.slf4j:slf4j-api:1.7.30'
+
+	//devtools
+	implementation 'org.springframework.boot:spring-boot-devtools'
+
+	//view
+	implementation 'javax.servlet:jstl:1.2'
+	implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
+	implementation 'org.apache.tiles:tiles-jsp:3.0.8'
+
+	//validation
+	implementation 'javax.validation:validation-api:2.0.1.Final'
+	implementation 'org.hibernate.validator:hibernate-validator:6.0.11.Final'
+
+	//gson
+	implementation 'com.google.code.gson:gson:2.9.0'
+
+	//spring boot admin client
+	implementation 'de.codecentric:spring-boot-admin-starter-client:2.7.5'
+
+	// feign
+	implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+
+	//mobile
+	implementation 'org.springframework.mobile:spring-mobile-device:1.1.5.RELEASE'
+
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

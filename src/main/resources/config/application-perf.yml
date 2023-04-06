@@ -1,0 +1,43 @@
+spring:
+  config:
+    activate:
+      on-profile: perf
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  boot:
+    admin:
+      client:
+        url: http://bootadmin.linker.ac
+
+server:
+  port: 8080
+  servlet:
+    encoding:
+      charset: UTF-8
+      force: true
+
+logging:
+  config: classpath:log/logback-spring.xml
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+
+external:
+  etoos:
+    auth-url: https://perf-member.etoos.com
+    auth-client-id: FDC9681217BF12363D7C11C1FF9EB66B
+    auth-secret-key: 12F95D404F50B4310BBC10F8AC423920A5713113B51A7D33CBE77614C051D5D8
+  sendbird:
+    app-id: 1bwluZVwTNXNF4avgXQJvPxxlWwbs3aRzKdiqYrUjyTP2M5DtWCJmHFi+xXTWjRX
+    app-key: 37ED539C0CEF13959ABD980BEBF30F4922F606E3
+
+feign:
+  linker:
+    url: https://stage.ilinker.co.kr
