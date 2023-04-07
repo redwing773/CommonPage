@@ -1,48 +1,13 @@
-// portalPageGate js
-
-// top banner include
-async function fetchHtmlAsText(url) {
-    return await (await fetch(url)).text();
-}
-async function importPage(target) {
-    document.querySelector('#' + target[0]).innerHTML = await fetchHtmlAsText('./views/m-portalTopBanner.html');
-    
-    let div = document.createElement('div');
-    div.id = 'tempDiv';
-    document.querySelector(`#${target[1]}`).prepend(div);
-    await fetchHtmlAsText('./views/m-portalPageGateTopContent.html')
-    .then(response => {
-        document.querySelector('#tempDiv').outerHTML = response;
-    })
-    .then(() => {
-        let targetMainSlide = document.querySelector('.top_container .main_slide');
-            targetMainSlide.classList.add('is-active');
-            new Swiper('.top_container .main_slide > .swiper-container', {
-                loop: true,
-                autoplay: {
-                    delay: 3000
-                },
-                effect : 'fade',
-                fadeEffect: { 
-                    crossFade: true 
-                },
-                allowTouchMove: false,
-            });
-    });
-
-    document.querySelector('#' + target[2]).innerHTML = await fetchHtmlAsText('./views/m-portalPageFooter.html');
-}
-importPage(['topBn','top_content','footer']);
-
+import CONSTANT from './Constant.js';
 // tab
-class TabsFunc{
+export default class TabsFunc{
     constructor(){
         this.urls = [
-            "./views/m-portalPageGate-tab1.html",
-            "./views/m-portalPageGate-tab2.html",
-            "./views/m-portalPageGate-tab3.html",
-            "./views/m-portalPageGate-tab4.html",
-            "./views/m-portalPageGate-tab5.html"
+            `./modules/${CONSTANT.SUBFILENAME}portalPageGate-tab1.html`,
+            `./modules/${CONSTANT.SUBFILENAME}portalPageGate-tab2.html`,
+            `./modules/${CONSTANT.SUBFILENAME}portalPageGate-tab3.html`,
+            `./modules/${CONSTANT.SUBFILENAME}portalPageGate-tab4.html`,
+            `./modules/${CONSTANT.SUBFILENAME}portalPageGate-tab5.html`
         ];
         this.tabInit = true;
         this.tabLoad = [];
@@ -119,47 +84,56 @@ class TabsFunc{
         });
     }
 
-    evenetTabTop(){
-        const toTop = document.querySelector('.toTop button');
-        toTop.addEventListener('click',() => {
-            let tabBodyTop = document.querySelector('.tab_wrap').offsetTop;
-            window.scroll({top:tabBodyTop,behavior:'smooth'});
-        })
-    }
-
     // 각 탭 스크립트
     static eventTabScript(idx){
         const tabScripts = [  
             () => { console.log('탭1 스크립트')
-                const swiperContainer = document.querySelector('#video_slide1');
+                const swiperContainer = document.querySelector('.cont1 .tit1-slide .swiper-container');
                 if (swiperContainer) {
                     const swiper = new Swiper(swiperContainer, {
-                    loop:true,
-                    slidesPerView: 1,
-                    pagination : {
-                        el : '.swiper-pagination',
-                        clickable : true,
-                    },
-                    autoplay: {
-                        delay: 3000,
-                    },
-                });
-                }
-            },
-            () => { console.log('탭2 스크립트')
-                const swiperContainer2 = document.querySelector('#mei_slide2');
-                if(swiperContainer2) {
-                        const swiper = new Swiper(swiperContainer2, {
                         loop:true,
-                        pagination : {
-                            el : '.swiper-pagination',
-                            clickable : true,
+                        navigation: {
+                            prevEl : ".cont1 .tit1-slide .swiper-container .swiper-button-prev",
+                            nextEl: ".cont1 .tit1-slide .swiper-container .swiper-button-next",
                         },
                         autoplay: {
                             delay: 3000,
+                            disableOnInteraction: false,
+                        },
+                        slidesPerView: 1,
+                        pagination: {
+                            el: ".swiper-pagination",
+                            clickable : true,
+                        },
+                        on: {
+                            init: function () {
+                              if(CONSTANT.DEVICE !== 'WEB' && document.querySelector(".cont1 .tit1-slide .swiper-container .swiper-button-prev")){
+                                document.querySelector(".cont1 .tit1-slide .swiper-container [class*='swiper-button-prev']").style.display = 'none';
+                                document.querySelector(".cont1 .tit1-slide .swiper-container [class*='swiper-button-next']").style.display = 'none';
+                              }
+                            },
                         },
                     });
-                    
+                }
+            },
+            () => { console.log('탭2 스크립트')
+                const swiperContainer2 = document.querySelector('.moei_tab .cont2 .tit2-slide .swiper-container');
+                if(swiperContainer2){
+                    const swiper = new Swiper(swiperContainer2, {
+                        loop:true,
+                        navigation: {
+                            prevEl : ".moei_tab .cont2 .swiper-container .swiper-button-prev",
+                            nextEl: ".moei_tab .cont2 .swiper-container .swiper-button-next",
+                        },
+                        autoplay: {
+                            delay: 3000,
+                            disableOnInteraction: false,
+                        },
+                        slidesPerView: 1,
+                        pagination: {
+                            el: ".swiper-pagination",
+                        },
+                    });
                 }
             },
             () => { console.log('탭3 스크립트')
@@ -236,7 +210,7 @@ class TabsFunc{
                 tabHead.classList.remove('fixed');
             }
 
-            if(winTop - 40 >= tabHeadY){
+            if(winTop - (CONSTANT.DEVICE == 'WEB' ? 60 : 30) >= tabHeadY){
                 tabHead.classList.add('hide');
             } else{
                 tabHead.classList.remove('hide');
@@ -254,14 +228,35 @@ class TabsFunc{
     eventTabHeadTooltip(){
         const tar = document.querySelectorAll('.tab_head li');
         tar.forEach(i => {
-            i.addEventListener('click',() => {
-                if(!i.querySelector('a').classList.contains('on')){
-                    document.querySelector('.tab_head li a.on .tooltip').style.opacity = '1';
-                } else{
-                    return false;
-                }
-                i.querySelector('a .tooltip').style.opacity = '0';
-            });
+            if(CONSTANT.DEVICE == 'WEB'){
+                const tooltip = i.querySelector('a .tooltip');
+                const tabHead = document.querySelector('.tab_head li a.on .tooltip');
+
+                i.addEventListener('mouseover', () => {
+                    if (!i.querySelector('a').classList.contains('on')) {
+                        tabHead.style.opacity = '0';
+                    }
+                    tooltip.style.opacity = '1';
+                });
+
+                i.addEventListener('mouseout', () => {
+                    if (!i.querySelector('a').classList.contains('on')) {
+                        tabHead.style.opacity = '1';
+                    } else {
+                        return false;
+                    }
+                    tooltip.style.opacity = '0';
+                });
+            } else{
+                i.addEventListener('click',() => {
+                    if(!i.querySelector('a').classList.contains('on')){
+                        document.querySelector('.tab_head li a.on .tooltip').style.opacity = '1';
+                    } else{
+                        return false;
+                    }
+                    i.querySelector('a .tooltip').style.opacity = '0';
+                });
+            }
         })
     }
 
@@ -279,7 +274,3 @@ class TabsFunc{
         }
     }
 }
-document.addEventListener('DOMContentLoaded',new TabsFunc);
-
-// 새로고침 시 항상 scroll top0
-history.scrollRestoration = 'manual';
