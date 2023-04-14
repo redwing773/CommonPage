@@ -1,29 +1,29 @@
 {
-  "name": "portal-main",
+  "name": "commonpage",
   "version": "1.0.0",
-  "description": "### Technology Stack",
-  "main": "index.js",
+  "description": "",
+  "main": "webpack.pub.config.js",
   "scripts": {
-    "start": "webpack",
-    "dev-pub": "sass --style=compressed --watch src/main/webapp/resources/css/portalPage/scss:src/main/webapp/resources/css/portalPage | webpack-dev-server --config webpack.pub.config.js "
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev-pub": "sass --style=compressed --watch resources/css/portalPage/scss:resources/css/portalPage | webpack-dev-server --config webpack.pub.config.js "
   },
   "repository": {
     "type": "git",
-    "url": "https://gitlab.linker.ac/portal-development-team/portal-main.git"
+    "url": "git+https://github.com/redwing773/CommonPage.git"
   },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/redwing773/CommonPage/issues"
+  },
+  "homepage": "https://github.com/redwing773/CommonPage#readme",
   "devDependencies": {
-    "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.3",
     "mini-css-extract-plugin": "^2.7.2",
     "sass": "^1.60.0",
-    "sass-loader": "^13.2.0",
-    "terser-webpack-plugin": "^5.3.6",
-    "webpack-assets-manifest": "^5.1.0"
-  },
+    "sass-loader": "^13.2.0"
+    },
   "dependencies": {
-    "remove-files-webpack-plugin": "^1.5.0",
     "webpack-cli": "^5.0.0",
     "webpack-dev-server": "^4.11.1"
   }

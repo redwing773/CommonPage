@@ -8,24 +8,24 @@ module.exports = {
   devtool: "source-map", //scss 소스맵 기능 추가
 
   entry: {
-    entry: path.resolve(__dirname, "./src/main/webapp/resources/js/portalPage/", "entry.js"),
+    entry: path.resolve(__dirname, "./resources/js/portalPage/", "entry.js"),
   },
   
   output: {
     filename: "[name]",
-    path: path.resolve(__dirname, "./src/main/webapp/resources/css/portalPage/")
+    path: path.resolve(__dirname, "./resources/css/portalPage/")
   },
 
   devServer: {
     hot: true, //내용이 변경된 모듈을 페이지 새로고침 없이 런타임에서 업데이트하고, 업데이트에 실패할 경우 새로고침을 수행
     static: { //서버 로딩할 static 파일 경로 지정
-      directory: path.resolve(__dirname, "./src/main/"), // output과 동일해야 devserver만 돌려 추출된 가상 css를 사용가능함 - <!-- <link rel="stylesheet" href="../../css/style.css"> -->
+      directory: path.resolve(__dirname, "./"), // output과 동일해야 devserver만 돌려 추출된 가상 css를 사용가능함 - <!-- <link rel="stylesheet" href="../../css/style.css"> -->
       serveIndex: true
     },
     host: "localhost",
-    port: 8083,
+    port: 8983,
     compress: true, //gzip 압축방식을 이용하여 웹 자원 사이즈를 줄임
-    open: ['/webapp/html'],
+    // open: ['/'],
     webSocketServer: false
   },
   module: {
