@@ -1,0 +1,30 @@
+@charset "UTF-8";
+@import "./modules/mixin";
+
+/* 7월 수시 */
+
+// 탭
+@import "./modules/7s_tab/_tab_layout.scss";
+@import "./modules/7s_tab/_tab1.scss";
+@import "./modules/7s_tab/_tab2.scss";
+@import "./modules/7s_tab/_tab3.scss";
+@import "./modules/7s_tab/_tab4.scss";
+
+.main_wrap {
+    .tab_wrap {
+        min-width: 1280px;
+
+        .tab_head li a .tooltip {
+            display: none;
+        }
+    }
+
+    .popup_wrap {
+        visibility: hidden;
+
+        &.is-open {
+            visibility: visible;
+        }
+    }
+
+}

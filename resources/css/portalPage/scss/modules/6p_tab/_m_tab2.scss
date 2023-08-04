@@ -1,0 +1,81 @@
+/* 탭2 */
+.strategy_tab {
+    overflow: hidden;
+
+    [class*="cont"] {
+        .tit1>img {
+            margin-left: -20px;
+            width: 360px;
+            max-width: none;
+        }
+    }
+
+    .cont1 {
+
+        .link {
+            position: absolute;
+            top: 1126px;
+            left: 0;
+
+            a {
+                display: block;
+                width: 320px;
+                height: 64px;
+            }
+        }
+    }
+
+    .cont2 {
+        background-color: #F5E9E2;
+        padding-bottom: 60px;
+
+        .tit1 {
+            padding-top: 60px;
+
+            >img {
+                margin: 0;
+                width: 320px;
+            }
+        }
+
+        .tit2 {
+            margin-top: 40px;
+        }
+
+        .linkwrap {
+            position: absolute;
+            top: 661px;
+            left: 162px;
+
+            .tickets {
+                a {
+                    display: block;
+                    width: 105px;
+                    height: 45px;
+
+                    &+a {
+                        margin-top: 154px;
+                    }
+                }
+
+                &+.tickets {
+                    margin-top: 375px;
+                }
+            }
+        }
+    }
+
+    .cont3 {
+        .link {
+            position: absolute;
+            top: 1070px;
+            left: 0;
+
+            a {
+                display: block;
+                width: 320px;
+                height: 64px;
+            }
+        }
+    }
+}

@@ -1,0 +1,271 @@
+@charset "UTF-8";
+@import "./modules/mixin";
+
+/* 3평 */
+.main_wrap .top_container {
+    height: 900px;
+}
+
+.main_wrap .top_container .top_cont {
+    position: relative;
+    width: 100%;
+    min-width: 1280px;
+    height: 900px;
+    background: url('https://resource-portal.etoos.com/common-page/static/top_main.png') no-repeat top center, url('https://resource-portal.etoos.com/common-page/static/top_bg.png') repeat top center;
+}
+
+.main_wrap .top_container .top_cont_3pAfter {
+    position: relative;
+    width: 100%;
+    min-width: 1280px;
+    height: 900px;
+    background: url('https://resource-portal.etoos.com/common-page/static/top_main_after.png') no-repeat top center, url('https://resource-portal.etoos.com/common-page/static/top_bg_after.png') repeat top center;
+}
+
+.main_wrap.after .top_container {
+    position: relative;
+    width: 100%;
+    min-width: 1280px;
+    height: 900px;
+    background: url('https://resource-portal.etoos.com/common-page/static/top_main_after.png') no-repeat top center, url('https://resource-portal.etoos.com/common-page/static/top_bg_after.png') repeat top center;
+}
+
+.main_wrap .top_container .inner {
+    position: relative;
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.main_wrap .top_container .inner .mainTitleWrap {
+    position: absolute;
+    top: 273px;
+    left: 100px;
+    width: 950px;
+    height: 350px;
+    z-index: 1;
+}
+
+.main_wrap .top_container .inner .mainTitleWrap .main_title_txt1 {
+    position: absolute;
+    top: -198px;
+    left: -81px;
+    opacity: 0;
+    ;
+    animation: fadeIn .4s forwards .1s;
+}
+
+.main_wrap .top_container .inner .mainTitleWrap .main_title_txt2 {
+    position: absolute;
+    top: 369px;
+    left: -79px;
+    opacity: 0;
+    animation: fadeIn .4s forwards .2s;
+}
+
+.main_wrap .top_container .inner .mainTitleWrap .main_title1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(1.2);
+    animation: fadeInRight1 1s forwards;
+}
+
+.main_wrap .top_container .inner .mainTitleWrap .main_title2 {
+    position: absolute;
+    top: 41px;
+    right: -203px;
+    transform: translateX(-200px);
+    animation: fadeInRight2 .8s forwards .2s;
+}
+
+.main_wrap.after .top_container .inner .mainTitleWrap .main_title_txt1 {
+    position: absolute;
+    top: -198px;
+    left: -81px;
+    opacity: 0;
+    animation: fadeIn .4s forwards .1s;
+}
+
+.main_wrap.after .top_container .inner .mainTitleWrap .main_title_txt2 {
+    position: absolute;
+    top: 369px;
+    left: -79px;
+    opacity: 0;
+    animation: fadeIn .4s forwards .1s;
+}
+
+.main_wrap.after .top_container .inner .mainTitleWrap .main_title1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    animation: fadeInRight1 .4s forwards .3s;
+}
+
+.main_wrap.after .top_container .inner .mainTitleWrap .main_title2 {
+    position: absolute;
+    top: 41px;
+    right: -203px;
+    opacity: 0;
+    animation: fadeInRight2 .4s forwards .3s;
+}
+
+.main_wrap .top_container .inner .mainPictureWrap {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    width: 500px;
+    height: 740px;
+    margin-left: -70px;
+}
+
+.main_wrap .top_container .inner .mainPictureWrap .main_effect {
+    opacity: 0;
+}
+
+.main_wrap .top_container .inner .mainPictureWrap .main_effect.is-active {
+    opacity: 1;
+    transition: opacity 0.3s ease-out;
+}
+
+.main_wrap .top_container .inner .mainPictureWrap .main_slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+    width: 710px;
+}
+
+.main_wrap .top_container .inner .mainPictureWrap .main_slide.is-active {
+    opacity: 1;
+    transition: opacity 0.3s ease-out;
+}
+
+.main_wrap .top_container .inner .mainPictureWrap .main_slide .text_rolling_box1 {
+    position: absolute;
+    top: 136px;
+    left: 368px;
+}
+
+.main_wrap .top_container .inner .mainPictureWrap .main_slide .text_rolling_box2 {
+    position: absolute;
+    top: 136px;
+    left: 384px;
+}
+
+.main_wrap .top_container .inner .mainPictureWrap .main_slide .text_rolling_box3 {
+    position: absolute;
+    top: 136px;
+    left: 344px;
+}
+
+.main_wrap .top_container .inner .mainPictureWrap .main_slide .text_rolling_box4 {
+    position: absolute;
+    top: 136px;
+    left: 370px;
+}
+
+.main_wrap .top_container .inner .mainPictureWrap .main_slide .text_rolling_box5 {
+    position: absolute;
+    top: 136px;
+    left: 378px;
+}
+
+.main_wrap .top_container .inner .mainPictureWrap .main_slide .text_rolling_box6 {
+    position: absolute;
+    top: 136px;
+    left: 364px;
+}
+
+.main_wrap .top_container .floating_bn {
+    position: fixed;
+    right: 20px;
+    top: calc(100px + 80px + 40px);
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+}
+
+.main_wrap .top_container .floating_bn a {
+    height: 180px;
+}
+
+.main_wrap .top_container .floating_bn a+a {
+    margin-top: 18px;
+}
+
+@keyframes fadeInRight1 {
+    0% {
+        transform: scale(1.1) translateX(-200px);
+    }
+
+    to {
+        transform: scale(1) translateX(0);
+        opacity: 1;
+    }
+
+    0% {
+        transform: scale(1.1) translateX(-200px);
+    }
+
+    to {
+        transform: scale(1) translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInRight2 {
+    0% {
+        transform: scale(1.1) translateX(-350px);
+    }
+
+    to {
+        transform: scale(0.88) translateX(0);
+        opacity: 1;
+    }
+
+    0% {
+        transform: scale(1.1) translateX(-350px);
+    }
+
+    to {
+        transform: scale(0.88) translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: scale(1.5) translateX(-200px);
+    }
+
+    to {
+        transform: scale(1) translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-20px);
+    }
+
+    50% {
+        transform: scaleY(.9) translateY(0px);
+    }
+
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+
+
+// 탭
+@import "./modules/3p_tab/_tab_layout.scss";
+@import "./modules/3p_tab/_tab1.scss";
+@import "./modules/3p_tab/_tab2.scss";
+@import "./modules/3p_tab/_tab3.scss";
+@import "./modules/3p_tab/_tab4.scss";
+@import "./modules/3p_tab/_tab5.scss";

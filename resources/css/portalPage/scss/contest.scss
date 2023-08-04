@@ -1,0 +1,95 @@
+@charset "UTF-8";
+@import "./modules/mixin";
+
+// 문항공모전
+.top_cont_contest {
+    position: relative;
+    padding-bottom: 160px;
+    width: 100%;
+    min-width: 1280px;
+    min-height: 960px;
+    background: bgurl("contest_top_main_bg.webp") repeat-x top center, #111111;
+
+
+    &.ie {
+        background: bgurl("contest_top_main_bg.png") repeat-x top center, #111111;
+
+    }
+
+    .inner {
+        .top_main_title {
+            padding-top: 91px;
+            text-align: center;
+        }
+
+        [class*="cont"] {
+            text-align: center;
+        }
+
+        .cont1 {
+            margin-top: -47px;
+
+            .cont1_tit1 {
+                margin-top: 109px;
+            }
+
+            .cont1_txt1 {
+                margin-top: 130px;
+            }
+        }
+
+        .cont2 {
+            margin-top: 160px;
+
+            .cont2_tit1_sub {
+                margin-top: 60px;
+            }
+
+            .cont2_txt1 {
+                margin-top: 60px;
+            }
+
+            .cont2_txt2 {
+                margin-top: 90px;
+            }
+        }
+
+        .cont3 {
+            margin-top: 160px;
+            position: relative;
+
+            .cont3_txt1 {
+                margin-top: 60px;
+
+                .copy_btn {
+                    position: absolute;
+                    top: 488px;
+                    left: 758px;
+                    width: 36px;
+                    height: 22px;
+                    border: 1px solid #444;
+                    border-radius: 4px;
+
+                    >span {
+                        font: 400 13px/19px "Noto Sans Kr";
+                        color: #999;
+                    }
+                }
+            }
+
+            .link_down {
+                position: absolute;
+                top: 609px;
+                left: 50%;
+                margin-left: -300px;
+                width: 600px;
+                height: 90px;
+            }
+
+            .cont3_txt2 {
+                margin-top: 80px;
+            }
+        }
+
+    }
+}

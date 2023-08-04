@@ -2,10 +2,10 @@
   "name": "commonpage",
   "version": "1.0.0",
   "description": "",
-  "main": "webpack.pub.config.js",
+  "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev-pub": "sass --style=compressed --watch resources/css/portalPage/scss:resources/css/portalPage | webpack-dev-server --config webpack.pub.config.js "
+    "dev": "sass --style=compressed --watch resources/css/portalPage/scss:resources/css/portalPage/ | webpack-dev-server --config webpack.pub.config.js "
   },
   "repository": {
     "type": "git",

@@ -1,0 +1,280 @@
+/* 탭 */
+.main_wrap .tab_wrap {
+    position: relative;
+}
+
+.main_wrap .tab_wrap .tab_head {
+    position: relative;
+    z-index: 1;
+    background-color: #242424;
+}
+
+.main_wrap .tab_wrap .tab_head>ul {
+    display: flex;
+    justify-content: center;
+    min-width: 360px;
+}
+
+.main_wrap .tab_wrap .tab_head>ul li {
+    position: relative;
+    width: 74px;
+    height: 66px;
+}
+
+.main_wrap .tab_wrap .tab_head>ul li:nth-child(4) {
+    width: 82px;
+}
+
+.main_wrap .tab_wrap .tab_head>ul li:nth-child(5) {
+    width: 60px;
+}
+
+.main_wrap .tab_wrap .tab_head>ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://resource-portal.etoos.com/common-page/static/m_tab_off.png');
+    background-size: 360px auto;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.main_wrap .tab_wrap .tab_head>ul li a.on {
+    background-image: url('https://resource-portal.etoos.com/common-page/static/m_tab_on.png');
+}
+
+.main_wrap .tab_wrap .tab_head>ul li a.on .tooltip {
+    opacity: 1;
+}
+
+.main_wrap .tab_wrap .tab_head>ul li:nth-child(2) a {
+    background-position: -74px 0;
+}
+
+.main_wrap .tab_wrap .tab_head>ul li:nth-child(3) a {
+    background-position: -147px 0;
+}
+
+.main_wrap .tab_wrap .tab_head>ul li:nth-child(4) a {
+    background-position: -220px 0;
+}
+
+.main_wrap .tab_wrap .tab_head>ul li:nth-child(5) a {
+    background-position: -301px 0;
+}
+
+.main_wrap .tab_wrap .tab_head>ul li:nth-child(5):before {
+    content: '';
+    position: absolute;
+    top: -23px;
+    left: 50%;
+    margin-left: -23px;
+    width: 45px;
+    height: 45px;
+    background-image: url("https://resource-portal.etoos.com/common-page/static/m_event_tab_floating.png");
+    background-size: 45px;
+    opacity: 1;
+    transition: opacity .1s ease-out;
+    animation: bounce .6s infinite;
+}
+
+.main_wrap .tab_wrap .tab_head>ul li .tooltip {
+    position: absolute;
+    left: auto;
+    bottom: -70px;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+
+.main_wrap .tab_wrap .tab_head>ul li .tooltip img {
+    max-width: none;
+    height: 60px;
+}
+
+.main_wrap .tab_wrap .tab_head>ul li.tab_head_video .tooltip {
+    transform: translateX(20px);
+}
+
+.main_wrap .tab_wrap .tab_head>ul li.tab_head_moei .tooltip {
+    left: 50%;
+    transform: translateX(-35%);
+}
+
+.main_wrap .tab_wrap .tab_head>ul li.tab_head_online .tooltip {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.main_wrap .tab_wrap .tab_head>ul li.tab_head_offline .tooltip {
+    left: 50%;
+    transform: translateX(-70%);
+}
+
+.main_wrap .tab_wrap .tab_head>ul li.tab_head_event .tooltip {
+    left: 50%;
+    transform: translateX(-90%);
+}
+
+.main_wrap .tab_wrap .tab_head>ul li:nth-child(5):before {
+    content: '';
+    position: absolute;
+    top: -23px;
+    left: 50%;
+    margin-left: -23px;
+    width: 45px;
+    height: 45px;
+    background-image: url("https://resource-portal.etoos.com/common-page/static/m_event_tab_floating.png");
+    background-size: 45px;
+    opacity: 1;
+    transition: opacity .1s ease-out;
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 360px;
+    min-width: 320px;
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li {
+    position: relative;
+    width: auto;
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li a {
+    display: block;
+    height: 66px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li a.on {
+    background-color: #fff;
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(1) a {
+    width: 68px;
+    background-image: url('https://resource-portal.etoos.com/common-page/static/m_3p-star_off.png');
+    background-size: 68px;
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(1) a.on {
+    background-image: url('https://resource-portal.etoos.com/common-page/static/m_3p-star_on.png');
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(2) a {
+    width: 85px;
+    background-image: url('https://resource-portal.etoos.com/common-page/static/m_3p-after_off.png');
+    background-size: 85px;
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(2) a.on {
+    background-image: url('https://resource-portal.etoos.com/common-page/static/m_3p-after_on.png');
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(3) a {
+    width: 67px;
+    background-image: url('https://resource-portal.etoos.com/common-page/static/m_asap_off.png');
+    background-size: 67px;
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(3) a.on {
+    background-image: url('https://resource-portal.etoos.com/common-page/static/m_asap_on.png');
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(4) a {
+    width: 81px;
+    background-image: url('https://resource-portal.etoos.com/common-page/static/m_3p-off_off.png');
+    background-size: 81px;
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(4) a.on {
+    background-image: url('https://resource-portal.etoos.com/common-page/static/m_3p-off_on.png');
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(5) a {
+    width: 59px;
+    background-image: url('https://resource-portal.etoos.com/common-page/static/m_event_off.png');
+    background-size: 59px;
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(5) a.on {
+    background-image: url('https://resource-portal.etoos.com/common-page/static/m_event_on.png');
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li a.on .tooltip {
+    opacity: 1;
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li .tooltip {
+    position: absolute;
+    left: auto;
+    bottom: -70px;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li .tooltip img {
+    max-width: none;
+    height: 60px;
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(1) .tooltip {
+    transform: translateX(20px);
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(2) .tooltip {
+    left: 50%;
+    transform: translateX(-61px);
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(3) .tooltip {
+    left: 50%;
+    transform: translateX(-85px);
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(4) .tooltip {
+    left: 50%;
+    transform: translateX(-121px);
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(5) .tooltip {
+    left: 50%;
+    transform: translateX(-101px);
+}
+
+.main_wrap .tab_wrap .tab_head.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #242424;
+    z-index: 10;
+}
+
+.main_wrap .tab_wrap .tab_head.fixed.hide .tooltip {
+    opacity: 0 !important;
+    visibility: hidden;
+}
+
+.main_wrap .tab_wrap .tab_head.fixed>ul li:nth-child(5):before {
+    opacity: 0;
+}
+
+.main_wrap .tab_wrap .tab_head.fixed+.tab_body>div {
+    padding-top: 66px;
+}
+
+.main_wrap .tab_wrap .tab_head.fixed>ul li:nth-child(5):before {
+    opacity: 0;
+}
+
+.main_wrap .tab_wrap .tab_body .inner {
+    position: relative;
+    margin: 0 auto;
+    padding: 96px 0;
+    width: 320px;
+    box-sizing: border-box;
+    text-align: center;
+}

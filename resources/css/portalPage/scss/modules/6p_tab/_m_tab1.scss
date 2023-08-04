@@ -1,0 +1,1472 @@
+/* 탭1 */
+.raiseup_tab.before {
+    position: relative;
+    padding-bottom: 80px;
+
+    .cont1 {
+        .inner {
+            padding: 72px 0 60px;
+
+            .tit1 img {
+                width: 320px;
+            }
+
+            .cont1_slide {
+                margin-top: 40px;
+
+                .swiper-container {
+                    padding-bottom: 36px;
+
+                    .swiper-slide {
+                        a {
+                            display: flex;
+                            margin-top: -16px;
+                            flex-wrap: wrap;
+                            justify-content: space-between;
+
+                            .imgwrap {
+                                margin-top: 16px;
+                                ;
+
+                                img {
+                                    display: block;
+                                    width: 156px;
+
+                                    &+img {
+                                        margin-top: 8px;
+                                        width: auto;
+                                        height: 35px;
+
+                                    }
+
+                                }
+
+                            }
+                        }
+                    }
+
+                    .swiper-pagination {
+                        bottom: 0;
+                    }
+
+                    .swiper-pagination-bullet {
+                        width: 10px;
+                        height: 10px;
+                        background-color: #000D7E1A;
+                        opacity: 1;
+                    }
+
+                    .swiper-pagination-bullet-active {
+                        margin-bottom: -1px;
+                        width: 12px;
+                        height: 12px;
+                        background-color: #000D7E;
+                    }
+                }
+            }
+
+            .link {
+                margin-top: 33px;
+
+            }
+        }
+    }
+
+    .cont2 {
+        background-color: #F3F4FE;
+
+        .inner {
+            padding: 60px 0;
+        }
+
+        .tit1 img {
+            width: 320px;
+        }
+
+        .cont2_tab_wrap {
+            margin-top: 40px;
+
+            .tab_select {
+                display: flex;
+                margin: 0 auto 0 -6px;
+                width: 332px;
+                height: 52px;
+                background: bgurl("m_6p_before_tab1_cont2_tabbg.png") no-repeat;
+                background-size: 332px;
+
+                button {
+                    position: relative;
+                    flex-grow: 1;
+                    height: 52px;
+                    border: none;
+
+
+                    @for $i from 1 through 5 {
+                        &:nth-child(#{$i}) {
+                            &.is-show:before {
+                                content: "";
+                                position: absolute;
+                                width: 63px;
+                                height: 36px;
+                                background-image: bgurl("m_6p_before_tab1_cont2_tabbg_on#{$i}.png");
+                                background-size: 63px;
+                                background-repeat: no-repeat;
+                            }
+                        }
+                    }
+
+                    &:nth-child(1):before {
+                        top: 6px;
+                        left: 8px;
+                    }
+
+                    &:nth-child(2):before {
+                        top: 6px;
+                        left: 5px;
+                    }
+
+                    &:nth-child(3):before {
+                        top: 6px;
+                        left: 2px;
+                    }
+
+                    &:nth-child(4):before {
+                        top: 6px;
+                        left: -1px;
+                    }
+
+                    &:nth-child(5):before {
+                        top: 6px;
+                        left: -5px;
+                    }
+
+                }
+            }
+
+            .tab_cont {
+                position: relative;
+                margin-top: 32px;
+                // overflow: hidden;
+
+                .tabs {
+                    display: none;
+                    width: 100%;
+
+                    &.is-show {
+                        display: block;
+                    }
+
+                    .frame {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+
+                    .frame {
+                        position: relative;
+
+                        >a {
+                            position: absolute;
+                            left: 20px;
+                            top: 272px;
+                            width: 280px;
+                            height: 48px;
+                        }
+
+                        &+.frame {
+                            margin-top: 16px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .link {
+            margin-top: 32px;
+
+
+        }
+    }
+
+    .cont3 {
+        background-color: #F7F7F7;
+
+        .inner {
+            padding: 60px 0;
+        }
+
+        .cont3_slide {
+            margin-top: 39px;
+
+            .swiper-container {
+                padding-bottom: 43px;
+
+                .swiper-pagination {
+                    bottom: 0;
+                }
+
+                .swiper-pagination-bullet {
+                    width: 10px;
+                    height: 10px;
+                    background-color: #000D7E1A;
+                    opacity: 1;
+                }
+
+                .swiper-pagination-bullet-active {
+                    margin-bottom: -1px;
+                    width: 12px;
+                    height: 12px;
+                    background-color: #000D7E;
+                }
+            }
+        }
+
+        .link {
+            margin-top: 32px;
+        }
+
+    }
+
+
+    .cont4 {
+        .inner {
+            padding-top: 60px;
+
+            .tit2 {
+                margin-top: 40px;
+
+                .cont4_exam {
+                    position: absolute;
+                    top: 838px;
+                    left: 20px;
+                    width: 280px;
+                    height: 60px;
+                }
+            }
+        }
+
+        .exam_wrap {
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            overflow-y: auto;
+            visibility: hidden;
+            z-index: 510; // portalGnb 509
+
+            &.is-show {
+                visibility: visible;
+            }
+
+
+            .inner {
+                position: relative;
+                padding: 0;
+                width: 320px;
+                width: 100%;
+                height: 100%;
+                background-color: #fff;
+                overflow: auto;
+
+                .swiper-container {
+                    height: 100%;
+                }
+
+                .swiper-button-disabled {
+                    display: none;
+                }
+
+                .swiper-button-next,
+                .swiper-button-prev {
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    width: 0;
+                    height: 0;
+                    background: none;
+                }
+
+                .swiper-slide {
+                    // height: 800px;
+                    // max-height: 800px;
+                    // opacity: 0 !important;
+                    overflow-y: auto;
+
+                    &.swiper-slide-active {
+                        // opacity: 1 !important;
+                    }
+
+                    .slide_inner {
+                        margin: 0 auto;
+                        padding-bottom: 20px;
+                        width: 320px;
+                        min-height: 665px;
+                        box-sizing: border-box;
+                        overflow: hidden;
+
+                        h2.tit {
+                            position: relative;
+                            margin-top: 13px;
+                            text-align: left;
+                            font: 700 18px/26px "Noto Sans Kr";
+                            color: #242424;
+
+                            &:after {
+                                content: "";
+                                position: absolute;
+                                bottom: -13px;
+                                left: 0;
+                                width: 100%;
+                                height: 1px;
+                                background-color: #444;
+                            }
+
+                            .timer {
+                                position: absolute;
+                                top: 11px;
+                                right: 0px;
+                                font: 500 10px/14px "Noto Sans Kr";
+                                color: #f00000;
+                                transform: translateZ(0);
+
+                                >span {
+                                    margin-left: 4px;
+                                    font: 500 13px/19px "Noto Sans Kr";
+                                    color: #f00000;
+                                }
+
+                            }
+                        }
+
+                        .boxes_wrap {
+                            margin-top: 26px;
+                            $exceptValue: 52+16+126;
+                            height: calc(100% - #{$exceptValue}px);
+
+                            .box_question {
+                                padding: 20px 12px;
+                                width: 100%;
+                                height: 360px;
+                                border: 1px solid #444;
+                                border-radius: 10px;
+                                box-sizing: border-box;
+                                overflow-y: auto;
+
+                                >img {
+                                    display: none;
+
+                                    &.on {
+                                        display: block;
+                                    }
+                                }
+                            }
+
+                            .box_answer_single {
+                                display: flex;
+                                margin-top: 16px;
+
+                                >div {
+                                    width: 100%;
+                                    height: 48px;
+
+                                    &:first-child {
+                                        width: 80px;
+                                        @include setFlexCenter;
+                                        border-radius: 10px 0 0 10px;
+                                        background-color: #000D7E;
+                                        font: 400 16px/48px "Noto Sans Kr";
+                                        color: #fff;
+                                    }
+                                }
+
+
+                                label {
+                                    input {
+                                        width: 100%;
+                                        height: 48px;
+                                        text-align: center;
+                                        border: 1px solid #ddd;
+                                        border-left: 0;
+                                        border-radius: 0 10px 10px 0;
+                                        box-sizing: border-box;
+                                        background-color: #fff;
+                                        font: 700 18px/48px "Noto Sans Kr";
+                                        color: #242424;
+
+                                        &::-webkit-inner-spin-button {
+                                            appearance: none;
+                                            -moz-appearance: none;
+                                            -webkit-appearance: none;
+                                        }
+
+                                        &:focus {
+                                            background-color: #000D7E1A;
+                                            border-color: #000D7E;
+
+                                        }
+                                    }
+                                }
+                            }
+
+
+
+                            .box_title {
+                                width: 100%;
+
+                                .result {
+                                    text-align: left;
+                                    font: 500 26px/34px "Noto Sans Kr";
+                                    color: #242424;
+
+                                    >span {
+                                        font-weight: 700;
+                                        color: #000D7E;
+                                        ;
+                                    }
+                                }
+
+                                .result_sub {
+                                    margin-top: 8px;
+                                    text-align: left;
+                                    font: 400 14px/20px "Noto Sans Kr";
+                                    color: #666;
+                                }
+
+                                .result_detail {
+                                    display: flex;
+                                    flex-direction: column;
+                                    margin-top: 16px;
+                                    padding: 23px 36px;
+                                    border-radius: 20px;
+                                    box-sizing: border-box;
+                                    background-color: #000D7E1A;
+
+                                    >div {
+                                        position: relative;
+                                        width: 100%;
+                                        text-align: left;
+                                        font: 500 13px/22px "Noto Sans Kr";
+                                        color: #242424;
+
+                                        &+div {
+                                            margin-top: 12px;
+                                        }
+
+                                        >span:not(.score, .time) {
+                                            position: absolute;
+                                            top: 0;
+                                            left: 129px;
+
+                                            font: 700 15px/22px "Noto Sans Kr";
+                                            color: #000D7E;
+
+                                            &.score {
+                                                margin-right: 4px;
+                                            }
+
+                                            &.time {
+                                                margin-left: 0;
+                                            }
+
+                                        }
+
+                                    }
+
+
+                                }
+                            }
+
+                            .box_tab_wrap {
+                                position: relative;
+                                display: flex;
+                                flex-direction: column;
+                                margin-top: 32px;
+                                width: 100%;
+
+                                >p.notice {
+                                    padding-left: 14px;
+                                    text-align: left;
+                                    font: 400 12px/17px "Noto Sans Kr";
+                                    color: #666;
+                                    text-indent: -14px;
+                                }
+
+                                .box_reslut_table {
+                                    margin-top: 10px;
+
+                                    .tab_select_head {
+                                        display: flex;
+                                        width: 100%;
+                                        height: 32px;
+                                        border-radius: 10px 10px 0 0;
+                                        background-color: #000D7E;
+
+                                        >div {
+                                            box-sizing: border-box;
+                                            text-align: center;
+                                            font: 400 13px/32px "Noto Sans Kr";
+                                            color: #fff;
+
+                                            &+div {
+                                                border-left: 1px solid #DDDDDD;
+                                            }
+
+                                            &:nth-child(1) {
+                                                width: 41px;
+                                            }
+
+                                            &:nth-child(2) {
+                                                width: 54px;
+                                            }
+
+                                            &:nth-child(3) {
+                                                width: 133px;
+                                            }
+
+                                            &:nth-child(4) {
+                                                width: 44px;
+                                            }
+
+                                            &:nth-child(5) {
+                                                width: 44px;
+                                            }
+                                        }
+                                    }
+
+                                    .tab_select {
+                                        width: 100%;
+                                        border: 1px solid #ddd;
+                                        border-top: 0;
+                                        border-radius: 0 0 10px 10px;
+
+                                        button {
+                                            position: relative;
+                                            display: flex;
+                                            height: 37px;
+
+                                            &.wrong {
+                                                background-color: #F000001A;
+
+                                                // &::after {
+                                                //     display: none;
+                                                // }
+
+                                            }
+
+                                            &.is-show {
+                                                background-color: #000D7E1A;
+
+                                                &:after {
+                                                    content: "";
+                                                    position: absolute;
+                                                    top: 0;
+                                                    left: 0;
+                                                    width: 318px;
+                                                    height: 100%;
+                                                    border: 1px solid #000D7E;
+                                                    box-sizing: border-box;
+                                                }
+
+                                                &:nth-child(8) {
+                                                    border-radius: 0 0 10px 10px;
+
+                                                    &:after {
+                                                        border-radius: 0 0 10px 10px;
+                                                    }
+                                                }
+                                            }
+
+                                            >div {
+                                                height: 39px;
+                                                box-sizing: border-box;
+                                                text-align: center;
+                                                font: 400 13px/39px "Noto Sans Kr";
+                                                color: #242424;
+
+                                                &+div {
+                                                    border-left: 1px solid #DDDDDD;
+
+                                                }
+
+                                                &:nth-child(1) {
+                                                    width: 41px;
+                                                }
+
+                                                &:nth-child(2) {
+                                                    width: 54px;
+                                                }
+
+                                                &:nth-child(3) {
+                                                    width: 133px;
+                                                }
+
+                                                &:nth-child(4) {
+                                                    width: 44px;
+                                                    @include setFlexCenter();
+                                                }
+
+                                                &:nth-child(5) {
+                                                    width: 44px;
+                                                    @include setFlexCenter();
+
+                                                    >a {
+                                                        width: 24px;
+                                                        height: 24px;
+                                                        background-image: bgurl("m_6p_before_exam8_mp4.png");
+                                                        background-size: 24px;
+
+
+                                                    }
+                                                }
+
+                                                .mark_o {
+                                                    display: block;
+                                                }
+
+                                                .mark_x {
+                                                    display: none;
+                                                }
+                                            }
+
+                                            &.wrong {
+                                                .mark_o {
+                                                    display: none;
+                                                }
+
+                                                .mark_x {
+                                                    display: block;
+                                                }
+                                            }
+
+
+
+                                            &+button {
+                                                >div {
+                                                    border-top: 1px solid #DDDDDD;
+                                                }
+
+                                            }
+                                        }
+                                    }
+                                }
+
+
+                            }
+                        }
+
+                        .move_btns {
+                            display: flex;
+                            justify-content: space-between;
+                            margin-top: 16px;
+
+                            &[data-index="1"] {
+                                .prev {
+                                    opacity: .3;
+                                }
+                            }
+
+                            &[data-index="8"] {
+                                .next {
+                                    opacity: .3;
+                                }
+
+                            }
+
+                            button {
+                                display: inline-block;
+                                width: 60px;
+                                height: 36px;
+                                border: 1px solid #dddddd;
+                                border-radius: 10px;
+                                font-size: 0;
+
+                                >span {
+                                    font: 700 14px/36px "Noto Sans Kr";
+                                    color: #242424;
+                                }
+
+                                &+button {
+                                    margin-left: 14px;
+                                }
+
+                                &.disable {
+                                    opacity: .3;
+                                }
+                            }
+                        }
+
+                        .add_content {
+                            margin-top: 40px;
+
+                            p.tit {
+                                text-align: left;
+                                font: 700 16px/23px "Noto Sans Kr";
+                                color: #000D7E;
+                            }
+
+                            p.tit_sub {
+                                margin-top: 2px;
+                                text-align: left;
+                                font: 400 12px/17px "Noto Sans Kr";
+                                color: #666;
+                            }
+
+                            .downbtn_wrap {
+                                margin-top: 20px;
+                                display: flex;
+                                flex-direction: column;
+
+                                a {
+                                    position: relative;
+                                    @include setFlexCenter;
+                                    flex-direction: column;
+                                    width: 100%;
+                                    height: 64px;
+                                    border-radius: 10px;
+                                    background-color: #000D7E;
+                                    font: 500 14px/20px "Noto Sans Kr";
+                                    color: #ffffff8A;
+
+                                    box-shadow: 1.49px 2.98px 5.96px rgba(0, 0, 0, 0.2);
+
+                                    >div {
+                                        font: 700 16px/23px "Noto Sans Kr";
+                                        color: #fff;
+                                    }
+
+                                    &:after {
+                                        content: "";
+                                        position: absolute;
+                                        top: 26px;
+                                        right: 29px;
+                                        width: 9px;
+                                        height: 15px;
+                                        background-image: bgurl("6p_before_exam8_downarr.svg");
+                                        background-size: 9px;
+                                        ;
+
+                                    }
+
+                                    &+a {
+                                        margin-top: 10px;
+                                    }
+
+
+                                }
+                            }
+
+                        }
+                    }
+
+                    &.entry {
+                        >.slide_inner>.close {
+                            position: absolute;
+                            top: 8px;
+                            left: 50%;
+                            margin-left: calc(160px - 40px);
+                            width: 32px;
+                            height: 32px;
+                            background-image: bgurl("6p_before_exam8_close.png");
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: 16px;
+                        }
+
+                        .slide_inner>img {
+                            margin-top: 52px;
+                            width: 320px;
+                        }
+
+
+                        .next {
+                            position: absolute;
+                            top: 551px;
+                            left: 50%;
+                            margin-left: -160px;
+                            width: 320px;
+                            height: 56px;
+                        }
+                    }
+
+                    &.notice {
+                        >.slide_inner {
+                            padding-bottom: 20px;
+                        }
+
+                        >.slide_inner>.close {
+                            position: absolute;
+                            top: 8px;
+                            left: 50%;
+                            margin-left: calc(160px - 40px);
+                            width: 32px;
+                            height: 32px;
+                            background-image: bgurl("6p_before_exam8_close.png");
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: 16px;
+
+                        }
+
+                        .box {
+                            padding: 24px 20px;
+                            width: 100%;
+                            border-radius: 10px;
+                            text-align: left;
+                            background-color: #F5F5F5;
+                        }
+
+                        .dot_list li {
+                            padding-left: 7px;
+                            font: 700 16px/23px "Noto Sans Kr";
+                            color: #242424;
+
+
+                            &:before {
+                                content: "";
+                                display: inline-block;
+                                margin: -2px 4px 0 -7px;
+                                width: 4px;
+                                height: 4px;
+                                border-radius: 50%;
+                                background-color: #000;
+                                vertical-align: middle;
+                            }
+
+                            &+li {
+                                margin-top: 16px;
+                            }
+                        }
+
+                        .txt_red {
+                            color: #f00000;
+                        }
+
+                        .txt_sub {
+                            margin-top: 2px;
+                            font: 400 14px/20px "Noto Sans Kr";
+                            color: #666;
+                        }
+
+                        .txt_guide {
+                            margin-top: 24px;
+                            font: 700 16px/23px "Noto Sans Kr";
+                            color: #000D7E;
+
+                        }
+
+                        button.next {
+                            display: block;
+                            margin-top: 16px;
+                            width: 320px;
+                            height: 56px;
+                            border-radius: 10px;
+                            background-color: #000D7E;
+                            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+                            >span {
+                                font: 700 16px/56px "Noto Sans Kr";
+                                color: #fff;
+                            }
+
+
+                        }
+                    }
+
+                    &.exam {}
+
+                    &.result {
+                        .boxes_wrap {
+                            display: block;
+                            height: auto;
+                        }
+
+                        >.slide_inner>.close {
+                            position: absolute;
+                            top: 8px;
+                            left: 50%;
+                            margin-left: calc(160px - 40px);
+                            width: 32px;
+                            height: 32px;
+                            background-image: bgurl("6p_before_exam8_close.png");
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: 16px;
+                            z-index: 1;
+                        }
+                    }
+                }
+
+            }
+
+            .box_answer {
+                display: none;
+                position: absolute;
+                // top: calc(100% - 90px);
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 126px;
+                transition: height .2s ease-in-out;
+                overflow: hidden;
+                z-index: 1;
+
+                >.toggle {
+                    display: inline-block;
+                    width: 112px;
+                    height: 30px;
+                    font-size: 0;
+
+                    >span {
+                        position: relative;
+                        top: 1px;
+                        display: inline-block;
+                        width: 112px;
+                        height: 30px;
+                        border: 1px solid #ddd;
+                        border-bottom: 0;
+                        border-radius: 5px 5px 0 0;
+                        box-sizing: border-box;
+                        background-color: #fff;
+                        font: 400 13px/30px "Noto Sans Kr";
+                        color: #242424;
+                        z-index: 1;
+
+                        &:before {
+                            content: "";
+                            position: fixed;
+                            top: 0;
+                            left: 0;
+                            width: 0;
+                            height: 0;
+                            ;
+                        }
+
+                        &:after {
+                            content: "";
+                            display: inline-block;
+                            margin-left: 5px;
+                            width: 10px;
+                            height: 10px;
+                            background-image: bgurl("m_6p_before_exam8_arr.png");
+                            background-position: center;
+                            background-size: 10px;
+
+
+
+                        }
+                    }
+                }
+
+                &.is-show {
+                    position: fixed;
+                    height: 354px;
+
+                    >.toggle>span:before {
+                        width: 100%;
+                        height: calc(100% - 324px);
+                    }
+
+                    >.toggle>span:after {
+                        transform: rotate(180deg);
+                    }
+
+                    &:before {
+                        content: "";
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: #0000002A;
+                    }
+
+                    .answer_body {
+                        padding: 20px 0 96px;
+                    }
+                }
+
+                .answer_body {
+                    position: relative;
+                    padding: 96px 0 20px;
+                    border-top: 1px solid #DDD;
+                    background: #fff;
+
+
+                    ul {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        margin: 0 auto;
+                        width: 320px;
+
+                        li {
+                            position: relative;
+                            display: flex;
+                            flex-direction: column;
+                            width: 80px;
+                            height: 104px;
+                            border: 1px solid #ddd;
+                            background-color: #fff;
+                            overflow: hidden;
+                            cursor: pointer;
+
+                            &+li:not(:nth-child(5)) {
+                                border-left: 0;
+                            }
+
+                            &:nth-child(n + 5) {
+                                border-top: 0;
+                            }
+
+                            &:nth-child(1) {
+                                border-radius: 5px 0 0 0;
+
+                                &.on {
+                                    &:after {
+                                        border-radius: 5px 0 0 0;
+                                    }
+                                }
+                            }
+
+                            &:nth-child(4) {
+                                border-radius: 0 5px 0 0;
+
+                                &.on {
+                                    &:after {
+                                        border-radius: 0 5px 0 0;
+
+                                    }
+                                }
+                            }
+
+                            &:nth-child(5) {
+                                border-radius: 0 0 0 5px;
+
+                                &.on {
+                                    &:after {
+                                        border-radius: 0 0 0 5px;
+
+                                    }
+                                }
+                            }
+
+                            &:nth-child(8) {
+                                border-radius: 0 0 5px 0;
+
+                                &.on {
+                                    &:after {
+                                        border-radius: 0 0 5px 0;
+
+                                    }
+                                }
+                            }
+
+                            &.on {
+                                &:after {
+                                    content: "";
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    border: 1px solid #000D7E;
+                                    box-sizing: border-box;
+                                    background-color: #000D7E1A;
+                                    z-index: 1;
+                                }
+                            }
+
+                            >div {
+                                // width: 210px;
+                                height: 56px;
+                                text-align: center;
+                                color: #242424;
+
+                                &:first-child {
+                                    @include setFlexCenter;
+                                    height: 48px;
+                                    background-color: #dddddd2A;
+                                    font: 400 16px/1 "Noto Sans Kr";
+                                }
+
+                                label {
+
+                                    // width: 208px;
+                                    z-index: 1;
+
+                                    input {
+                                        width: 100%;
+                                        height: 56px;
+                                        background: transparent;
+                                        text-align: center;
+                                        font: 700 16px/1 "Noto Sans Kr";
+                                        color: #242424;
+
+                                        &::-webkit-inner-spin-button {
+                                            appearance: none;
+                                            -moz-appearance: none;
+                                            -webkit-appearance: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.is-show .answer_body {}
+            }
+
+            .submit {
+                display: none;
+                position: fixed;
+                bottom: 20px;
+                left: 0;
+                width: 100%;
+                z-index: 1;
+
+                button {
+                    width: 320px;
+                    height: 56px;
+                    background: #000D7E;
+                    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.2);
+                    border-radius: 10px;
+
+                    >span {
+                        font: 700 16px/56px "Noto Sans Kr";
+                        color: #fff;
+                    }
+                }
+            }
+
+            .box_commentary.tab_cont {
+                position: fixed;
+                top: 0;
+                left: 0;
+                display: none;
+                width: 100%;
+                height: 100%;
+                background-color: #0000006A;
+                overflow-y: auto;
+                z-index: 1;
+
+                // &:before {
+                //     content: "";
+                //     position: absolute;
+                //     top: 0;
+                //     left: 0;
+                //     width: 486px;
+                //     height: 326px;
+                //     border: 1px solid #ddd;
+                //     border-radius: 10px;
+                //     box-sizing: border-box;
+                //     background: bgurl("6p_before_8exam_comment_dft.png");
+                //     z-index: 1;
+
+                // }
+
+                // &.off:before {
+                //     display: none;
+                // }
+
+                .tabs {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    margin-top: -280px;
+                    margin-left: -160px;
+                    width: 320px;
+                    height: 560px;
+                    opacity: 0;
+                    visibility: hidden;
+                    overflow-y: auto;
+
+                    &.is-show {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+
+                    .btnwrap {
+                        position: relative;
+                        height: 52px;
+                        background-color: #fff;
+                        border-radius: 20px 20px 0 0;
+
+                        .close {
+                            position: absolute;
+                            top: 8px;
+                            right: 8px;
+                            width: 32px;
+                            height: 32px;
+                            background-image: bgurl("6p_before_exam8_close.png");
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: 16px;
+                        }
+                    }
+
+                    .imgwrap {
+                        padding: 0 16px 10px 18px;
+                        height: 508px;
+                        border-radius: 0 0 20px 20px;
+                        box-sizing: border-box;
+                        background-color: #fff;
+                        overflow-y: auto;
+                    }
+                }
+            }
+        }
+    }
+
+    .popup_wrap {
+        .popup-s-box {
+            .cancel+.confirm {
+                width: 50%;
+            }
+
+        }
+
+
+    }
+}
+
+@media screen and (max-height:560px) {
+    .raiseup_tab .cont4 .exam_wrap .box_commentary.tab_cont .tabs {
+        top: 0;
+        margin-top: 0;
+    }
+
+}
+
+
+.raiseup_tab.after {
+    position: relative;
+
+    // [class*=cont] > .inner > div > img{
+    //     width: 320px;
+    // }
+
+    .cont1 {
+        .inner {
+            padding: 72px 0 60px;
+
+            .tit1 img {
+                width: 320px;
+            }
+
+            .cont1_tab_wrap {
+                margin-top: 40px;
+
+                .tab_select {
+                    display: flex;
+                    margin: 0 auto 0 -6px;
+                    width: 332px;
+                    height: 52px;
+                    background: bgurl("m_6p_before_tab1_cont2_tabbg.png") no-repeat;
+                    background-size: 332px;
+
+                    button {
+                        position: relative;
+                        flex-grow: 1;
+                        height: 52px;
+                        border: none;
+
+
+                        @for $i from 1 through 5 {
+                            &:nth-child(#{$i}) {
+                                &.is-show:before {
+                                    content: "";
+                                    position: absolute;
+                                    width: 63px;
+                                    height: 36px;
+                                    background-image: bgurl("m_6p_before_tab1_cont2_tabbg_on#{$i}.png");
+                                    background-size: 63px;
+                                    background-repeat: no-repeat;
+                                }
+                            }
+                        }
+
+                        &:nth-child(1):before {
+                            top: 6px;
+                            left: 8px;
+                        }
+
+                        &:nth-child(2):before {
+                            top: 6px;
+                            left: 5px;
+                        }
+
+                        &:nth-child(3):before {
+                            top: 6px;
+                            left: 2px;
+                        }
+
+                        &:nth-child(4):before {
+                            top: 6px;
+                            left: -1px;
+                        }
+
+                        &:nth-child(5):before {
+                            top: 6px;
+                            left: -5px;
+                        }
+
+                    }
+                }
+
+                .tab_cont {
+                    position: relative;
+                    margin-top: 24px;
+                    // overflow: hidden;
+
+                    .tabs {
+                        display: none;
+                        width: 100%;
+
+                        &.is-show {
+                            display: block;
+                        }
+
+                        .frame {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                        }
+
+                        .frame {
+                            position: relative;
+
+                            >a {
+                                position: absolute;
+                                left: 20px;
+                                top: 272px;
+                                width: 280px;
+                                height: 48px;
+                            }
+
+                            &+.frame {
+                                margin-top: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .link {
+                margin-top: 32px;
+
+            }
+        }
+    }
+
+    .cont2 {
+        background-color: #F5F5F7;
+
+        .inner {
+            padding: 60px 0;
+        }
+
+        .tit1 img {
+            width: 320px;
+        }
+
+        .cont2_slide {
+            position: relative;
+            margin: 16px auto 76px;
+            width: 280px;
+            height: 515px;
+            box-sizing: border-box;
+
+            .swiper-pagination {
+                bottom: -43px;
+                width: 100%;
+                z-index: 0;
+            }
+
+            .swiper-pagination-bullet {
+                margin: 0 4px;
+                width: 10px;
+                height: 10px;
+                background-color: #000D7E;
+            }
+
+            .swiper-pagination-bullet-active {
+                margin-bottom: -1px;
+                width: 12px;
+                height: 12px;
+                background-color: #000D7E;
+            }
+        }
+
+        .link {
+            margin-top: 32px;
+        }
+    }
+
+    .cont3 {
+        .inner {
+            padding: 60px 0;
+        }
+
+        .cont3_slide {
+            margin-top: 39px;
+
+            .swiper-container {
+                padding-bottom: 43px;
+
+                .swiper-pagination {
+                    bottom: 0;
+                }
+
+                .swiper-pagination-bullet {
+                    width: 10px;
+                    height: 10px;
+                    background-color: #000D7E1A;
+                    opacity: 1;
+                }
+
+                .swiper-pagination-bullet-active {
+                    margin-bottom: -1px;
+                    width: 12px;
+                    height: 12px;
+                    background-color: #000D7E;
+                }
+            }
+        }
+
+        .link1 {
+            margin-top: 40px;
+        }
+
+        .link2 {
+            margin-top: 12px;
+        }
+
+        .tit3 {
+            img {
+                width: 311px;
+            }
+
+            text-align: center;
+        }
+
+    }
+
+
+    .popup_wrap {
+        .popup-s-box {
+            .cancel+.confirm {
+                width: 50%;
+            }
+
+        }
+
+
+    }
+}

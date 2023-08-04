@@ -1,0 +1,139 @@
+@charset "UTF-8";
+@import "./modules/mixin";
+
+/* 3평 */
+.main_wrap {
+    overflow: hidden;
+}
+
+.main_wrap .top_container {
+    height: 380px;
+}
+
+.main_wrap .top_container .top_cont {
+    position: relative;
+    width: 100%;
+    min-width: 320px;
+    height: 380px;
+    background: url('https://resource-portal.etoos.com/common-page/static/m_top_main.png') no-repeat top center, url('https://resource-portal.etoos.com/common-page/static/m_top_bg.png') repeat top center;
+    background-size: 360px auto;
+}
+
+.main_wrap .top_container .top_cont_3pAfter {
+    position: relative;
+    width: 100%;
+    min-width: 320px;
+    height: 380px;
+    background: url('https://resource-portal.etoos.com/common-page/static/m_top_main_after.png') no-repeat top center, url('https://resource-portal.etoos.com/common-page/static/m_top_bg_after.png') repeat top center;
+    background-size: 360px auto;
+}
+
+.main_wrap.after .top_container {
+    position: relative;
+    width: 100%;
+    min-width: 320px;
+    height: 380px;
+    background: url('https://resource-portal.etoos.com/common-page/static/m_top_main_after.png') no-repeat top center, url('https://resource-portal.etoos.com/common-page/static/m_top_bg_after.png') repeat top center;
+    background-size: 360px auto;
+}
+
+.main_wrap .top_container .inner {
+    position: relative;
+    width: 320px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.main_wrap .top_container .inner .mainPictureWrap {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    margin-left: -65px;
+}
+
+.main_wrap .top_container .inner .mainPictureWrap .main_effect {
+    opacity: 0;
+}
+
+.main_wrap .top_container .inner .mainPictureWrap .main_effect.is-active {
+    opacity: 1;
+    transition: opacity 0.3s ease-out;
+}
+
+.main_wrap .top_container .inner .mainPictureWrap .main_slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 220px;
+    opacity: 0;
+    z-index: 1;
+    text-align: center;
+}
+
+.main_wrap .top_container .inner .mainPictureWrap .main_slide img {
+    width: 200px;
+}
+
+.main_wrap .top_container .inner .mainPictureWrap .main_slide img.slide_img_phn {
+    width: 220px;
+}
+
+/* 박하나 관장 */
+.main_wrap .top_container .inner .mainPictureWrap .main_slide.is-active {
+    opacity: 1;
+    transition: opacity 0.3s ease-out;
+}
+
+.main_wrap .top_container .inner .mainPictureWrap .main_slide .text_rolling_box {
+    position: absolute;
+    bottom: 32px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.main_wrap .top_container .inner .mainPictureWrap .main_slide .text_rolling_box2 img {
+    width: 188px;
+}
+
+.main_wrap .top_container .inner .mainPictureWrap .main_slide .text_rolling_box3 img {
+    width: 196px
+}
+
+.main_wrap .top_container .inner .mainPictureWrap .main_slide .text_rolling_box4 img {
+    width: 196px;
+}
+
+.main_wrap .top_container .inner .mainPictureWrap .main_slide .text_rolling_box5 img {
+    width: 180px;
+}
+
+.main_wrap .top_container .inner .mainPictureWrap .main_slide .text_rolling_box6 img {
+    width: 182px;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-10px);
+    }
+
+    50% {
+        transform: scaleY(.9) translateY(0px);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+/* 탭 */
+@import "./modules/3p_tab/_m_tab_layout.scss";
+@import "./modules/3p_tab/_m_tab1.scss";
+@import "./modules/3p_tab/_m_tab2.scss";
+@import "./modules/3p_tab/_m_tab3.scss";
+@import "./modules/3p_tab/_m_tab4.scss";
+@import "./modules/3p_tab/_m_tab5.scss";

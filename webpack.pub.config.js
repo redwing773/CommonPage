@@ -1,19 +1,19 @@
 const path = require("path");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+// const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 // const buildConfig = require('./build/webpack.build');
 
 module.exports = {
-  // mode: "development",
-  mode: "production",
+  mode: "development",
+  // mode: "production",
   devtool: "source-map", //scss 소스맵 기능 추가
 
   entry: {
-    entry: path.resolve(__dirname, "./resources/js/portalPage/", "entry.js"),
+  //   entry: path.resolve(__dirname, "./src/main/webapp/resources/js/portalPage/", "entry.js"),
   },
-  
+
   output: {
-    filename: "[name]",
-    path: path.resolve(__dirname, "./resources/css/portalPage/")
+  //   filename: "[name]",
+  //   path: path.resolve(__dirname, "./src/main/webapp/resources/css/portalPage/")
   },
 
   devServer: {
@@ -23,41 +23,41 @@ module.exports = {
       serveIndex: true
     },
     host: "localhost",
-    port: 8983,
+    port: 8083,
     compress: true, //gzip 압축방식을 이용하여 웹 자원 사이즈를 줄임
-    // open: ['/'],
+    // open: ['/html'],
     webSocketServer: false
   },
-  module: {
-    rules: [
-      {
-        test: /\.(sa|sc|c)ss$/i,
-        use: [
-          { loader: MiniCssExtractPlugin.loader },
-          { loader: 'css-loader' },
-          { 
-            loader: 'sass-loader',
-            // options: {
-            //   additionalData: `
-            //     $queryString:  "?v=${buildConfig.VERSION}";`
-            // }
-          },
-        ],
-        exclude: /node_modules/,
-      },
-      {
-        test: /\.(png|jpe?g|gif|svg)$/i,
-        dependency: { not: ["url"] },
-        use: [
-          {
-            loader: "url-loader"
-          }
-        ]
-      }
-    ]
-  },
+  // module: {
+  //   rules: [
+  //     {
+  //       test: /\.(sa|sc|c)ss$/i,
+  //       use: [
+  //         { loader: MiniCssExtractPlugin.loader },
+  //         { loader: 'css-loader' },
+  //         { 
+  //           loader: 'sass-loader',
+  //           // options: {
+  //           //   additionalData: `
+  //           //     $queryString:  "?v=${buildConfig.VERSION}";`
+  //           // }
+  //         },
+  //       ],
+  //       exclude: /node_modules/,
+  //     },
+  //     {
+  //       test: /\.(png|jpe?g|gif|svg)$/i,
+  //       dependency: { not: ["url"] },
+  //       use: [
+  //         {
+  //           loader: "url-loader"
+  //         }
+  //       ]
+  //     }
+  //   ]
+  // },
 
-  plugins: [
-    new MiniCssExtractPlugin({ filename: "[name].css" })// 컴파일 + 번들링 CSS 파일이 저장될 경로와 이름 지정
-  ]
+  // plugins: [
+  //   new MiniCssExtractPlugin({ filename: "[name].css" })// 컴파일 + 번들링 CSS 파일이 저장될 경로와 이름 지정
+  // ]
 };

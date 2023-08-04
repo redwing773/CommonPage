@@ -1,0 +1,17 @@
+$NS: "Noto Sans KR";
+
+@mixin set320() {
+    margin-left: -20px;
+    width: 360px;
+    max-width: none;
+}
+
+@mixin setFlexCenter() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@function bgurl($name){
+@return url("https://resource-portal.etoos.com/common-page/static/#{$name}")
+}

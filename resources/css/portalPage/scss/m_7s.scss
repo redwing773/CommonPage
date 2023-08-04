@@ -1,0 +1,11 @@
+@charset "UTF-8";
+@import "./modules/mixin";
+
+/* 7월 수시 */
+
+// 탭
+@import "./modules/7s_tab/_m_tab_layout.scss";
+@import "./modules/7s_tab/_m_tab1.scss";
+@import "./modules/7s_tab/_m_tab2.scss";
+@import "./modules/7s_tab/_m_tab3.scss";
+@import "./modules/7s_tab/_m_tab4.scss";

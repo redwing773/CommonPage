@@ -1,0 +1,751 @@
+@charset "UTF-8";
+@import "./modules/mixin";
+
+/* 9월 모평 */
+
+// 탭
+// @import "./modules/7s_tab/_tab_layout.scss";
+// @import "./modules/7s_tab/_tab1.scss";
+// @import "./modules/7s_tab/_tab2.scss";
+// @import "./modules/7s_tab/_tab3.scss";
+// @import "./modules/7s_tab/_tab4.scss";
+
+.main_wrap {
+    .top_container {
+        .exam_wrap {
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            // justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .6);
+            overflow-y: auto;
+            visibility: hidden;
+            z-index: 510; // portalGnb 509
+
+            &.is-show {
+                visibility: visible;
+            }
+
+            .inner {
+                position: relative;
+                padding: 0;
+                width: 1100px;
+                height: 800px;
+
+                .swiper-container {
+                    border-radius: 30px;
+                    background-color: #fff;
+                    overflow: hidden;
+                }
+
+                .swiper-button-disabled {
+                    display: none;
+                }
+
+                .swiper-button-next,
+                .swiper-button-prev {
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    width: 0;
+                    height: 0;
+                    background: none;
+                }
+
+                .swiper-slide {
+                    height: 800px;
+                    max-height: 800px;
+                    // opacity: 0 !important;
+                    overflow-y: auto;
+
+                    &.swiper-slide-active {
+                        // opacity: 1 !important;
+                    }
+
+                    .slide_inner {
+                        width: 1100px;
+                        padding: 40px 56px;
+                        height: 800px;
+                        box-sizing: border-box;
+
+                        h2.tit {
+                            position: relative;
+                            font: 500 24px/35px "Noto Sans Kr";
+                            color: #242424;
+
+                            &:after {
+                                content: "";
+                                position: absolute;
+                                top: 44px;
+                                left: 0;
+                                width: 100%;
+                                height: 2px;
+                                background-color: #000;
+                            }
+
+                            .timer {
+                                position: absolute;
+                                top: 12px;
+                                right: 6px;
+                                font: 500 14px/23px "Noto Sans Kr";
+                                color: #f00000;
+
+                                >span {
+                                    margin-left: 6px;
+                                    font: 500 16px/23px "Noto Sans Kr";
+                                    color: #f00000;
+                                }
+
+                            }
+                        }
+
+                        .boxes_wrap {
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: space-between;
+                            margin-top: 29px;
+                            height: 570px;
+
+                            .box_question {
+                                padding: 35px 40px 0;
+                                width: 668px;
+                                height: 570px;
+                                border: 1px solid #444;
+                                border-radius: 10px;
+                                box-sizing: border-box;
+                                overflow-y: auto;
+
+                                >img {
+                                    display: none;
+
+                                    &.on {
+                                        display: block;
+                                    }
+                                }
+                            }
+
+                            .box_answer {
+                                width: 300px;
+                                height: 570px;
+                                overflow: hidden;
+
+                                .answer_head {
+                                    display: flex;
+                                    background-color: #000D7E;
+                                    height: 58px;
+                                    border-radius: 10px 10px 0 0;
+
+                                    >div {
+                                        width: 210px;
+                                        font: 400 16px/59px "Noto Sans Kr";
+                                        box-sizing: border-box;
+                                        text-align: center;
+                                        color: #fff;
+
+                                        &:first-child {
+                                            width: 90px;
+                                            border-right: 1px solid #ffffff2A;
+                                        }
+                                    }
+                                }
+
+                                .answer_body {
+                                    li {
+                                        position: relative;
+                                        display: flex;
+                                        height: 64px;
+                                        border-left: 1px solid #242424;
+                                        border-right: 1px solid #242424;
+                                        background-color: #fff;
+                                        cursor: pointer;
+
+                                        &.on {
+                                            &:after {
+                                                content: "";
+                                                position: absolute;
+                                                top: 0;
+                                                left: 0;
+                                                width: 298px;
+                                                height: 64px;
+                                                border: 2px solid #000D7E;
+                                                box-sizing: border-box;
+                                                background-color: #000D7E1A;
+                                                z-index: 1;
+                                            }
+                                        }
+
+                                        &:last-child {
+                                            border-bottom: 1px solid #242424;
+                                            border-radius: 0 0 9px 9px;
+
+                                            &.on:after {
+                                                height: 62px;
+                                                border-radius: 0 0 9px 9px;
+                                            }
+                                        }
+
+                                        >div {
+                                            width: 210px;
+                                            text-align: center;
+                                            color: #242424;
+
+                                            &:first-child {
+                                                width: 90px;
+                                                background-color: #dddddd2A;
+                                                font: 400 16px/64px "Noto Sans Kr";
+                                            }
+
+                                            label {
+                                                position: absolute;
+                                                top: 0;
+                                                left: 90px;
+                                                width: 208px;
+                                                z-index: 1;
+
+                                                input {
+                                                    width: 208px;
+                                                    background: transparent;
+                                                    text-align: center;
+                                                    font: 700 18px/64px "Noto Sans Kr";
+                                                    color: #242424;
+
+                                                    &::-webkit-inner-spin-button {
+                                                        appearance: none;
+                                                        -moz-appearance: none;
+                                                        -webkit-appearance: none;
+                                                    }
+                                                }
+
+                                            }
+
+                                        }
+
+                                        &+li {
+                                            border-top: 1px solid #dddddd;
+                                        }
+
+                                    }
+
+                                }
+
+                            }
+
+                            .box_title {
+                                width: 100%;
+
+                                .result {
+                                    font: 500 32px/46px "Noto Sans Kr";
+                                    color: #242424;
+
+                                    >span {
+                                        font-weight: 700;
+                                        color: #000D7E;
+                                        ;
+                                    }
+                                }
+
+                                .reuslt_sub {
+                                    margin-top: 6px;
+                                    font: 400 16px/23px "Noto Sans Kr";
+                                    color: #666;
+                                }
+
+                                .result_detail {
+                                    display: flex;
+                                    margin-top: 10px;
+                                    height: 64px;
+                                    border-radius: 20px;
+                                    background-color: #000D7E1A;
+
+                                    >div {
+                                        width: 33.33%;
+                                        text-align: center;
+                                        font: 500 16px/64px "Noto Sans Kr";
+                                        color: #242424;
+
+                                        >span {
+                                            margin-left: 12px;
+                                            font: 700 18px/64px "Noto Sans Kr";
+                                            color: #000D7E;
+
+                                            &.score {
+                                                margin-right: 4px;
+                                            }
+
+                                            &.time {
+                                                margin-left: 0;
+                                            }
+
+                                        }
+
+                                    }
+
+
+                                }
+                            }
+
+                            .box_tab_wrap {
+                                position: relative;
+                                display: flex;
+                                justify-content: space-between;
+                                margin-top: 48px;
+                                width: 100%;
+
+                                >p.notice {
+                                    position: absolute;
+                                    top: -28px;
+                                    left: 0;
+                                    font: 400 14px/20px "Noto Sans Kr";
+                                    color: #666;
+                                }
+
+                                .box_reslut_table {
+                                    .tab_select_head {
+                                        display: flex;
+                                        width: 486px;
+                                        height: 30px;
+                                        border-radius: 10px 10px 0 0;
+                                        background-color: #000D7E;
+
+                                        >div {
+                                            box-sizing: border-box;
+                                            text-align: center;
+                                            font: 400 14px/30px "Noto Sans Kr";
+                                            color: #fff;
+
+                                            &+div {
+                                                border-left: 1px solid #DDDDDD;
+                                            }
+
+                                            &:nth-child(1) {
+                                                width: 68px;
+                                            }
+
+                                            &:nth-child(2) {
+                                                width: 74px;
+                                            }
+
+                                            &:nth-child(3) {
+                                                width: 177px;
+                                            }
+
+                                            &:nth-child(4) {
+                                                width: 66px;
+                                            }
+
+                                            &:nth-child(5) {
+                                                width: 101px;
+                                            }
+                                        }
+                                    }
+
+                                    .tab_select {
+                                        width: 486px;
+                                        border: 1px solid #ddd;
+                                        border-top: 0;
+                                        border-radius: 0 0 10px 10px;
+
+                                        button {
+                                            position: relative;
+                                            display: flex;
+                                            height: 37px;
+
+                                            &.wrong {
+                                                background-color: #F000001A;
+
+                                                // &::after {
+                                                //     display: none;
+                                                // }
+
+                                            }
+
+                                            &.is-show {
+                                                background-color: #000D7E1A;
+
+                                                &:after {
+                                                    content: "";
+                                                    position: absolute;
+                                                    top: -1px;
+                                                    left: -1px;
+                                                    width: 100%;
+                                                    height: calc(100% + 1px);
+                                                    border: 1px solid #000D7E;
+                                                    box-sizing: border-box;
+                                                }
+                                            }
+
+                                            >div {
+                                                height: 36px;
+                                                box-sizing: border-box;
+                                                text-align: center;
+                                                font: 400 14px/36px "Noto Sans Kr";
+                                                color: #242424;
+
+                                                &+div {
+                                                    border-left: 1px solid #DDDDDD;
+
+                                                }
+
+                                                &:nth-child(1) {
+                                                    width: 68px;
+                                                }
+
+                                                &:nth-child(2) {
+                                                    width: 74px;
+                                                }
+
+                                                &:nth-child(3) {
+                                                    width: 177px;
+                                                }
+
+                                                &:nth-child(4) {
+                                                    width: 66px;
+                                                    @include setFlexCenter();
+                                                }
+
+                                                &:nth-child(5) {
+                                                    position: relative;
+                                                    width: 101px;
+                                                    z-index: 1;
+
+                                                    >a {
+                                                        height: 36px;
+                                                        @include setFlexCenter();
+                                                    }
+                                                }
+
+                                                .mark_o {
+                                                    display: block;
+                                                }
+
+                                                .mark_x {
+                                                    display: none;
+                                                }
+                                            }
+
+                                            &.wrong {
+                                                .mark_o {
+                                                    display: none;
+                                                }
+
+                                                .mark_x {
+                                                    display: block;
+                                                }
+                                            }
+
+
+
+                                            &+button {
+                                                >div {
+                                                    border-top: 1px solid #DDDDDD;
+                                                }
+
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .box_commentary.tab_cont {
+                                    width: 486px;
+                                    height: 326px;
+
+
+                                    &:before {
+                                        content: "";
+                                        position: absolute;
+                                        top: 0;
+                                        left: 502px;
+                                        width: 486px;
+                                        height: 326px;
+                                        border: 1px solid #ddd;
+                                        border-radius: 10px;
+                                        box-sizing: border-box;
+                                        background: bgurl("6p_before_8exam_comment_dft.png");
+                                        z-index: 1;
+
+                                    }
+
+                                    &.off:before {
+                                        display: none;
+                                    }
+
+                                    .tabs {
+                                        position: absolute;
+                                        top: 0;
+                                        left: 502px;
+                                        padding: 25px;
+                                        width: 486px;
+                                        height: 326px;
+                                        border: 1px solid #ddd;
+                                        border-radius: 10px;
+                                        box-sizing: border-box;
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        overflow-y: auto;
+
+                                        &.is-show {
+                                            opacity: 1;
+                                            visibility: visible;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .move_btns {
+                            position: absolute;
+                            top: 704px;
+                            left: 272px;
+
+                            &[data-index="1"] {
+                                .prev {
+                                    opacity: .3;
+                                }
+                            }
+
+                            &[data-index="8"] {
+                                .next {
+                                    opacity: .3;
+                                }
+
+                            }
+
+                            button {
+                                display: inline-block;
+                                width: 110px;
+                                height: 50px;
+                                border: 1px solid #dddddd;
+                                border-radius: 10px;
+                                font-size: 0;
+
+                                >span {
+                                    font: 700 20px/50px "Noto Sans Kr";
+                                    color: #242424;
+                                }
+
+                                &+button {
+                                    margin-left: 14px;
+                                }
+
+                                &.disable {
+                                    opacity: .3;
+                                }
+                            }
+                        }
+
+                        .submit {
+                            position: absolute;
+                            top: 696px;
+                            left: 744px;
+
+                            button {
+                                width: 300px;
+                                height: 64px;
+                                background: #000D7E;
+                                box-shadow: 1.49px 2.98px 5.96px rgba(0, 0, 0, 0.2);
+                                border-radius: 10px;
+
+                                >span {
+                                    font: 700 20px/64px "Noto Sans Kr";
+                                    color: #fff;
+                                }
+                            }
+
+                        }
+
+                        .add_content {
+                            margin-top: 20px;
+
+                            p.tit {
+                                font: 700 20px/29px "Noto Sans Kr";
+                                color: #000D7E;
+                            }
+
+                            p.tit_sub {
+                                position: absolute;
+                                top: 646px;
+                                left: 271px;
+                                font: 400 16px/23px "Noto Sans Kr";
+                                color: #666;
+                            }
+
+                            .downbtn_wrap {
+                                margin-top: 12px;
+                                display: flex;
+                                justify-content: space-between;
+
+                                a {
+                                    position: relative;
+                                    @include setFlexCenter;
+                                    flex-direction: column;
+                                    width: 319px;
+                                    height: 72px;
+                                    border-radius: 10px;
+                                    background-color: #000D7E;
+                                    font: 500 16px/23px "Noto Sans Kr";
+                                    color: #ffffff8A;
+                                    box-shadow: 1.49px 2.98px 5.96px rgba(0, 0, 0, 0.2);
+
+                                    >div {
+                                        font: 700 20px/29px "Noto Sans Kr";
+                                        color: #fff;
+                                    }
+
+                                    &:after {
+                                        content: "";
+                                        position: absolute;
+                                        top: 26px;
+                                        right: 26px;
+                                        width: 12px;
+                                        height: 20px;
+                                        background: bgurl("6p_before_exam8_downarr.svg");
+                                        ;
+
+                                    }
+
+
+                                }
+                            }
+
+                        }
+                    }
+
+                    &.entry {
+                        >.slide_inner>.close {
+                            position: absolute;
+                            top: 30px;
+                            right: 34px;
+                            width: 32px;
+                            height: 32px;
+                            background-image: bgurl("6p_before_exam8_close.png");
+
+                        }
+
+                        .slide_inner>img {
+                            margin-top: 28px;
+                        }
+
+
+                        .next {
+                            position: absolute;
+                            top: 652px;
+                            left: 270px;
+                            // margin-left: -280px;
+                            width: 560px;
+                            height: 80px;
+                        }
+                    }
+
+                    &.notice {
+                        >.slide_inner>.close {
+                            position: absolute;
+                            top: 30px;
+                            right: 34px;
+                            width: 32px;
+                            height: 32px;
+                            background-image: bgurl("6p_before_exam8_close.png");
+
+                        }
+
+                        .box {
+                            padding: 40px;
+                            width: 100%;
+
+                            background-color: #F5F5F5;
+                        }
+
+                        .dot_list li {
+                            padding-left: 7px;
+                            font: 700 20px/29px "Noto Sans Kr";
+                            color: #242424;
+
+
+                            &:before {
+                                content: "";
+                                display: inline-block;
+                                margin: -2px 4px 0 -7px;
+                                width: 4px;
+                                height: 4px;
+                                border-radius: 50%;
+                                background-color: #000;
+                                vertical-align: middle;
+                            }
+
+                            &+li {
+                                margin-top: 20px;
+                            }
+                        }
+
+                        .txt_red {
+                            color: #f00000;
+                        }
+
+                        .txt_sub {
+                            margin-top: 4px;
+                            font: 400 18px/26px "Noto Sans Kr";
+                            color: #666;
+                        }
+
+                        .txt_guide {
+                            margin-top: 37px;
+                            font: 700 20px/29px "Noto Sans Kr";
+                            color: #000D7E;
+
+                        }
+
+                        button.next {
+                            position: absolute;
+                            top: 696px;
+                            left: 744px;
+                            width: 300px;
+                            height: 64px;
+                            border-radius: 10px;
+                            background-color: #000D7E;
+                            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+                            >span {
+                                font: 700 20px/29px "Noto Sans Kr";
+                                color: #fff;
+                            }
+
+
+                        }
+                    }
+
+                    &.result {
+                        .boxes_wrap {
+                            display: block;
+                            height: auto;
+                        }
+
+                        >.slide_inner>.close {
+                            position: absolute;
+                            top: 30px;
+                            right: 34px;
+                            width: 32px;
+                            height: 32px;
+                            background-image: bgurl("6p_before_exam8_close.png");
+
+                        }
+                    }
+                }
+
+            }
+
+        }
+    }
+
+    .popup_wrap {
+        visibility: hidden;
+
+        &.is-open {
+            visibility: visible;
+        }
+    }
+
+}

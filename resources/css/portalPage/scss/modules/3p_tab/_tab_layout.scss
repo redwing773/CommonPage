@@ -1,0 +1,539 @@
+/* 탭 레이아웃 */
+.main_wrap .tab_wrap {
+    position: relative;
+    margin-top: -100px;
+}
+
+.main_wrap .tab_wrap .tab_head {
+    position: relative;
+    z-index: 1;
+}
+
+.main_wrap .tab_wrap .tab_head>ul {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 1280px;
+    height: 100px;
+}
+
+.main_wrap .tab_wrap .tab_head>ul li {
+    position: relative;
+    width: 256px;
+    height: 100px;
+}
+
+.main_wrap .tab_wrap .tab_head>ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #242424 url('https://resource-portal.etoos.com/common-page/static/tab_off.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.main_wrap .tab_wrap .tab_head>ul li a.on {
+    background: url('https://resource-portal.etoos.com/common-page/static/tab_on.png');
+}
+
+.main_wrap .tab_wrap .tab_head>ul li a.on:hover {
+    background: url('https://resource-portal.etoos.com/common-page/static/tab_on.png');
+}
+
+.main_wrap .tab_wrap .tab_head>ul li a.on .tooltip {
+    opacity: 1;
+}
+
+.main_wrap .tab_wrap .tab_head>ul li a:hover {
+    background: url('https://resource-portal.etoos.com/common-page/static/tab_hover.png');
+}
+
+.main_wrap .tab_wrap .tab_head>ul li:nth-child(2) a,
+.main_wrap .tab_wrap .tab_head>ul li:nth-child(2) a.on:hover {
+    background-position: -256px 0;
+}
+
+.main_wrap .tab_wrap .tab_head>ul li:nth-child(3) a,
+.main_wrap .tab_wrap .tab_head>ul li:nth-child(3) a.on:hover {
+    background-position: -512px 0;
+}
+
+.main_wrap .tab_wrap .tab_head>ul li:nth-child(4) a,
+.main_wrap .tab_wrap .tab_head>ul li:nth-child(4) a.on:hover {
+    background-position: -768px 0;
+}
+
+.main_wrap .tab_wrap .tab_head>ul li:nth-child(5) a,
+.main_wrap .tab_wrap .tab_head>ul li:nth-child(5) a.on:hover {
+    background-position: -1024px 0;
+}
+
+.main_wrap .tab_wrap .tab_head>ul li:nth-child(5):before {
+    content: '';
+    position: absolute;
+    top: -92px;
+    left: 50%;
+    margin-left: -63px;
+    width: 127px;
+    height: 130px;
+    background-image: url("https://resource-portal.etoos.com/common-page/static/event_tab_floating.png");
+    opacity: 1;
+    transition: opacity .1s ease-out;
+    animation: bounce .6s infinite;
+}
+
+.main_wrap .tab_wrap .tab_head>ul li .tooltip {
+    position: absolute;
+    left: auto;
+    bottom: -88px;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+
+.main_wrap .tab_wrap .tab_head>ul li .tooltip img {
+    max-width: none;
+}
+
+.main_wrap .tab_wrap .tab_head>ul li.tab_head_video .tooltip {
+    transform: translateX(20px);
+}
+
+.main_wrap .tab_wrap .tab_head>ul li.tab_head_moei .tooltip {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.main_wrap .tab_wrap .tab_head>ul li.tab_head_online .tooltip {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.main_wrap .tab_wrap .tab_head>ul li.tab_head_offline .tooltip {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.main_wrap .tab_wrap .tab_head>ul li.tab_head_event .tooltip {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 1280px;
+    height: 100px;
+    background-color: #242424;
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li {
+    position: relative;
+    width: 256px;
+    height: 100px;
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #242424;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li a.on:hover {
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:first-child a:before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 1px;
+    height: 40px;
+    background-color: #414141;
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:first-child a:hover:before {
+    background-color: #0084ff;
+    z-index: 1;
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:first-child a.on:before {
+    background-color: #fff;
+    z-index: 1;
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:first-child a.on:hover:before {
+    background-color: #fff;
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:not(:first-child) a:before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: -1px;
+    width: 1px;
+    height: 40px;
+    background-color: #414141;
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:not(:first-child) a:hover:before {
+    left: auto;
+    right: 0;
+    background-color: #0084ff;
+    z-index: 1;
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:not(:first-child) a.on:before {
+    left: auto;
+    right: 0;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:not(:first-child) a.on:hover:before {
+    background-color: #fff;
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li a:hover {
+    background-color: #0084ff;
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li a.on {
+    background-color: #fff;
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li a.on:hover {
+    background-color: #fff;
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li a.on .tooltip {
+    opacity: 1;
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(1) a {
+    background-image: url('https://resource-portal.etoos.com/common-page/static/3p-star_off.png');
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(1) a:hover {
+    background-image: url('https://resource-portal.etoos.com/common-page/static/3p-star_hover.png');
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(1) a.on {
+    background-image: url('https://resource-portal.etoos.com/common-page/static/3p-star_on.png');
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(2) a {
+    background-image: url('https://resource-portal.etoos.com/common-page/static/3p-after_off.png');
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(2) a:hover {
+    background-image: url('https://resource-portal.etoos.com/common-page/static/3p-after_hover.png');
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(2) a.on {
+    background-image: url('https://resource-portal.etoos.com/common-page/static/3p-after_on.png');
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(3) a {
+    background-image: url('https://resource-portal.etoos.com/common-page/static/asap_off.png');
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(3) a:hover {
+    background-image: url('https://resource-portal.etoos.com/common-page/static/asap_hover.png');
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(3) a.on {
+    background-image: url('https://resource-portal.etoos.com/common-page/static/asap_on.png');
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(4) a {
+    background-image: url('https://resource-portal.etoos.com/common-page/static/3p-off_off.png');
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(4) a:hover {
+    background-image: url('https://resource-portal.etoos.com/common-page/static/3p-off_hover.png');
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(4) a.on {
+    background-image: url('https://resource-portal.etoos.com/common-page/static/3p-off_on.png');
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(5) a {
+    background-image: url('https://resource-portal.etoos.com/common-page/static/event_off.png');
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(5) a:hover {
+    background-image: url('https://resource-portal.etoos.com/common-page/static/event_hover.png');
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(5) a.on {
+    background-image: url('https://resource-portal.etoos.com/common-page/static/event_on.png');
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li .tooltip {
+    position: absolute;
+    left: auto;
+    bottom: -88px;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li .tooltip img {
+    max-width: none;
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(1) .tooltip {
+    transform: translateX(20px);
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(2) .tooltip {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(3) .tooltip {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(4) .tooltip {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(5) .tooltip {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 1280px;
+    height: 100px;
+    background-color: #242424;
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li {
+    position: relative;
+    width: 256px;
+    height: 100px;
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #242424;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li a.on:hover {
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:first-child a:before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 1px;
+    height: 40px;
+    background-color: #414141;
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:first-child a:hover:before {
+    background-color: #0084ff;
+    z-index: 1;
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:first-child a.on:before {
+    background-color: #fff;
+    z-index: 1;
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:first-child a.on:hover:before {
+    background-color: #fff;
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:not(:first-child) a:before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: -1px;
+    width: 1px;
+    height: 40px;
+    background-color: #414141;
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:not(:first-child) a:hover:before {
+    left: auto;
+    right: 0;
+    background-color: #0084ff;
+    z-index: 1;
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:not(:first-child) a.on:before {
+    left: auto;
+    right: 0;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:not(:first-child) a.on:hover:before {
+    background-color: #fff;
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li a:hover {
+    background-color: #0084ff;
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li a.on {
+    background-color: #fff;
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li a.on:hover {
+    background-color: #fff;
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li a.on .tooltip {
+    opacity: 1;
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(1) a {
+    background-image: url('https://resource-portal.etoos.com/common-page/static/3p-star_off.png');
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(1) a:hover {
+    background-image: url('https://resource-portal.etoos.com/common-page/static/3p-star_hover.png');
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(1) a.on {
+    background-image: url('https://resource-portal.etoos.com/common-page/static/3p-star_on.png');
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(2) a {
+    background-image: url('https://resource-portal.etoos.com/common-page/static/3p-after_off.png');
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(2) a:hover {
+    background-image: url('https://resource-portal.etoos.com/common-page/static/3p-after_hover.png');
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(2) a.on {
+    background-image: url('https://resource-portal.etoos.com/common-page/static/3p-after_on.png');
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(3) a {
+    background-image: url('https://resource-portal.etoos.com/common-page/static/asap_off.png');
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(3) a:hover {
+    background-image: url('https://resource-portal.etoos.com/common-page/static/asap_hover.png');
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(3) a.on {
+    background-image: url('https://resource-portal.etoos.com/common-page/static/asap_on.png');
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(4) a {
+    background-image: url('https://resource-portal.etoos.com/common-page/static/3p-off_off.png');
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(4) a:hover {
+    background-image: url('https://resource-portal.etoos.com/common-page/static/3p-off_hover.png');
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(4) a.on {
+    background-image: url('https://resource-portal.etoos.com/common-page/static/3p-off_on.png');
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(5) a {
+    background-image: url('https://resource-portal.etoos.com/common-page/static/event_off.png');
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(5) a:hover {
+    background-image: url('https://resource-portal.etoos.com/common-page/static/event_hover.png');
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(5) a.on {
+    background-image: url('https://resource-portal.etoos.com/common-page/static/event_on.png');
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li .tooltip {
+    position: absolute;
+    left: auto;
+    bottom: -88px;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li .tooltip img {
+    max-width: none;
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(1) .tooltip {
+    transform: translateX(20px);
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(2) .tooltip {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(3) .tooltip {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(4) .tooltip {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.main_wrap.after .tab_wrap .tab_head>ul li:nth-child(5) .tooltip {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.main_wrap .tab_wrap .tab_head.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #242424;
+    z-index: 10;
+}
+
+.main_wrap .tab_wrap .tab_head.fixed.hide .tooltip {
+    opacity: 0 !important;
+    visibility: hidden;
+}
+
+.main_wrap .tab_wrap .tab_head.fixed+.tab_body>div {
+    padding-top: 100px;
+}
+
+.main_wrap .tab_wrap .tab_head.fixed>ul li:nth-child(5):before {
+    opacity: 0;
+}
+
+.main_wrap .tab_wrap .tab_body {
+    width: 100%;
+    min-width: 1280px;
+    background: url('https://resource-portal.etoos.com/common-page/static/tab_body_bgline.png') center repeat-y;
+}
+
+.main_wrap .tab_wrap .tab_body .inner {
+    position: relative;
+    margin: 0 auto;
+    padding: 160px 0;
+    width: 1280px;
+}

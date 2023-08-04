@@ -1,0 +1,168 @@
+@charset "UTF-8";
+@import "./modules/mixin";
+
+/* 6평 */
+.main_wrap .top_container .top_cont_6p {
+    &.before {
+        position: relative;
+        width: 100%;
+        height: 576px;
+        background: bgurl("m_6p_before_top_bg.webp") repeat-x top center;
+        background-size: 360px auto;
+
+        .visual_wrap {
+            .ticket {
+                position: absolute;
+                top: 28px;
+
+                left: 0;
+
+                >img {
+                    width: 320px;
+                }
+            }
+
+            .plane {
+                position: absolute;
+                top: 296px;
+                left: 30px;
+
+                >img {
+                    width: 280px;
+                }
+
+                animation: hovering 1.75s ease-in-out infinite;
+
+                @keyframes hovering {
+
+                    0%,
+                    100% {
+                        top: 286px;
+                    }
+
+                    50% {
+                        top: 306px;
+                    }
+                }
+            }
+        }
+    }
+
+    &.after {
+        position: relative;
+        width: 100%;
+        height: 576px;
+
+        .visual_wrap {
+
+            .title {
+                position: absolute;
+                top: 56px;
+                left: 0;
+            }
+
+            .plane {
+                position: absolute;
+                top: 378px;
+                left: 15px;
+
+                >img {
+                    width: 300px;
+                }
+            }
+        }
+    }
+}
+
+// 6평 사전 티켓 이벤트
+.passticket {
+    position: absolute;
+    z-index: 1;
+    animation: tickle 1.8s linear infinite forwards;
+
+    @keyframes tickle {
+
+        0%,
+        100% {
+            transform: rotate(0);
+        }
+
+        30% {
+            transform: rotate(0);
+        }
+
+        32% {
+            transform: rotate(10deg);
+        }
+
+        34% {
+            transform: rotate(0);
+        }
+
+        50% {
+            transform: rotate(0);
+        }
+
+        52% {
+            transform: rotate(10deg);
+        }
+
+        55% {
+            transform: rotate(0);
+        }
+
+    }
+
+    >button {
+        display: block;
+        width: 124px;
+        height: 106px;
+        background-image: bgurl("6p_before_passticket.png");
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: contain;
+    }
+
+    &.off {
+        animation: none;
+
+        >button {
+            background-image: bgurl("6p_before_passticket_off.png");
+        }
+
+    }
+}
+
+//1탭
+.raiseup_tab {
+    .passticket {
+        top: 3763px;
+        left: 50%;
+        margin-left: 45px;
+    }
+}
+
+//2탭
+.strategy_tab {
+    .passticket {
+        top: 3130px;
+        left: 50%;
+        margin-left: -120px;
+    }
+}
+
+//3탭
+.rehearsal_tab {
+    .passticket {
+        top: 940px;
+        left: 50%;
+        margin-left: -155px;
+    }
+}
+
+/* 탭 */
+@import "./modules/6p_tab/_m_tab_layout.scss";
+@import "./modules/6p_tab/_m_tab1.scss";
+@import "./modules/6p_tab/_m_tab2.scss";
+@import "./modules/6p_tab/_m_tab3.scss";
+@import "./modules/6p_tab/_m_tab4.scss";

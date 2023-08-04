@@ -1,0 +1,162 @@
+@import "../mixin";
+
+/* 탭 레이아웃 */
+.main_wrap .tab_wrap {
+    position: relative;
+
+    .tab_head {
+        position: relative;
+        @include setFlexCenter;
+        min-width: 1280px;
+        height: 94px;
+        background-color: transparent;
+        transition: background-color .3s ease-in-out;
+        z-index: 1;
+
+        >ul {
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+            width: 1080px;
+            height: 56px;
+            border: 1px solid #222;
+            border-radius: 27px;
+            box-sizing: border-box;
+            background-color: #fff;
+            overflow: hidden;
+
+            li {
+                position: relative;
+                width: 270px;
+                height: 54px;
+
+                a {
+                    position: relative;
+                    @include setFlexCenter;
+                    width: 100%;
+                    height: 54px;
+                    border-radius: 27px;
+                    background-color: #fff;
+                    font: 700 18px/54px $NS;
+                    color: #333;
+                    letter-spacing: -.72px;
+                    transition: background-color .2s ease-in-out, color .2s ease-in-out;
+
+                    &.on {
+                        background-color: #000;
+                        color: #fff;
+                    }
+
+                    span .pc {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        &.fixed {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #fff;
+            z-index: 10;
+
+            &+.tab_body>div {
+                padding-top: 94px;
+            }
+
+            >ul {
+                overflow: hidden;
+            }
+        }
+    }
+
+    .tab_body {
+        width: 100%;
+        min-width: 1280px;
+        // overflow: hidden;
+
+        .inner {
+            position: relative;
+            margin: 0 auto;
+            width: 1280px;
+        }
+    }
+}
+
+.quickmenu {
+    position: sticky;
+    top: 0;
+    left: 30px;
+    width: 180px;
+    z-index: 10;
+
+    ul {
+        position: absolute;
+        top: 50vh;
+        left: 0;
+        margin-top: -260px;
+
+        li {
+            margin-left: 30px;
+
+            >button {
+                position: relative;
+                display: block;
+                width: 183px;
+                text-align: left;
+                font: 400 16px/23px "Noto Sans Kr";
+                color: #999;
+
+                &.on {
+                    padding-left: 20px;
+                    font-weight: 700;
+                    color: #242424;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 16px;
+                        height: 23px;
+                        background: bgurl("7s_quickon_ico.png") center/16px no-repeat;
+                    }
+                }
+            }
+
+            &+li {
+                margin-top: 60px;
+            }
+        }
+    }
+}
+
+#pop_videoplay1,
+#pop_videoplay2,
+#pop_videoplay3 {
+    margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
+
+    .inner {
+        overflow: hidden;
+    }
+
+    .pop_body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        width: 960px;
+        height: 540px;
+        border: none;
+        background-color: transparent;
+
+        .close_btn {
+            top: 2px;
+            right: 2px;
+            filter: drop-shadow(0 0 2px #FFF);
+        }
+    }
+}

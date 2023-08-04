@@ -1,0 +1,140 @@
+@import "../mixin";
+
+/* 탭 레이아웃 */
+.main_wrap .top_container {
+    min-height: auto;
+}
+
+.main_wrap .tab_wrap {
+    position: relative;
+
+    .tab_head {
+        position: relative;
+        @include setFlexCenter;
+        min-width: 320px;
+        height: 80px;
+        background-color: transparent;
+        transition: background-color .3s ease-in-out;
+        z-index: 1;
+
+        >ul {
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+            width: 320px;
+            height: 48px;
+            border: 1px solid #222;
+            border-radius: 27px;
+            box-sizing: border-box;
+            background-color: #fff;
+            overflow: hidden;
+
+            li {
+                position: relative;
+                width: 80px;
+                height: 46px;
+
+                a {
+                    position: relative;
+                    @include setFlexCenter;
+                    width: 100%;
+                    height: 46px;
+                    border-radius: 27px;
+                    background-color: #fff;
+                    text-align: center;
+                    font: 700 12px/16px $NS;
+                    color: #333;
+                    letter-spacing: -.48px;
+                    transition: background-color .2s ease-in-out, color .2s ease-in-out;
+
+                    &.on {
+                        background-color: #000;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        &.fixed {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #fff;
+            z-index: 11;
+
+            &+.tab_body>div {
+                padding-top: 80px;
+            }
+
+            >ul {
+                overflow: hidden;
+            }
+        }
+    }
+
+    .tab_body {
+        width: 100%;
+        min-width: 320px;
+        overflow: hidden;
+
+        .inner {
+            position: relative;
+            margin: 0 auto;
+            width: 320px;
+        }
+    }
+}
+
+#pop_videoplay1,
+#pop_videoplay2,
+#pop_videoplay3 {
+    top: 50%;
+    margin: 0;
+    transform: translateY(-50%);
+
+
+
+    // margin: -40px auto 0;
+    // margin: -40px auto 0;
+    // padding-bottom: 56.25%;
+    // max-height: calc(100vh - 80px);
+    // border-radius: 0;
+
+    .inner {
+        max-height: none;
+        height: 100%;
+        // overflow: hidden;
+    }
+
+    .pop_body {
+        padding: 0;
+        width: 100%;
+        max-height: 100vh;
+        background-color: transparent;
+
+        .close_btn {
+            top: 5px;
+            right: 5px;
+            filter: drop-shadow(0 0 2px #FFF);
+            z-index: 1;
+        }
+
+        .video_wrap {
+            padding-bottom: 56.25%;
+            width: 100%;
+            height: 0;
+
+            iframe,
+            object,
+            embed {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

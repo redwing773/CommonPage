@@ -1,0 +1,237 @@
+/* 탭 */
+.main_wrap .tab_wrap.before {
+    .tab_head {
+        position: relative;
+        background-color: #000D7E;
+        z-index: 1;
+
+        >ul {
+            display: flex;
+            justify-content: center;
+            // margin: 0 auto;
+            // width: 320px;
+
+            li {
+                position: relative;
+
+                a {
+                    display: block;
+                    width: 94px;
+                    height: 66px;
+                    background-repeat: no-repeat;
+                    background-size: 94px;
+                    background-position: center;
+                    transition: background-image .2s ease-in-out;
+                }
+
+                @for $i from 1 through 4 {
+                    &:nth-child(#{$i}) {
+                        a {
+                            background-image: bgurl("m_6p_before_tab#{$i}_off.png");
+
+                            &.on {
+                                background-image: bgurl("m_6p_before_tab#{$i}_on.png");
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            li:nth-child(4) a {
+                width: 78px;
+                background-size: 78px;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: -26px;
+                    left: 27px;
+                    width: 44px;
+                    height: 44px;
+                    background-image: bgurl("m_6p_before_tab4_on_add.png");
+                    background-size: 44px;
+                    opacity: 1;
+                    transition: opacity .1s ease-out;
+                    animation: bomb 2s linear infinite;
+                    transform: scale(.8);
+
+                    @keyframes bomb {
+
+                        0%,
+                        50%,
+                        100% {
+                            transform: scale(.8);
+                        }
+
+                        20%,
+                        70% {
+                            top: -26px;
+                            transform: scale(.9);
+                        }
+
+                        25%,
+                        75% {
+                            top: -29px;
+                            transform: scaleY(1.2) scaleX(1.1);
+                        }
+
+                        30%,
+                        80% {
+                            top: -26px;
+                            transform: scale(.9);
+                        }
+
+
+                    }
+                }
+            }
+        }
+
+        &.fixed {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #000D7E;
+            z-index: 10;
+
+            >ul {
+                li:nth-child(4) a:before {
+                    opacity: 0;
+                }
+            }
+
+            &+.tab_body>div {
+                padding-top: 66px;
+            }
+
+        }
+    }
+
+    .tab_body .inner {
+        position: relative;
+        margin: 0 auto;
+        width: 320px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+}
+
+
+.main_wrap .tab_wrap.after {
+    .tab_head {
+        position: relative;
+        background-color: #000D7E;
+        z-index: 1;
+
+        >ul {
+            display: flex;
+            justify-content: center;
+            // margin: 0 auto;
+            // width: 320px;
+
+            li {
+                position: relative;
+
+                a {
+                    display: block;
+                    width: 120px;
+                    height: 66px;
+                    background-repeat: no-repeat;
+                    background-size: 120px;
+                    background-position: center;
+                    transition: background-image .2s ease-in-out;
+                }
+
+                @for $i from 1 through 3 {
+                    &:nth-child(#{$i}) {
+                        a {
+                            background-image: bgurl("m_6p_after_tab#{$i}_off.png");
+
+                            &.on {
+                                background-color: #fff;
+                                background-image: bgurl("m_6p_after_tab#{$i}_on.png");
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            li:nth-child(3) a {
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: -26px;
+                    left: 50%;
+                    margin-left: - 17px;
+                    width: 44px;
+                    height: 44px;
+                    background-image: bgurl("m_6p_before_tab4_on_add.png");
+                    background-size: 44px;
+                    opacity: 1;
+                    transition: opacity .1s ease-out;
+                    animation: bomb 2s linear infinite;
+                    transform: scale(.8);
+
+                    @keyframes bomb {
+
+                        0%,
+                        50%,
+                        100% {
+                            transform: scale(.8);
+                        }
+
+                        20%,
+                        70% {
+                            top: -26px;
+                            transform: scale(.9);
+                        }
+
+                        25%,
+                        75% {
+                            top: -29px;
+                            transform: scaleY(1.2) scaleX(1.1);
+                        }
+
+                        30%,
+                        80% {
+                            top: -26px;
+                            transform: scale(.9);
+                        }
+
+
+                    }
+                }
+            }
+        }
+
+        &.fixed {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #000D7E;
+            z-index: 10;
+
+            >ul {
+                li:nth-child(3) a:before {
+                    opacity: 0;
+                }
+            }
+
+            &+.tab_body>div {
+                padding-top: 66px;
+            }
+
+        }
+    }
+
+    .tab_body .inner {
+        position: relative;
+        margin: 0 auto;
+        width: 320px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+}

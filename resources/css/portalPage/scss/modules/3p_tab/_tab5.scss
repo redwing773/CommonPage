@@ -1,0 +1,860 @@
+/* 탭5 */
+.main_wrap .event_tab .cont1 .inner {
+    padding: 160px 0 100px;
+}
+
+.main_wrap .event_tab .cont1 .tit1-guide {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 58px;
+}
+
+.main_wrap .event_tab .color_bg {
+    width: 100%;
+    min-width: 1280px;
+    background: #E6F3FF url('https://resource-portal.etoos.com/common-page/static/tab_body_bgline.png') center repeat-y;
+}
+
+.main_wrap .event_tab .color_bg .inner {
+    padding: 80px 0;
+}
+
+.main_wrap .event_tab .tit1-guide-text .tit1-txtbox {
+    display: flex;
+    justify-content: center;
+}
+
+.main_wrap .event_tab .cont2 .inner {
+    padding: 80px 0 120px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz-tit {
+    text-align: center;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 48px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 0;
+    width: 620px;
+    border: 5px solid #A8D5FF;
+    border-radius: 0 50px 0 50px;
+    box-sizing: border-box;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz:nth-child(even) {
+    margin-left: 40px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    background-image: url('https://resource-portal.etoos.com/common-page/static/event_tab_tit1_icons.png');
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity .3s ease-out, width .3s ease-out;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz.right:before {
+    top: 0;
+    left: 95px;
+    width: 178px;
+    height: 134px;
+    background-position: -551px -215px;
+    opacity: 1;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz.wrong:before {
+    top: -10px;
+    left: 100px;
+    width: 174px;
+    height: 174px;
+    background-position: -551px -359px;
+    opacity: 1;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz2.right:before {
+    top: 0;
+    left: 5px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz2.wrong:before {
+    top: -10px;
+    left: 0px
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz3.right:before {
+    top: 0;
+    left: 25px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz3.wrong:before {
+    top: -10px;
+    left: 20px
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz4.right:before {
+    top: -5px;
+    left: 100px
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz4.wrong:before {
+    top: -10px;
+    left: 90px
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .rdo_wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz label {
+    display: inline-block;
+    font-size: 0;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz input {
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz label span {
+    font-size: 0;
+    background-image: url('https://resource-portal.etoos.com/common-page/static/event_tab_tit1_icons.png');
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz1 {
+    height: 365px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz1 img+img {
+    margin-top: 29px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz1 .rdo_wrap {
+    margin-top: 27px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz1 input+span {
+    display: inline-block;
+    width: 92px;
+    height: 92px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz1 label:nth-child(1) input+span {
+    background-position: -5px -5px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz1 label:nth-child(1) span.disable {
+    background-position: -107px -5px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz1 label:nth-child(1) input:checked+span,
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz1 label:nth-child(1):hover span {
+    background-position: -209px -5px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz1 label:nth-child(2) {
+    margin-left: 38px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz1 label:nth-child(2) input+span {
+    background-position: -311px -5px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz1 label:nth-child(2) span.disable {
+    background-position: -413px -5px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz1 label:nth-child(2) input:checked+span,
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz1 label:nth-child(2):hover span {
+    background-position: -515px -5px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz2 {
+    height: 540px;
+    border-radius: 50px 0 50px 0;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz2 .rdo_wrap {
+    margin-top: 38px;
+    padding: 0 50px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz2 input+span {
+    display: inline-block;
+    width: 172px;
+    height: 60px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz2 label:nth-child(1) input+span {
+    background-position: -5px -107px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz2 label:nth-child(1) span.disable {
+    background-position: -187px -107px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz2 label:nth-child(1) input:checked+span,
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz2 label:nth-child(1):hover span {
+    background-position: -369px -107px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz2 label:nth-child(2) {
+    margin-left: 8px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz2 label:nth-child(2) input+span {
+    background-position: -5px -177px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz2 label:nth-child(2) span.disable {
+    background-position: -187px -177px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz2 label:nth-child(2) input:checked+span,
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz2 label:nth-child(2):hover span {
+    background-position: -369px -177px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz2 label:nth-child(3) {
+    margin-top: 8px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz2 label:nth-child(3) input+span {
+    background-position: -5px -247px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz2 label:nth-child(3) span.disable {
+    background-position: -187px -247px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz2 label:nth-child(3) input:checked+span,
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz2 label:nth-child(3):hover span {
+    background-position: -369px -247px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz2 label:nth-child(4) {
+    margin-top: 8px;
+    margin-left: 8px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz2 label:nth-child(4) input+span {
+    background-position: -5px -317px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz2 label:nth-child(4) span.disable {
+    background-position: -187px -317px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz2 label:nth-child(4) input:checked+span,
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz2 label:nth-child(4):hover span {
+    background-position: -369px -317px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz3 {
+    margin-top: -144px;
+    height: 540px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz3 .rdo_wrap {
+    margin-top: 42px;
+    padding: 0 50px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz3 input+span {
+    display: inline-block;
+    width: 172px;
+    height: 60px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz3 label:nth-child(1) input+span {
+    background-position: -5px -387px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz3 label:nth-child(1) span.disable {
+    background-position: -187px -387px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz3 label:nth-child(1) input:checked+span,
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz3 label:nth-child(1):hover span {
+    background-position: -369px -387px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz3 label:nth-child(2) {
+    margin-left: 8px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz3 label:nth-child(2) input+span {
+    background-position: -5px -457px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz3 label:nth-child(2) span.disable {
+    background-position: -187px -457px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz3 label:nth-child(2) input:checked+span,
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz3 label:nth-child(2):hover span {
+    background-position: -369px -457px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz3 label:nth-child(3) {
+    margin-top: 8px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz3 label:nth-child(3) input+span {
+    background-position: -5px -527px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz3 label:nth-child(3) span.disable {
+    background-position: -187px -527px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz3 label:nth-child(3) input:checked+span,
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz3 label:nth-child(3):hover span {
+    background-position: -369px -527px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz3 label:nth-child(4) {
+    margin-top: 8px;
+    margin-left: 8px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz3 label:nth-child(4) input+span {
+    background-position: -617px -5px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz3 label:nth-child(4) span.disable {
+    background-position: -617px -75px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz3 label:nth-child(4) input:checked+span,
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz3 label:nth-child(4):hover span {
+    background-position: -551px -145px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz4 {
+    margin-top: 31px;
+    height: 365px
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz4 img+img {
+    margin-top: 16px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz4 .rdo_wrap {
+    margin-top: 33px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz4 input+span {
+    display: inline-block;
+    width: 92px;
+    height: 92px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz4 label:nth-child(1) input+span {
+    background-position: -5px -5px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz4 label:nth-child(1) span.disable {
+    background-position: -107px -5px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz4 label:nth-child(1) input:checked+span,
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz4 label:nth-child(1):hover span {
+    background-position: -209px -5px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz4 label:nth-child(2) {
+    margin-left: 38px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz4 label:nth-child(2) input+span {
+    background-position: -311px -5px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz4 label:nth-child(2) span.disable {
+    background-position: -413px -5px;
+}
+
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz4 label:nth-child(2) input:checked+span,
+.main_wrap .event_tab .cont2 .tit1-quiz .quiz4 label:nth-child(2):hover span {
+    background-position: -515px -5px;
+}
+
+.main_wrap .event_tab .cont2 .cont1-tit1-link {
+    position: relative;
+    margin-top: 80px;
+    text-align: center;
+}
+
+.main_wrap .event_tab .cont2 .cont1-tit1-link .link-wrap {
+    display: flex;
+    justify-content: center;
+    height: 90px;
+}
+
+.main_wrap .event_tab .cont2 .cont1-tit1-link .linkgo {
+    width: 600px;
+    height: 90px;
+    background-image: url('https://resource-portal.etoos.com/common-page/static/event_tab_tit1_link_icons.png');
+    background-repeat: no-repeat;
+    background-position: -5px -5px;
+    cursor: pointer;
+}
+
+.main_wrap .event_tab .cont2 .cont1-tit1-link .linkgo.off {
+    background-position: -5px -105px;
+}
+
+.main_wrap .event_tab .cont2 .cont1-tit1-link .linkgo.on {
+    height: 169px;
+    background-position: -5px -205px;
+    transform: translateY(-79px);
+}
+
+.main_wrap .event_tab .cont2 .cont1-tit1-link .linkchk {
+    margin-left: 16px;
+}
+
+.main_wrap .event_tab .cont2 .cont1-tit1-link>img {
+    margin-top: 20px;
+}
+
+.main_wrap .event_tab .cont2 .cont1-tit-notice {
+    text-align: center;
+    margin-top: 72px
+}
+
+.main_wrap .event_tab .cont3 .tit1-sub {
+    display: flex;
+    justify-content: center;
+    margin-top: 19px;
+}
+
+.main_wrap .event_tab .cont3 .tit1-temp {
+    position: relative;
+    margin-top: 86px;
+}
+
+.main_wrap .event_tab .cont3 .tit1-temp .place_find {
+    position: absolute;
+    top: 553px;
+    right: 293px;
+    width: 123px;
+    height: 34px;
+}
+
+.main_wrap .event_tab .cont3 .tit1-link {
+    display: flex;
+    justify-content: center;
+    margin-top: 48px;
+}
+
+.main_wrap .event_tab .cont4 .inner {
+    padding: 140px 0 20px;
+}
+
+.main_wrap .event_tab .cont4.color_bg .inner {
+    padding: 140px 0;
+}
+
+.main_wrap .event_tab .cont4 .tit1-img {
+    margin-top: 63px;
+    text-align: center;
+}
+
+.main_wrap .event_tab .cont4 .tit1-img img {
+    width: auto;
+}
+
+.main_wrap .event_tab .cont4 .tit1-link {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.main_wrap .event_tab .popup_wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .6);
+    opacity: 0;
+    z-index: -100;
+}
+
+.main_wrap .event_tab .popup_wrap.is-open {
+    opacity: 1;
+    z-index: 510;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    font-size: 0;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-box .box-cont {
+    position: relative;
+    border-radius: 30px 30px 0 0;
+    background-color: #fff;
+    overflow-y: auto;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-box .box-cont::-webkit-scrollbar {
+    display: none;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-box .box-cont .input-box {
+    position: relative;
+    margin-top: 16px;
+    text-align: center;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-box .box-cont .input-box input {
+    position: absolute;
+    top: 36px;
+    left: 80px;
+    padding: 0 20px;
+    width: 440px;
+    height: 48px;
+    box-sizing: border-box;
+    font-size: 20px;
+    background: transparent;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-box .box-cont .input-box input::placeholder,
+.main_wrap .event_tab .popup_wrap .popup-box .box-cont .input-box input:disabled {
+    color: #A9B4C5;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-box .box-cont .input-box input[disabled="true"] {
+    color: #A9B4C5;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-box .box-cont .input-box input.inpPhone {
+    top: 125px;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-box .box-cont .input-box.addr {
+    margin-top: 8px;
+    text-align: center;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-box .box-cont .input-box.addr .inpAddr1 {
+    top: 34px;
+    left: 80px;
+    width: 390px;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-box .box-cont .input-box.addr .inpAddrBtn {
+    position: absolute;
+    top: 34px;
+    left: auto;
+    right: 80px;
+    width: 54px;
+    height: 48px;
+    cursor: pointer;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-box .box-cont .input-box.addr .inpAddr2 {
+    top: 90px;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-box .box-cont .input-box.grade {
+    margin-top: 8px;
+    margin-left: 80px;
+    text-align: left;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-box .box-cont .input-box.grade .rdo_wrap {
+    position: relative;
+    margin-top: 2px;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-box .box-cont .input-box.grade .rdo_wrap label {
+    font-size: 0;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-box .box-cont .input-box.grade input {
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-box .box-cont .input-box.grade input+span {
+    margin-left: 40px;
+    padding-left: 34px;
+    font-weight: 500;
+    font-size: 20px;
+    color: #242424;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-box .box-cont .input-box.grade label:first-child input+span {
+    margin-left: 0;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-box .box-cont .input-box.grade input+span:before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    background: url('https://resource-portal.etoos.com/common-page/static/event_tab_tit1_popup_rdo_icons.png') no-repeat;
+    background-position: -10px -10px;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-box .box-cont .input-box.grade input:checked+span:before {
+    background-position: -64px -10px;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-box .box-cont .input-box.grade .rdo_wrap label:nth-child(2) input+span:before {
+    left: 104px
+}
+
+.main_wrap .event_tab .popup_wrap .popup-box .box-cont .input-box.grade .rdo_wrap label:nth-child(3) input+span:before {
+    left: 209px;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-box .box-cont .agree-box {
+    position: relative;
+    margin-top: 32px;
+    border-top: 1px solid #E6E6E6;
+    text-align: center;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-box .box-cont .agree-box .imgwrap {
+    margin-top: 32px;
+    margin-left: 40px;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-box .box-cont .agree-box input+span {
+    position: absolute;
+    top: 29px;
+    left: 79px;
+    width: 30px;
+    height: 30px;
+    background: url('https://resource-portal.etoos.com/common-page/static/event_tab_tit1_popup_chk_icons.png') no-repeat;
+    background-position: -5px -5px;
+    cursor: pointer;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-box .box-cont .agree-box input:checked+span {
+    background-position: -45px -5px;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-box .box-cont .agree-box label:nth-of-type(1)+button {
+    position: absolute;
+    top: 23px;
+    right: 70px;
+    width: 50px;
+    height: 44px;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-box .box-cont .agree-box #agr2+span {
+    top: 76px;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-box .box-cont .agree-box label:nth-of-type(2)+button {
+    position: absolute;
+    top: 75px;
+    right: 70px;
+    width: 50px;
+    height: 44px;
+    ;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-box .box-cont .agree-box .imgwrap2 {
+    margin: 32px 0 40px;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-box .box-cont .closeBtn {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-box .box-bot {
+    border-radius: 0 0 30px 30px;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-box .box-bot .submit img:nth-child(1) {
+    display: inline;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-box .box-bot .submit img:nth-child(2) {
+    display: none;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-box .box-bot .submit.on img:nth-child(1) {
+    display: none;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-box .box-bot .submit.on img:nth-child(2) {
+    display: inline;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-s-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .2);
+    font-size: 0;
+    opacity: 0;
+    z-index: -100;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-s-box.is-open {
+    opacity: 1;
+    z-index: 510;
+    ;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-s-box .box-cont {
+    position: relative;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-s-box .closeBtn {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 22px;
+    height: 22px;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-s-box .confirm {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-s-box .confirm.cancel {
+    width: 50%;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-s-box .confirm.cancel+.confirm {
+    left: 50%;
+    width: 50%;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-s-box .input-box {
+    position: absolute;
+    top: 130px;
+    left: 40px;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-s-box .input-box label {
+    display: block;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-s-box .input-box label input {
+    padding: 0 20px;
+    width: 379px;
+    height: 48px;
+    box-sizing: border-box;
+    background: none;
+    font-weight: 500;
+    font-size: 20px;
+    color: #242424;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-s-box .input-box label input::placeholder {
+    color: #A9B4C5;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-s-box .input-box label:nth-child(2) {
+    margin-top: 42px;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-s-box .rdo_wrap {
+    position: absolute;
+    top: 246px;
+    left: 94px;
+    width: 272px;
+    height: 32px;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-s-box .rdo_wrap input {
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-s-box .rdo_wrap input+span {
+    margin-left: 40px;
+    padding-left: 34px;
+    font-weight: 500;
+    font-size: 20px;
+    color: #242424;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-s-box .rdo_wrap label:first-child input+span {
+    margin-left: 0;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-s-box .rdo_wrap input+span:before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    background: url('https://resource-portal.etoos.com/common-page/static/event_tab_tit1_popup_rdo_icons.png') no-repeat;
+    background-position: -10px -10px;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-s-box .rdo_wrap input:checked+span:before {
+    background-position: -64px -10px;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-s-box .rdo_wrap label:nth-child(2) input+span:before {
+    left: 104px
+}
+
+.main_wrap .event_tab .popup_wrap .popup-s-box .rdo_wrap label:nth-child(3) input+span:before {
+    left: 209px;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-s-box .pop-down .cancel+.confirm {
+    width: 230px;
+    height: 70px;
+    background: url('https://resource-portal.etoos.com/common-page/static/event_tab_tit1_pop-chk2_off.png') no-repeat;
+}
+
+.main_wrap .event_tab .popup_wrap .popup-s-box .pop-down .cancel+.confirm.on {
+    background: none;
+}

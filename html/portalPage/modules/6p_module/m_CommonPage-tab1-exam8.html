@@ -1,0 +1,399 @@
+<div class="exam_wrap is-show">
+    <div class="inner">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide entry">
+                    <div class="slide_inner">
+                        <button class="close"
+                            onclick="document.querySelector('.exam_wrap').classList.remove('is-show');document.querySelector('.exam_wrap').innerHTML = null;document.querySelector('body').style.overflow = null;"><span
+                                class="blind">닫기</span></button>
+                        <img src="https://resource-portal.etoos.com/common-page/static/m_6p_before_exam8_slide1.png"
+                            alt="">
+                        <div class="blind">
+                            [수학 8문항 등급 진단 TEST]
+                            나의 6평
+                            수학 예상 등급은?
+                            8문항 풀고 예상 등급 미리 진단하기!
+                            STEP 01
+                            테스트 시작 버튼 클릭!
+                            테스트 참여 시 이벤트 미션 스탬프 획득!
+                            STEP 02
+                            8문항 문제 풀고 제출하기
+                            30분 동안 8문항 문제 풀고 답안지 제출하기
+                            STEP 03
+                            예상 등급 확인하고 취약 단원 파악!
+                            나의 예상 등급 확인하고 취약 단원 중심으로
+                            6평 대비하기
+                        </div>
+                        <button type="button" class="next"><span class="blind">8문항 진단 TEST 시작!</span></button>
+                    </div>
+                </div>
+                <div class="swiper-slide notice">
+                    <div class="slide_inner">
+                        <h2 class="tit">안내 사항</h2>
+                        <button class="close"
+                            onclick="document.querySelector('.exam_wrap').classList.remove('is-show');document.querySelector('.exam_wrap').innerHTML = null;document.querySelector('body').style.overflow = null;"><span
+                                class="blind">닫기</span></button>
+                        <div class="boxes_wrap">
+                            <div class="box">
+                                <ul class="dot_list">
+                                    <li>
+                                        8문항 진단TEST는 <span class="txt_red">1회</span>만 가능합니다.
+                                        <div class="txt_sub">답안 제출 후에는 TEST 진단 결과만 확인할 수 있습니다.</div>
+                                    </li>
+
+                                    <li>TEST 시간은 <span class="txt_red">30분</span>입니다.
+                                        <div class="txt_sub">
+                                            문제 풀이 중 일시 정지할 수 없으며 시간 종료 시 답안지가 자동 제출됩니다.</div>
+                                    </li>
+                                    <li><span class="txt_red">자유롭게 문제 이동</span>이 가능합니다.
+                                        <div class="txt_sub">
+                                            [이전], [다음] 버튼이나 답안지의 문항 번호를 클릭하여 답을 입력하지 못한 문제로 바로 이동할 수 있습니다.</div>
+                                    </li>
+                                    <li>답은 모두 <span class="txt_red">단답형(세자리 이하의 자연수)</span>입니다.
+                                        <div class="txt_sub">
+                                            정답은 세 자리 이하의 자연수만 입력할 수 있습니다.</div>
+                                    </li>
+                                    <li>TEST 시작하기 전, <span class="txt_red">필기구</span>를 미리 준비하시길 바랍니다.
+                                        <div class="txt_sub">
+                                            문제 풀이에 필요한 필기구를 미리 준비하여 TEST를 시작하시면 됩니다.</div>
+                                    </li>
+                                    <li>TEST가 강제 중단된 경우, <span class="txt_red">답안 제출 전 다시 응시</span>할 수 있습니다.
+                                        <div class="txt_sub">
+                                            단, TEST 중단 전 작성된 답은 저장되지 않습니다.</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="txt_guide">안내 사항을 확인하였으면<br>“START” 버튼을 눌러주세요.</p>
+                        <button type="button" class="next"><span class="">START</span></button>
+                    </div>
+                </div>
+                <div class="swiper-slide exam">
+                    <div class="slide_inner">
+                        <h2 class="tit">수학 8문항 진단 TEST<div class="timer">남은시간 <span>30:00</span></div>
+                        </h2>
+
+                        <div class="boxes_wrap">
+                            <div class="box_question">
+                                <img class="on"
+                                    src="https://resource-portal.etoos.com/common-page/static/m_6p_before_exam8_q1.png"
+                                    alt="문제1">
+                                <img src="https://resource-portal.etoos.com/common-page/static/m_6p_before_exam8_q2.png"
+                                    alt="문제2">
+                                <img src="https://resource-portal.etoos.com/common-page/static/m_6p_before_exam8_q3.png"
+                                    alt="문제3">
+                                <img src="https://resource-portal.etoos.com/common-page/static/m_6p_before_exam8_q4.png"
+                                    alt="문제4">
+                                <img src="https://resource-portal.etoos.com/common-page/static/m_6p_before_exam8_q5.png"
+                                    alt="문제5">
+                                <img src="https://resource-portal.etoos.com/common-page/static/m_6p_before_exam8_q6.png"
+                                    alt="문제6">
+                                <img src="https://resource-portal.etoos.com/common-page/static/m_6p_before_exam8_q7.png"
+                                    alt="문제7">
+                                <img src="https://resource-portal.etoos.com/common-page/static/m_6p_before_exam8_q8.png"
+                                    alt="문제8">
+                            </div>
+                            <div class="box_answer_single">
+                                <div class="num">답안</div>
+                                <div><label for=""><input type="text"></label></div>
+                            </div>
+                            <div class="move_btns" data-index="1">
+                                <button type="button" class="prev"><span>이전</span></button>
+                                <button type="button" class="next"><span>다음</span></button>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <div class="swiper-slide result">
+                    <div class="slide_inner">
+                        <h2 class="tit">수학 8문항 진단 TEST 결과</h2>
+                        <button class="close"
+                            onclick="document.querySelector('.exam_wrap').classList.remove('is-show');document.querySelector('.exam_wrap').innerHTML = null;document.querySelector('body').style.overflow = null;"><span
+                                class="blind">닫기</span></button>
+                        <div class="boxes_wrap">
+                            <div class="box_title">
+                                <h3 class="result">
+                                    <span class="name">이투스</span>님의<br>예상 등급은 <span class="grade">2등급</span>입니다.
+                                </h3>
+                                <p class="result_sub">틀린 단원 중심으로 문항해설집/해설영상을 꼼꼼히 본다면 6월 모의평가 때 좋은 결과를 받으실 수 있을 것으로
+                                    예상됩니다.</p>
+                                <div class="result_detail">
+                                    <div>응시일 <span class="date">2023.05.15</span></div>
+                                    <div>응시결과 <span><span class="score">6/8</span>(<span class="time">27분
+                                                42초</span>)</span></div>
+                                    <div>6평 예상등급 <span class="grade">2등급</span></div>
+                                </div>
+                            </div>
+
+                            <div class="box_tab_wrap">
+                                <p class="notice">※ 문항 선택 시 문항별 해설을 확인할 수 있으며, MP3 파일 다운로드도 가능합니다.</p>
+                                <div class="box_reslut_table">
+                                    <div class="tab_select_head">
+                                        <div>문항</div>
+                                        <div>과목</div>
+                                        <div>단원</div>
+                                        <div>정오</div>
+                                        <div>해설</div>
+                                    </div>
+                                    <div class="tab_select">
+                                        <!-- [맞춘 문항의 경우 default 추가 클래스 없음 / 틀린 문항은 경우 wrong 추가] -->
+                                        <button type="button" class="">
+                                            <div>1</div>
+                                            <div>수학 I</div>
+                                            <div>지수함수와 로그함수</div>
+                                            <div>
+                                                <img class="mark_o"
+                                                    src="https://resource-portal.etoos.com/common-page/static/6p_before_exam8_o.svg"
+                                                    alt="O">
+                                                <img class="mark_x"
+                                                    src="https://resource-portal.etoos.com/common-page/static/6p_before_exam8_x.svg"
+                                                    alt="X">
+                                            </div>
+                                            <div>
+                                                <a href="javascript:;"><span class="blind">mp4파일 다운로드</span></a>
+                                            </div>
+                                        </button>
+                                        <button type="button">
+                                            <div>2</div>
+                                            <div>수학 I</div>
+                                            <div>미분</div>
+                                            <div>
+                                                <img class="mark_o"
+                                                    src="https://resource-portal.etoos.com/common-page/static/6p_before_exam8_o.svg"
+                                                    alt="O">
+                                                <img class="mark_x"
+                                                    src="https://resource-portal.etoos.com/common-page/static/6p_before_exam8_x.svg"
+                                                    alt="X">
+                                            </div>
+                                            <div>
+                                                <a href="javascript:;"><span class="blind">mp4파일 다운로드</span></a>
+                                            </div>
+                                        </button>
+                                        <button type="button" class="wrong">
+                                            <div>3</div>
+                                            <div>수학 II</div>
+                                            <div>적분</div>
+                                            <div>
+                                                <img class="mark_o"
+                                                    src="https://resource-portal.etoos.com/common-page/static/6p_before_exam8_o.svg"
+                                                    alt="O">
+                                                <img class="mark_x"
+                                                    src="https://resource-portal.etoos.com/common-page/static/6p_before_exam8_x.svg"
+                                                    alt="X">
+                                            </div>
+                                            <div>
+                                                <a href="javascript:;"><span class="blind">mp4파일 다운로드</span></a>
+                                            </div>
+                                        </button>
+                                        <button type="button">
+                                            <div>4</div>
+                                            <div>수학 I</div>
+                                            <div>수열</div>
+                                            <div>
+                                                <img class="mark_o"
+                                                    src="https://resource-portal.etoos.com/common-page/static/6p_before_exam8_o.svg"
+                                                    alt="O">
+                                                <img class="mark_x"
+                                                    src="https://resource-portal.etoos.com/common-page/static/6p_before_exam8_x.svg"
+                                                    alt="X">
+                                            </div>
+                                            <div>
+                                                <a href="javascript:;"><span class="blind">mp4파일 다운로드</span></a>
+                                            </div>
+                                        </button>
+                                        <button type="button">
+                                            <div>5</div>
+                                            <div>수학 I</div>
+                                            <div>적분</div>
+                                            <div>
+                                                <img class="mark_o"
+                                                    src="https://resource-portal.etoos.com/common-page/static/6p_before_exam8_o.svg"
+                                                    alt="O">
+                                                <img class="mark_x"
+                                                    src="https://resource-portal.etoos.com/common-page/static/6p_before_exam8_x.svg"
+                                                    alt="X">
+                                            </div>
+                                            <div>
+                                                <a href="javascript:;"><span class="blind">mp4파일 다운로드</span></a>
+                                            </div>
+                                        </button>
+                                        <button type="button" class="wrong">
+                                            <div>6</div>
+                                            <div>수학 I</div>
+                                            <div>삼각함수</div>
+                                            <div>
+                                                <img class="mark_o"
+                                                    src="https://resource-portal.etoos.com/common-page/static/6p_before_exam8_o.svg"
+                                                    alt="O">
+                                                <img class="mark_x"
+                                                    src="https://resource-portal.etoos.com/common-page/static/6p_before_exam8_x.svg"
+                                                    alt="X">
+                                            </div>
+                                            <div>
+                                                <a href="javascript:;"><span class="blind">mp4파일 다운로드</span></a>
+                                            </div>
+                                        </button>
+                                        <button type="button">
+                                            <div>7</div>
+                                            <div>수학 I</div>
+                                            <div>삼각함수</div>
+                                            <div>
+                                                <img class="mark_o"
+                                                    src="https://resource-portal.etoos.com/common-page/static/6p_before_exam8_o.svg"
+                                                    alt="O">
+                                                <img class="mark_x"
+                                                    src="https://resource-portal.etoos.com/common-page/static/6p_before_exam8_x.svg"
+                                                    alt="X">
+                                            </div>
+                                            <div>
+                                                <a href="javascript:;"><span class="blind">mp4파일 다운로드</span></a>
+                                            </div>
+                                        </button>
+                                        <button type="button">
+                                            <div>8</div>
+                                            <div>수학 I</div>
+                                            <div>수열</div>
+                                            <div>
+                                                <img class="mark_o"
+                                                    src="https://resource-portal.etoos.com/common-page/static/6p_before_exam8_o.svg"
+                                                    alt="O">
+                                                <img class="mark_x"
+                                                    src="https://resource-portal.etoos.com/common-page/static/6p_before_exam8_x.svg"
+                                                    alt="X">
+                                            </div>
+                                            <div>
+                                                <a href="javascript:;"><span class="blind">mp4파일 다운로드</span></a>
+                                            </div>
+                                        </button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="add_content">
+                            <p class="tit">등급별 추가 학습 콘텐츠</p>
+                            <p class="tit_sub">진단 등급에 따라 학습 자료를 다운로드 받고 6평을 대비해보세요!</p>
+                            <div class="downbtn_wrap">
+                                <a href="javascript:;">1·2등급<div>학습 자료 받기</div></a>
+                                <a href="javascript:;">3·4등급<div>학습 자료 받기</div></a>
+                                <a href="javascript:;">5등급 이하<div>학습 자료 받기</div></a>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div id="exam_prev" class="swiper-button-prev"></div>
+            <div id="exam_next" class="swiper-button-next"></div>
+        </div>
+    </div>
+    <div class="box_answer">
+        <button type="button" class="toggle"><span>답안지 확인</span></button>
+        <div class="answer_body">
+            <ul>
+
+                <li class="on">
+                    <div>1</div>
+                    <div><label for=""><input type="text"></label></div>
+                </li>
+                <li>
+                    <div>2</div>
+                    <div><label for=""><input type="text"></label></div>
+                </li>
+                <li>
+                    <div>3</div>
+                    <div><label for=""><input type="text"></label></div>
+                </li>
+                <li>
+                    <div>4</div>
+                    <div><label for=""><input type="text"></label></div>
+                </li>
+                <li>
+                    <div>5</div>
+                    <div><label for=""><input type="text"></label></div>
+                </li>
+                <li>
+                    <div>6</div>
+                    <div><label for=""><input type="text"></label></div>
+                </li>
+                <li>
+                    <div>7</div>
+                    <div><label for=""><input type="text"></label></div>
+                </li>
+                <li>
+                    <div>8</div>
+                    <div><label for=""><input type="text"></label></div>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    <div class="submit">
+        <button type="button"><span>제출하기</span></button>
+    </div>
+    <div class="box_commentary tab_cont">
+        <div class="tabs is-show">
+            <div class="btnwrap"><button class="close"></button></div>
+            <div class="imgwrap">
+                <img src="https://resource-portal.etoos.com/common-page/static/m_6p_before_exam8_commentary1.png"
+                    alt="">
+            </div>
+        </div>
+        <div class="tabs">
+            <div class="btnwrap"><button class="close"></button></div>
+            <div class="imgwrap">
+                <img src="https://resource-portal.etoos.com/common-page/static/m_6p_before_exam8_commentary2.png"
+                    alt="">
+            </div>
+        </div>
+        <div class="tabs">
+            <div class="btnwrap"><button class="close"></button></div>
+            <div class="imgwrap">
+                <img src="https://resource-portal.etoos.com/common-page/static/m_6p_before_exam8_commentary3.png"
+                    alt="">
+            </div>
+        </div>
+        <div class="tabs">
+            <div class="btnwrap"><button class="close"></button></div>
+            <div class="imgwrap">
+                <img src="https://resource-portal.etoos.com/common-page/static/m_6p_before_exam8_commentary4.png"
+                    alt="">
+            </div>
+        </div>
+        <div class="tabs">
+            <div class="btnwrap"><button class="close"></button></div>
+            <div class="imgwrap">
+                <img src="https://resource-portal.etoos.com/common-page/static/m_6p_before_exam8_commentary5.png"
+                    alt="">
+            </div>
+        </div>
+        <div class="tabs">
+            <div class="btnwrap"><button class="close"></button></div>
+            <div class="imgwrap">
+                <img src="https://resource-portal.etoos.com/common-page/static/m_6p_before_exam8_commentary6.png"
+                    alt="">
+            </div>
+        </div>
+        <div class="tabs">
+            <div class="btnwrap"><button class="close"></button></div>
+            <div class="imgwrap">
+                <img src="https://resource-portal.etoos.com/common-page/static/m_6p_before_exam8_commentary7.png"
+                    alt="">
+            </div>
+        </div>
+        <div class="tabs">
+            <div class="btnwrap"><button class="close"></button></div>
+            <div class="imgwrap">
+                <img src="https://resource-portal.etoos.com/common-page/static/m_6p_before_exam8_commentary8.png"
+                    alt="">
+            </div>
+        </div>
+    </div>
+</div>

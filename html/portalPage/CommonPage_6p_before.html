@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6평 사전 - 공통페이지</title>
+    <meta name="keywords" content="6평 점수 궁금해?">
+    <meta name="description" content="6평 점수 궁금해?">
+    <link rel="stylesheet" href="../../resources/css/common_style.css">
+    <link rel="stylesheet" href="../../resources/css/portalPage/style.css">
+    <link rel="stylesheet" href="../../resources/css/portalPage/6p.css">
+    <script src="https://portal.etoos.com/js/library/swiper.min.js"></script>
+    <script type="module" src="../../resources/js/portalPage/ui.js" defer></script>
+</head>
+
+<body>
+    <!-- portalGnb 호출 -->
+    <div id="portalGnb"></div>
+    <script async type="text/javascript" src="https://gnb.etoos.com/v2/dev/gnb.js" id="gnbService" data-service="portal"
+        data-device="web"></script>
+
+    <!-- topBanner include -->
+    <div id="topBn" class="top_bn"></div>
+
+    <!-- Common page -->
+    <div class="main_wrap">
+        <!-- 서비스 타입 -->
+        <div class="top_container" id="top_content" data-service="CommonPage6p" data-service-type="before">
+            <!-- top_content include  -->
+            <!-- floating banner -->
+            <div class="floating_bn">
+                <a href="javascript:;"><img src="https://resource-portal.etoos.com/common-page/static/top_flo1.png"
+                        alt="" /></a>
+                <a href="javascript:;"><img src="https://resource-portal.etoos.com/common-page/static/top_flo2.png"
+                        alt="" /></a>
+                <a href="javascript:;"><img src="https://resource-portal.etoos.com/common-page/static/top_flo3.png"
+                        alt="" /></a>
+            </div>
+        </div>
+
+        <!-- tabwrap -->
+        <div class="tab_wrap">
+            <div class="tab_head">
+                <ul>
+                    <li>
+                        <a href="javascript:;">
+                            <span class="blind">6평 점수 궁금해? 이투스가 올려줄게!</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <span class="blind">6평 점수 궁금해? 점수의 의미와 대응 전략</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <span class="blind">6평 점수 궁금해? 수능리허설, 지금 해봐!</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <span class="blind">스탬프 이벤트</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab_body">
+                <!-- tab include -->
+            </div>
+
+            <!-- popup_wrap 오픈 시 is-open 추가 -->
+            <div class="popup_wrap">
+                <!-- 로그인 -->
+                <!-- popup_comingsoon 에서  popup_type1로 id 변경 -->
+                <div id="popup_type1" class="popup-s-box">
+                    <div class="box-cont">
+                        <div class="txt">5월 19일에 만나요!</div>
+                        <a href="javascript:;" class="confirm"
+                            onclick="this.closest('.popup_wrap').classList.remove('is-open');document.querySelector('body').style.overflow = null;"><span>확인</span></a>
+                    </div>
+                </div>
+                <div id="popup_type2" class="popup-s-box">
+                    <div class="box-cont">
+                        <div class="txt">
+                            <div>6평 PASS TICKET을<br>1개 찾았어요.</div>
+                            <div class="subtxt">(남은 티켓: 2개)</div>
+                        </div>
+                    </div>
+                    <div class="box-bot">
+                        <a href="javascript:;" class="cancle"
+                            onclick="this.closest('.popup_wrap').classList.remove('is-open');document.querySelector('body').style.overflow = null;"><span>취소</span></a>
+                        <a href="javascript:;" class="confirm"
+                            onclick="this.closest('.popup_wrap').classList.remove('is-open');document.querySelector('body').style.overflow = null;"><span>확인</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- //Common page -->
+
+    <div class="toTop">
+        <button type="button">top</button>
+    </div>
+
+    <footer id="footer">
+        <!-- footer include -->
+    </footer>
+</body>
+
+</html>

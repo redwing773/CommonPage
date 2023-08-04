@@ -1,0 +1,232 @@
+.rehearsal_tab {
+    .quickmenu {
+        position: sticky;
+        top: 0;
+        left: 30px;
+        width: 180px;
+        z-index: 10;
+
+        ul {
+            position: absolute;
+            top: 50vh;
+            left: 0;
+            height: 86px;
+            margin-top: -130px;
+            background-image: bgurl("6p_before_tab1_quick_line.png");
+            background-repeat: no-repeat;
+
+            li {
+                margin-left: 30px;
+                transform: translateY(-8px);
+
+                >button {
+                    position: relative;
+                    display: block;
+                    font: 400 16px/21px "Noto Sans Kr";
+                    color: #999;
+
+                    &.on {
+                        font-weight: 700;
+                        color: #242424;
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: -2px;
+                            left: -30px;
+                            width: 24px;
+                            height: 24px;
+                            background: bgurl("6p_before_tab1_quick_plane.png");
+                        }
+                    }
+                }
+
+                &:nth-child(2) {
+                    margin-top: 60px;
+                }
+
+                &:nth-child(3) {
+                    margin-top: 58px;
+                }
+
+                &:nth-child(4) {
+                    margin-top: 59px;
+                }
+            }
+        }
+    }
+
+    .conts {
+        .tit1>img {
+            margin-left: -320px;
+            width: 1920px;
+            max-width: none;
+        }
+    }
+
+    .cont1 {
+        .cont1_slidewrap {
+            position: absolute;
+            top: 575px;
+            left: 152px;
+            width: 977px;
+            height: 652px;
+
+            .swiper-slide {
+                display: flex;
+                opacity: 0 !important;
+
+                &.swiper-slide-active {
+                    opacity: 1 !important;
+                    transition-duration: 0.6s !important;
+                }
+
+                .pages {
+                    position: relative;
+                    padding: 20px 54px;
+                    width: 488px;
+                    height: 652px;
+                    box-sizing: border-box;
+                    text-align: center;
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 50%;
+                        height: 100%;
+                        background: linear-gradient(90deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0) 100%);
+                    }
+
+                    .txt {
+                        display: inline-block;
+                        margin: 0 auto;
+                        padding: 0 28px;
+                        height: 40px;
+                        border-radius: 23px;
+                        background-color: #999;
+                        text-align: center;
+                        font: 700 16px/40px "Noto Sans Kr";
+                        color: #fff;
+                    }
+
+                    .imgwrap {
+                        margin-top: 20px;
+
+                        img {
+                            max-height: 552px;
+                        }
+                    }
+                }
+
+                .page_left {}
+
+                .page_right {
+                    .txt {
+                        background-color: #FF6B00;
+                    }
+                }
+
+                &:nth-child(n+5) {
+                    .page_right {
+                        .txt {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+
+            .swiper-button-prev {
+                top: 50%;
+                left: -96px;
+                margin-top: -28px;
+                width: 56px;
+                height: 56px;
+                background: bgurl("6p_before_cont1_slide_left.png") no-repeat;
+            }
+
+            .swiper-button-next {
+                top: 50%;
+                right: -96px;
+                margin-top: -28px;
+                width: 56px;
+                height: 56px;
+                background: bgurl("6p_before_cont1_slide_left.png") no-repeat;
+                transform: rotate(180deg);
+            }
+        }
+
+        .tit2>img {
+            margin-left: -320px;
+            width: 1920px;
+            max-width: none;
+        }
+
+
+
+        .link1 {
+            position: absolute;
+            top: 3150px;
+            left: 100px;
+
+            a {
+                display: block;
+                width: 540px;
+                height: 90px;
+            }
+        }
+
+        .link2 {
+            position: absolute;
+            top: 3150px;
+            left: 640px;
+
+            a {
+                display: block;
+                width: 540px;
+                height: 90px;
+            }
+        }
+
+        .link3 {
+            position: absolute;
+            top: 3340px;
+            left: 370px;
+
+            a {
+                display: block;
+                width: 540px;
+                height: 90px;
+            }
+        }
+    }
+
+    .cont2 {
+        .linkwrap {
+            position: absolute;
+            top: 303px;
+            left: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            a {
+                width: 416px;
+                height: 234px;
+
+                &:nth-child(n+4) {
+                    margin-top: 16px;
+                }
+
+                &.coming {
+                    background: bgurl("6p_before_tab3_cont2_coming.png");
+                }
+            }
+
+
+        }
+
+
+    }
+}
